@@ -1,0 +1,36 @@
+/**
+ * app-sidebar
+ * Author: Cesar Villajo
+ * Contact: cesarvillajo.dev@gmail.com
+ */
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 8px 0;
+  list-style: none;
+}
+
+.sidebar-menu li {
+  font-size: 14px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.sidebar-menu li:hover {
+  background-color: lightblue;
+  border-radius: 9999px;
+}
+
+.sidebar-menu li.active {
+  font-weight: 600;
+}
+
+
+

@@ -1,4 +1,6 @@
 {
+    // TEMA DE COLOR AL QUE MODIFICAMOS
+    "workbench.colorTheme": "Visual Studio Dark",
     // BARRAS DE ACTIVIDAD DE VS-CODE
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#ff1493",
@@ -46,8 +48,6 @@
     // CONFIGURACION DE LIGADURAS DE FUENTE
     "editor.fontLigatures": true,
     //
-    // TEMA DE COLOR AL QUE MODIFICAMOS
-    "workbench.colorTheme": "Visual Studio Dark",
     // Color de Comentarios
     "editor.tokenColorCustomizations": {
         "comments": {
@@ -103,7 +103,7 @@
         },
         {
             "tag": "override",
-             "color": "#FD79A8"
+            "color": "#FD79A8"
         },
         {
             "tag": "note",

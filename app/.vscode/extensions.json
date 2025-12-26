@@ -2,3 +2,144 @@
 //   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
 //   "recommendations": ["angular.ng-template"]
 // }
+
+
+
+
+{
+    // BARRAS DE ACTIVIDAD DE VS-CODE
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#ff1493",
+        "editor.lineHighlightBackground": "#1E3E6240"
+    }, 
+    //
+    // CARPETAS CON ESTILO "MATERIAL ICONS THEME"
+    "workbench.iconTheme": "material-icon-theme",
+    //
+    // ICONOS DE CARPETA: "ASOCIACIONES CUSTOM DE CARPETAS"
+    "material-icon-theme.folders.associations": {
+        "c-tooltip": "prompts",
+        "theme-sintra": "storybook",
+        "app-style": "context",
+        "design-system": "custom",
+        "body": "public",
+        "common-style": "css",
+        "common-variables": "controller",
+        "display": "ui",
+        "frameworks": "storybook",
+        "footer": "mock",
+        "icons-style": "images",
+        "material-components-v17": "angular",
+        "material-components-v19": "angular",
+        "plugins": "plugin",
+        "primeng-components-v17": "robot",
+        "primeng-components-v19": "robot",
+        "theme": "theme",
+        "pruebas-theme": "test",
+        "web-components": "layout",
+    },
+    // COLOR POR DEFECTO DE CARPETA MATERIAL ICONS
+    "material-icon-theme.folders.color": "#ff1493",
+    //
+    // AUTOGUARDADO "AUTIMÁTICO" A LOS 10 SEGUNDOS DE INACTIVIDAD
+    "files.autoSave": "off",
+    // "files.autoSave": "afterDelay",
+    // "files.autoSaveDelay": 120000,
+    //
+    // CONFIGURACION DE FUENTE
+    "editor.fontFamily": "Jetbrains Mono, Fira Code, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 22,
+    //
+    // CONFIGURACION DE LIGADURAS DE FUENTE
+    "editor.fontLigatures": true,
+    //
+    // TEMA DE COLOR AL QUE MODIFICAMOS
+    "workbench.colorTheme": "Visual Studio Dark",
+    // Color de Comentarios
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "foreground": "#A75FD6"
+        }
+    },
+    // Comentarios de Better Comments
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#ff4d4d"
+        },
+        {
+            "tag": "?",
+            "color": "#42a5f5"
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+        },
+        {
+            "tag": "//",
+            "color": "#A75FD6"
+        },
+        {
+            "tag": "*",
+            "color": "#98C379"
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00"
+        },
+        {
+            "tag": "fixme",
+            "color": "#FD79A8"
+        },
+        {
+            "tag": "custom",
+            "color": "#FD79A8"
+        },
+        {
+            "tag": "creado",
+            "color": "#FD79A8"
+        },
+        {
+            "tag": "modified",
+            "color": "#FD79A8"
+        },
+        {
+            "tag": "modificado",
+            "color": "#FD79A8"
+        },
+        {
+            "tag": "override",
+             "color": "#FD79A8"
+        },
+        {
+            "tag": "note",
+            "color": "#78DCE8",
+            "italic": true
+        },
+        {
+            "tag": "bug",
+            "color": "#E84393",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#FDA7DF20",
+            "bold": false,
+            "italic": true
+        },
+        {
+            "tag": "hack",
+            "color": "#ff4d4d",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#9B59B620",
+            "bold": false,
+            "italic": true
+        },
+    ],
+    //PARA QUE NO MOLESTE COPILOT
+    // "notebook.cellToolbarVisibility": "click",
+    // "inlineChat.accessibleDiffView": "off",
+    // "editor.inlineSuggest.showToolbar": "always",
+    // "chat.disableAIFeatures": true
+}

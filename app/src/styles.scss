@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --c-header-height: 56px;
+    --c-header-border: 1px;
+    --c-header-surface: white;
+    --c-header-border: lightgray;
+}
+
+
+// =========================
+// BODY BASE NORMALIZE
+// =========================
+
+//AJUSTE EN DASHBOARD PARA QUE NO HAYA UN SCROLL GENERAL
+
+html {
+    font-size: 16px;
+    font-family: "Inter", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 400;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
