@@ -8,13 +8,42 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: var(--c-primary-surface);
   height: 100%;
-  padding: 0 16px;
+  padding: 0 32px;
+}
+
+.topbar::after {
+  content: "";
+  background: linear-gradient(135deg in oklch, var(--c-primary-color), var(--c-secondary-color));
+  width: 200vw;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: -100vw;
 }
 
 .topbar__brand {
-  font-size: 24px;
-  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand__brandmark {
+  width: 32px;
+  height: 32px;
+}
+
+.brand__wordmark {
+  font-size: 22px;
+  font-family: var(--c-font-fanily-brand);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  position: relative;
+  top: -1px;
 }
 
 .topbar__actions {

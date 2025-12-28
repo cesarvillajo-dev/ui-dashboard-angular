@@ -4,33 +4,83 @@
  * Contact: cesarvillajo.dev@gmail.com
  */
 
+// nav
 .sidebar {
-  width: 240px;
+  position: sticky;
+  top: 0;
+
   flex-shrink: 0;
   height: 100%;
+  padding: 16px;
   overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  justify-content: start;
 }
 
+// ul
 .sidebar-menu {
-  list-style: none;
-  padding: 8px 0;
+  padding: 0;
+  margin: 0;
+  font-size: var(--c-text-base);
+  color: var(--c-primary-text-color);
   list-style: none;
 }
 
+// li
 .sidebar-menu li {
-  font-size: 14px;
-  padding: 8px 16px;
+  background-color: inherit;
+  border-radius: 4px;
+}
+
+// li hover
+.sidebar-menu li:hover {
+  background-color: color-mix(in oklab, var(--c-primary-color) 12%, transparent);
+}
+
+// li (color de fondo cuando <a> es is-active)
+.sidebar-menu li:has(a.is-active) {
+
+  /* Efecto linea */
+  // border: var(--c-primary-color);
+  // border-style: solid;
+  // border-radius: 0 4px 4px 0;
+  // border-width: 0 0 0 2px;
+  // margin-left: -2px;
+
+  /* Efecto focus-visible */
+  // box-shadow: 0 0 0 1px var(--c-primary-color);
+}
+
+// a (recae todo el peso para que no haya fallos al clickar)
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  padding-inline-start: 16px;
+  color: currentColor;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
-.sidebar-menu li:hover {
-  background-color: lightblue;
-  border-radius: 9999px;
-}
-
-.sidebar-menu li.active {
+// a (is-active --> atributo routerLinkActive)
+.sidebar-menu a.is-active {
   font-weight: 600;
+  color: var(--c-primary-color);
 }
 
+// Icono
+.sidebar-menu i {
+  font-size: var(--c-text-xl);
+  color: currentColor;
+}
 
-
+// Titulo
+.sidebar-menu span {
+  color: currentColor;
+}

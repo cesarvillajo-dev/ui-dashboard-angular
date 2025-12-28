@@ -1,13 +1,25 @@
 <nav class="sidebar">
   <ul class="sidebar-menu">
-    <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      Home
+
+    <li>
+      <a routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" (pointerdown)="$event.currentTarget">
+        <i class="material-icons-outlined">home</i>
+        <span>Home</span>
+      </a>
     </li>
-    <li routerLink="/components" routerLinkActive="active">
-      Components
+
+    <li>
+      <a routerLinkActive="is-active" routerLink="/components" (pointerdown)="$event.currentTarget">
+        <i class="material-icons-outlined">apps</i>
+        <span>Components</span>
+      </a>
     </li>
-    <li routerLink="/guides" routerLinkActive="active">
-      Guides
+
+    <li>
+      <a routerLinkActive="is-active" routerLink="/guides" (pointerdown)="$event.currentTarget">
+        <i class="material-icons-outlined">auto_stories</i>
+        <span>Guides</span></a>
     </li>
+
   </ul>
 </nav>

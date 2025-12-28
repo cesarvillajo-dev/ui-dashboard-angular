@@ -9,4 +9,14 @@ import { RouterModule } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+
+   onNavPointerDown(event: PointerEvent): void {
+    const target = event.currentTarget as HTMLElement | null;
+
+    if (target) {
+      target.click();
+    }
+  }
+  
+}

@@ -1,10 +1,35 @@
 {
-    // TEMA DE COLOR AL QUE MODIFICAMOS
-    "workbench.colorTheme": "Visual Studio Dark",
     // BARRAS DE ACTIVIDAD DE VS-CODE
     "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#ff1493",
-        "editor.lineHighlightBackground": "#1E3E6240"
+        //
+        // Barra Superior
+        "titleBar.activeBackground": "#1E3E62", // barra superior fondo
+        "titleBar.activeForeground": "#e7e7e7", //  barra superior texto
+        "titleBar.border": "#1E3E6299", // barra superior borde inferior
+        "commandCenter.border": "#e7e7e799", // barra superior borde cuadro de busqueda
+        "titleBar.inactiveBackground": "#1E3E6299", // barra superior cuando la ventana está inactiva
+        "titleBar.inactiveForeground": "#e7e7e799", // texto de la barra superior cuando la ventana está inactiva
+        //
+        // Barra Lateral
+        "activityBar.background": "#1E3E6299", // barra lateral fondo
+        "activityBar.inactiveForeground": "#e7e7e799", // barra lateral icono no seleccionado
+        "activityBar.activeBackground": "#ff1493", // barra lateral seleccionado
+        "activityBar.foreground": "#e7e7e7", // barra lateral icono si seleccionado
+        //
+        // Badge o Círculo de Actividad
+        "activityBarBadge.background": "#0B192C", // barra lateral fondo del circulo badge
+        "activityBarBadge.foreground": "#e7e7e7", // barra lateral número del circulo badge
+        //
+        // Barra inferior
+        "statusBar.background": "#1E3E62", // barra inferior
+        "statusBar.foreground": "#e7e7e7", // barra inferior texto
+        "statusBarItem.remoteBackground": "#ff149399", // barra inferior icono esquina izquierda
+        "statusBarItem.hoverBackground": "#ff1493", // barra inferior icono esquina izquierda hover
+        "statusBarItem.remoteForeground": "#e7e7e7", //  barra inferior icono esquina izquierda color
+        //
+        // Cursor
+        "editorCursor.foreground": "#ff1493", // cursor color
+        "editor.lineHighlightBackground": "#1E3E6240", // fondeo de la linea en la que está el cursor
     },
     //
     // CARPETAS CON ESTILO "MATERIAL ICONS THEME"
@@ -48,6 +73,8 @@
     // CONFIGURACION DE LIGADURAS DE FUENTE
     "editor.fontLigatures": true,
     //
+    // TEMA DE COLOR AL QUE MODIFICAMOS
+    "workbench.colorTheme": "Visual Studio Dark",
     // Color de Comentarios
     "editor.tokenColorCustomizations": {
         "comments": {
@@ -107,7 +134,7 @@
         },
         {
             "tag": "note",
-            "color": "#78DCE8",
+            "color": "#FF8C00",
             "italic": true
         },
         {
@@ -129,7 +156,7 @@
             "italic": true
         },
     ],
-    //PARA QUE NO MOLESTE COPILOT
+    // ANULAR COPILOT
     // "notebook.cellToolbarVisibility": "click",
     // "inlineChat.accessibleDiffView": "off",
     // "editor.inlineSuggest.showToolbar": "always",
