@@ -18,8 +18,7 @@
 .layout-content {
     flex: 1;
     display: flex;
-    height: calc(100vh - var(--c-topbar-height));
-    min-height: 0;
+    min-height: calc(100vh - var(--c-topbar-height));
     margin-top: var(--c-topbar-height);
 
     /* importante */
@@ -28,12 +27,15 @@
 
 // contenedor del menu lateral (sidebar)
 .layout-sidebar {
-    min-width: 260px;
+    max-width: 240px;
+    min-width: 240px;
+    flex-shrink: 0;
     border-right: 1px solid var(--c-primary-border-color);
 }
 
 // contenedor del contenido principal (main)
 .layout-main {
     flex: 1;
+    min-width: 0;
     overflow: hidden;
 }

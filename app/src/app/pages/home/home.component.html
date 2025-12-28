@@ -1,77 +1,47 @@
 <app-pages>
-  <div style="flex: 1;">
 
-  <!-- lista de pestañas -->
-  <section page-tabs role="tablist" class="c-tablist">
-
-    <!-- pestaña 1 -->
-    <span role="tab" class="c-tab" [class.active]="activeTab === 'overview'" (click)="activeTab = 'overview'">
-      Overview
-    </span>
-
-    <!-- pestaña 2 -->
-    <span role="tab" class="c-tab" [class.active]="activeTab === 'usage'" (click)="activeTab = 'usage'">
-      Usage
-    </span>
-
-    <!-- pestaña 3 -->
-    <span role="tab" class="c-tab" [class.active]="activeTab === 'notes'" (click)="activeTab = 'notes'">
-      Notes
-    </span>
-
-  </section>
-
+  <!-- TÍTULO DE PÁGINA -->
   <header page-title>
-    <h2 class="c-doc-title">Home</h2>
+    <h3>Home</h3>
   </header>
 
-  <!-- contenido de pestaña 1 -->
-  <ng-container role="tabpanel" *ngIf="activeTab === 'overview'">
-    <p *ngFor="let i of filler">
-      Contenido Overview para probar scroll.
-    </p>
+  <!-- TABS -->
+  <nav page-tabs class="c-tablist" role="tablist" aria-label="Secciones de la página">
+
+    <!-- DESCRIPCIÓN -->
+    <span role="tab" id="tab-descripcion" class="c-tab" [class.active]="activeTab === 'descripcion'"
+      [attr.aria-selected]="activeTab === 'descripcion'" [attr.tabindex]="activeTab === 'descripcion' ? 0 : -1"
+      aria-controls="panel-descripcion" (click)="activeTab = 'descripcion'">
+      Descripción
+    </span>
+
+    <!-- API -->
+    <span role="tab" id="tab-api" class="c-tab" [class.active]="activeTab === 'api'"
+      [attr.aria-selected]="activeTab === 'api'" [attr.tabindex]="activeTab === 'api' ? 0 : -1"
+      aria-controls="panel-api" (click)="activeTab = 'api'">
+      Api
+    </span>
+
+    <!-- EJEMPLOS -->
+    <span role="tab" id="tab-ejemplos" class="c-tab" [class.active]="activeTab === 'ejemplos'"
+      [attr.aria-selected]="activeTab === 'ejemplos'" [attr.tabindex]="activeTab === 'ejemplos' ? 0 : -1"
+      aria-controls="panel-ejemplos" (click)="activeTab = 'ejemplos'">
+      Ejemplos
+    </span>
+  </nav>
+
+  <!-- PANEL: DESCRIPCION -->
+  <ng-container role="tabpanel" id="panel-descripcion" aria-labelledby="tab-descripcion" *ngIf="activeTab === 'descripcion'">
+    <p *ngFor="let i of filler">Contenido descripcion para probar scroll.</p>
   </ng-container>
 
-  <!-- contenido de pestaña 2 -->
-  <ng-container role="tabpanel" *ngIf="activeTab === 'usage'">
-    <p *ngFor="let i of filler">
-      Contenido Usage para probar scroll.
-    </p>
+  <!-- PANEL: API -->
+  <ng-container role="tabpanel" id="panel-api" aria-labelledby="tab-api" *ngIf="activeTab === 'api'">
+    <p *ngFor="let i of filler">Contenido api para probar scroll.</p>
   </ng-container>
 
-  <!-- contenido de pestaña 3 -->
-  <ng-container role="tabpanel" *ngIf="activeTab === 'notes'">
-    <p *ngFor="let i of filler">
-      Contenido Notes para probar scroll.
-    </p>
+  <!-- PANEL: EJEMPLOS -->
+  <ng-container role="tabpanel" id="panel-ejemplos" aria-labelledby="tab-ejemplos" *ngIf="activeTab === 'ejemplos'">
+    <p *ngFor="let i of filler">Contenido ejemplos para probar scroll.</p>
   </ng-container>
-
-  </div>
-  
-  
-  <div style="flex: 1;">
-  
-    
-    <div page-tabs>
-      <button (click)="activeTab = 'overview'">Overview</button>
-      <button (click)="activeTab = 'usage'">Usage</button>
-      <button (click)="activeTab = 'notes'">Notes</button>
-    </div>
-  
-    <h1 page-title>Home2</h1>
-    
-    <div *ngIf="activeTab === 'overview'">
-      <p *ngFor="let i of filler">Contenido Overview</p>
-    </div>
-    
-    <div *ngIf="activeTab === 'usage'">
-      <p *ngFor="let i of filler">Contenido Usage</p>
-    </div>
-    
-    <div *ngIf="activeTab === 'notes'">
-      <p *ngFor="let i of filler">Contenido Notes</p>
-    </div>
-  </div>
 </app-pages>
-
-  

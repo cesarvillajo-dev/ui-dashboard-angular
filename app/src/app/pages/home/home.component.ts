@@ -10,6 +10,6 @@ import { PagesComponent } from '../pages.component';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  activeTab = 'overview';
+  activeTab: 'descripcion' | 'api' | 'ejemplos' = 'descripcion';
   filler = Array.from({ length: 30 });
 }

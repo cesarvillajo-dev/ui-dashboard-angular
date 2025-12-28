@@ -4,15 +4,17 @@
  * Contact: cesarvillajo.dev@gmail.com
  */
 
+ // nav
 .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--c-primary-surface);
   height: 100%;
-  padding: 0 32px;
+  padding: 0 24px;
 }
 
+// línea divisoria con degradado
 .topbar::after {
   content: "";
   background: linear-gradient(135deg in oklch, var(--c-primary-color), var(--c-secondary-color));
@@ -23,17 +25,20 @@
   left: -100vw;
 }
 
+// imagotipo
 .topbar__brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
 }
 
+// logotipo
 .brand__brandmark {
   width: 32px;
   height: 32px;
 }
 
+// isologo
 .brand__wordmark {
   font-size: 22px;
   font-family: var(--c-font-fanily-brand);
@@ -46,6 +51,7 @@
   top: -1px;
 }
 
+// parete derecha aún sin especificar
 .topbar__actions {
   margin-left: auto;
 }

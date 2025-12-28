@@ -12,6 +12,7 @@
   flex-shrink: 0;
   height: 100%;
   padding: 16px;
+  padding-inline-end: 24px;
   overflow-y: auto;
 
   display: flex;
@@ -52,7 +53,11 @@
 
   /* Efecto focus-visible */
   // box-shadow: 0 0 0 1px var(--c-primary-color);
+
+  /* Efecto background */
+  background-color: color-mix(in oklab, var(--c-primary-color) 12%, transparent);
 }
+
 
 // a (recae todo el peso para que no haya fallos al clickar)
 .sidebar-menu a {

@@ -2,8 +2,10 @@
 
 :root {
     --c-topbar-height: 56px;
-    --c-primary-surface: #ffffff;
-    --c-primary-border-color: #9e9e9e;
+    --c-primary-surface: var(--c-white);
+    --c-primary-border-color: var(--c-gray-500);
+    --c-secondary-border-color: var(--c-gray-300);
+
 }
 
 

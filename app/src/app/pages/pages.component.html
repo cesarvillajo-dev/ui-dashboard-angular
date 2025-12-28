@@ -1,19 +1,23 @@
-<!-- pages: estructura que se repite en cada página -->
+<!-- contenedor de las páginas -->
 <section class="page">
 
-  <!-- menu horizontal de pestañas -->
-  <nav class="page-tabs">
-    <ng-content select="[page-tabs]"></ng-content>
-  </nav>
+  <section class="page-container">
 
-  <!-- encabezado de documento -->
-  <header class="page-header">
-    <ng-content select="[page-title]"></ng-content>
-  </header>
+    <!-- menu horizontal de pestañas -->
+    <nav class="page-tabs">
+      <ng-content select="[page-tabs]"></ng-content>
+    </nav>
 
-  <!-- contenido de pestañas -->
-  <section class="page-content">
-    <ng-content></ng-content>
+    <!-- encabezado de documento debajo de TABS -->
+    <header class="page-header">
+      <ng-content select="[page-title]"></ng-content>
+    </header>
+
+    <!-- contenido de pestañas -->
+    <section class="page-content">
+      <ng-content></ng-content>
+    </section>
+
   </section>
 
 </section>
