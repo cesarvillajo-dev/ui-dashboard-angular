@@ -1,22 +1,33 @@
+/**
+ * SidebarComponent
+ * ------------------------------------------------------
+ * Sidebar contextual según el área activa (Components).
+ *
+ * Proyecto: c-dashboard
+ * Autor: Cesar Villajo
+ */
+
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+
+import { COMPONENTS_DATA } from '../../pages/components/data/components.data';
+import { ComponentEntry } from '../../pages/components/model/component-entry.model';
 
 @Component({
   standalone: true,
   selector: 'app-sidebar',
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
 
-   onNavPointerDown(event: PointerEvent): void {
-    const target = event.currentTarget as HTMLElement | null;
+  readonly items: ComponentEntry[] = COMPONENTS_DATA;
 
-    if (target) {
-      target.click();
-    }
+  constructor(private router: Router) {}
+
+  isActive(slug: string): boolean {
+    return this.router.url.startsWith(`/components/${slug}`);
   }
-  
+
 }

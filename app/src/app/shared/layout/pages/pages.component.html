@@ -1,0 +1,53 @@
+<section class="page">
+  <section class="page-container page-layout">
+
+    <div class="page-main">
+
+      @if (tabs.length) {
+        <nav class="page-tabs" role="tablist">
+          @for (tab of tabs; track tab.id) {
+            <button
+              type="button"
+              role="tab"
+              class="page-tab"
+              [class.is-active]="tab.id === activeTabId"
+              (click)="onTabClick(tab.id)"
+            >
+              {{ tab.label }}
+            </button>
+          }
+        </nav>
+      }
+
+      <header class="page-header">
+        <h2>{{ title }}</h2>
+      </header>
+
+      <section class="page-content">
+        <ng-content></ng-content>
+      </section>
+
+    </div>
+
+    @if (sections.length) {
+      <aside class="page-toc">
+        <nav aria-label="Índice de la página">
+          <ul>
+            @for (section of sections; track section.id) {
+              <li>
+                <button
+                  type="button"
+                  [class.is-active]="isSectionActive(section.id)"
+                  (click)="onSectionClick(section.id)"
+                >
+                  {{ section.label }}
+                </button>
+              </li>
+            }
+          </ul>
+        </nav>
+      </aside>
+    }
+
+  </section>
+</section>

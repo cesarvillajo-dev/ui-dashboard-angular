@@ -1,0 +1,37 @@
+/**
+ * Components Detail
+ * ------------------------------------------------------
+ * Estilos para la vista de documentación de un componente.
+ *
+ * Proyecto: c-dashboard
+ * Autor: Cesar Villajo
+ */
+
+.component-detail__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 960px;
+}
+
+/* Texto base de documentación */
+.component-detail__section p {
+  font-size: var(--c-text-base);
+  line-height: 1.6;
+  color: var(--c-primary-text-color);
+}
+
+/* Preparado para bloques futuros */
+
+.component-detail__section pre {
+  background-color: var(--c-primary-surface-alt, #f5f5f5);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.component-detail__section code {
+  font-family: var(--c-font-family-code, monospace);
+  font-size: 0.875rem;
+}

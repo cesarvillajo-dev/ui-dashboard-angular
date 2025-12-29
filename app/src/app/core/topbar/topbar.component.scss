@@ -4,33 +4,10 @@
  * Contact: cesarvillajo.dev@gmail.com
  */
 
- // nav
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--c-primary-surface);
-  height: 100%;
-  padding: 0 24px;
-}
 
-// línea divisoria con degradado
-.topbar::after {
-  content: "";
-  background: linear-gradient(135deg in oklch, var(--c-primary-color), var(--c-secondary-color));
-  width: 200vw;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: -100vw;
-}
 
-// imagotipo
-.topbar__brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
+
+
 
 // logotipo
 .brand__brandmark {
@@ -51,7 +28,57 @@
   top: -1px;
 }
 
-// parete derecha aún sin especificar
-.topbar__actions {
-  margin-left: auto;
+  // nav
+  .topbar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+    background: var(--c-primary-surface);
+    border-bottom: 1px solid var(--c-primary-border-color);
+    // justify-content: space-between;
+  }
+
+// línea divisoria con degradado
+// .topbar::after {
+//   content: "";
+//   background: linear-gradient(135deg in oklch, var(--c-primary-color), var(--c-secondary-color));
+//   width: 200vw;
+//   height: 1px;
+//   position: absolute;
+//   bottom: 0;
+//   left: -100vw;
+// }
+
+  .topbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .topbar__nav {
+    display: flex;
+    gap: 16px;
+    margin-left: 32px;
+  }
+  
+  
+  .topbar__nav a.active {
+    font-weight: 600;
+  }
+  
+  // acciones de light/dark
+  .topbar__actions {
+    margin-left: auto;
+  }
+  
+
+  .theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--c-primary-text-color);
+  font-size: 1.25rem;
 }

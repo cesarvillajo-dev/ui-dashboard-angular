@@ -1,0 +1,41 @@
+<section class="components-index">
+
+  <!-- Título del área -->
+  <header class="components-index__header">
+    <h1 class="components-index__title">
+      {{ title }}
+    </h1>
+  </header>
+
+  <!-- Grid de cards -->
+  <section class="components-index__grid">
+
+    @for (component of components; track component.slug) {
+      <a
+        class="component-card"
+        [routerLink]="['/components', component.slug]"
+      >
+
+        <div class="component-card__image">
+          <!-- Placeholder visual -->
+          @if (component.image) {
+            <img
+              [src]="component.image"
+              [alt]="component.label"
+              loading="lazy"
+            />
+          }
+        </div>
+
+        <div class="component-card__content">
+          <h3 class="component-card__title">
+            {{ component.label }}
+          </h3>
+        </div>
+
+      </a>
+    }
+
+  </section>
+
+</section>

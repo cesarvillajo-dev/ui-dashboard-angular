@@ -1,28 +1,29 @@
+<!-- 
 <app-pages>
 
-  <!-- TÍTULO DE PÁGINA -->
+  <!-- TÍTULO DE PÁGINA 
   <header page-title>
     <h3>Home</h3>
   </header>
 
-  <!-- TABS -->
+  <!-- TABS 
   <nav page-tabs class="c-tablist" role="tablist" aria-label="Secciones de la página">
 
-    <!-- DESCRIPCIÓN -->
+    <!-- DESCRIPCIÓN 
     <span role="tab" id="tab-descripcion" class="c-tab" [class.active]="activeTab === 'descripcion'"
       [attr.aria-selected]="activeTab === 'descripcion'" [attr.tabindex]="activeTab === 'descripcion' ? 0 : -1"
       aria-controls="panel-descripcion" (click)="activeTab = 'descripcion'">
       Descripción
     </span>
 
-    <!-- API -->
+    <!-- API 
     <span role="tab" id="tab-api" class="c-tab" [class.active]="activeTab === 'api'"
       [attr.aria-selected]="activeTab === 'api'" [attr.tabindex]="activeTab === 'api' ? 0 : -1"
       aria-controls="panel-api" (click)="activeTab = 'api'">
       Api
     </span>
 
-    <!-- EJEMPLOS -->
+    <!-- EJEMPLOS 
     <span role="tab" id="tab-ejemplos" class="c-tab" [class.active]="activeTab === 'ejemplos'"
       [attr.aria-selected]="activeTab === 'ejemplos'" [attr.tabindex]="activeTab === 'ejemplos' ? 0 : -1"
       aria-controls="panel-ejemplos" (click)="activeTab = 'ejemplos'">
@@ -30,18 +31,24 @@
     </span>
   </nav>
 
-  <!-- PANEL: DESCRIPCION -->
+  <!-- PANEL: DESCRIPCION 
   <ng-container role="tabpanel" id="panel-descripcion" aria-labelledby="tab-descripcion" *ngIf="activeTab === 'descripcion'">
     <p *ngFor="let i of filler">Contenido descripcion para probar scroll.</p>
   </ng-container>
 
-  <!-- PANEL: API -->
+  <!-- PANEL: API 
   <ng-container role="tabpanel" id="panel-api" aria-labelledby="tab-api" *ngIf="activeTab === 'api'">
     <p *ngFor="let i of filler">Contenido api para probar scroll.</p>
   </ng-container>
 
-  <!-- PANEL: EJEMPLOS -->
+  <!-- PANEL: EJEMPLOS 
   <ng-container role="tabpanel" id="panel-ejemplos" aria-labelledby="tab-ejemplos" *ngIf="activeTab === 'ejemplos'">
     <p *ngFor="let i of filler">Contenido ejemplos para probar scroll.</p>
   </ng-container>
-</app-pages>
+</app-pages> -->
+
+
+<section class="page">
+  <h2>Bienvenido</h2>
+  <p>Selecciona una sección desde el menú superior.</p>
+</section>

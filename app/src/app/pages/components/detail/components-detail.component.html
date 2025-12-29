@@ -1,0 +1,210 @@
+<app-pages [title]="component.label" [tabs]="tabs" [activeTabId]="activeTabId" [sections]="sectionsForTab"
+  [activeSectionId]="activeSectionId" (tabChange)="onTabChange($event)" (sectionClick)="onSectionClick($event)">
+
+  @switch (activeTabId) {
+
+  @case ('overview') {
+  <section id="usage" #pageSection>
+    <h2>Usage</h2>
+    <p>
+      Uso básico del componente {{ component.label }} dentro de una aplicación Angular.
+    </p>
+
+    <div class="demo-block">Demo principal</div>
+    <div class="demo-block">Demo principal</div>
+    <div class="demo-block">Demo principal</div>
+    <div class="demo-block">Demo principal</div>
+  </section>
+
+  <section id="variants" #pageSection>
+    <h2>Variants</h2>
+    <p>
+      Variantes visuales y de comportamiento del componente.
+    </p>
+
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+    <div class="demo-block">Demo variantes</div>
+  </section>
+
+  <section id="sizes" #pageSection>
+    <h2>Sizes</h2>
+    <p>
+      Tamaños disponibles y recomendaciones de uso.
+    </p>
+
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+    <div class="demo-block">Demo tamaños</div>
+  </section>
+  }
+
+  @case ('api') {
+  <section id="inputs" #pageSection>
+    <h2>Inputs</h2>
+
+    <pre class="code-block">
+&#64;Input() disabled: boolean;
+&#64;Input() size: 'sm' | 'md' | 'lg';
+        </pre>
+  </section>
+
+  <section id="outputs" #pageSection>
+    <h2>Outputs</h2>
+
+    <pre class="code-block">
+&#64;Output() valueChange = new EventEmitter&lt;string&gt;();
+        </pre>
+  </section>
+  }
+
+  @case ('theming') {
+  <section id="css-vars" #pageSection>
+    <h2>CSS Variables</h2>
+
+    <pre class="code-block">
+--c-button-bg
+--c-button-color
+--c-button-radius
+        </pre>
+  </section>
+
+  <section id="scss-mixins" #pageSection>
+    <h2>SCSS Mixins</h2>
+
+    <pre class="code-block">
+&#64;mixin button-variant($bg, $color)
+        </pre>
+  </section>
+  }
+
+  @case ('examples') {
+  <section id="basic" #pageSection>
+    <h2>Basic examples</h2>
+
+    <div class="demo-block">Ejemplo básico</div>
+    <div class="demo-block">Ejemplo básico</div>
+    <div class="demo-block">Ejemplo básico</div>
+  </section>
+  }
+
+  }
+
+</app-pages>

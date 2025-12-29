@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-components',
-  template: `
-    <h1>Components</h1>
-    <p>Contenido de prueba para la sección Components.</p>
-  `,
+  imports: [RouterOutlet],
+  templateUrl: './components.component.html',
+  styleUrls: ['./components.component.scss'],
 })
 export class ComponentsComponent {}

@@ -1,0 +1,94 @@
+/**
+ * Components Index
+ * ------------------------------------------------------
+ * Estilos para la vista índice del área Components.
+ *
+ * Proyecto: c-dashboard
+ * Autor: Cesar Villajo
+ */
+
+.components-index {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header */
+
+.components-index__header {
+  margin-bottom: 1rem;
+}
+
+.components-index__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--c-primary-text-color);
+}
+
+/* Grid */
+
+.components-index__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Card */
+
+.component-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 240px;
+  min-height: 160px;
+  padding: 1rem;
+
+  border-radius: 8px;
+  background-color: var(--c-primary-surface);
+  border: 1px solid var(--c-primary-border-color);
+
+  text-decoration: none;
+  color: inherit;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.component-card:hover,
+.component-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--c-primary-color);
+}
+
+/* Image */
+
+.component-card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  margin-bottom: 1rem;
+}
+
+.component-card__image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Content */
+
+.component-card__content {
+  display: flex;
+  align-items: center;
+}
+
+.component-card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--c-primary-text-color);
+}

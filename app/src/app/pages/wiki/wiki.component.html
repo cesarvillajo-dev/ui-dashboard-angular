@@ -1,0 +1,37 @@
+<!-- contenedor de las páginas 
+<section class="page">
+
+  <section class="page-container">
+
+     menu horizontal de pestañas 
+    <nav class="page-tabs">
+      <ng-content select="[page-tabs]"></ng-content>
+    </nav>
+
+     encabezado de documento debajo de TABS 
+    <header class="page-header">
+      <ng-content select="[page-title]"></ng-content>
+    </header>
+
+     contenido de pestañas 
+    <section class="page-content">
+      <ng-content></ng-content>
+    </section>
+
+  </section>
+
+</section> -->
+
+
+<app-pages title="wiki" [tabs]="tabs">
+
+  <section class="page">
+    <h2>Wiki</h2>
+    <p>Guías, decisiones y documentación interna.</p>
+  </section>
+
+  @for (i of filler; track i) {
+  <p>Contenido de la sección Styles.</p>
+  }
+
+</app-pages>

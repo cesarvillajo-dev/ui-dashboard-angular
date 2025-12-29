@@ -1,0 +1,141 @@
+/**
+ * Component: Pages
+ * Description: Layout reutilizable de páginas de documentación
+ * Autor: Cesar Villajo
+ */
+
+.page {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  height: 100%;
+  overflow-y: auto;
+  padding-inline: 32px;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 32px;
+}
+
+.page-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  background-color: var(--c-primary-surface);
+}
+
+.page-tab {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: var(--c-text-base);
+  color: var(--c-secondary-text-color);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.page-tab.is-active {
+  color: var(--c-primary-color);
+  font-weight: 600;
+  border-bottom-color: var(--c-primary-color);
+}
+
+.page-tab:focus-visible {
+  outline: 2px solid var(--c-primary-color);
+  outline-offset: 2px;
+}
+
+.page-header {
+  position: sticky;
+  top: 48px;
+  z-index: 2;
+  padding-block: 16px;
+  background-color: var(--c-primary-surface);
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: var(--c-text-xl);
+  font-weight: 600;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.page-toc {
+  position: sticky;
+  top: calc(var(--c-topbar-height) + 24px);
+  align-self: start;
+  font-size: var(--c-text-sm);
+}
+
+.page-toc nav {
+  border-inline-start: 1px solid var(--c-primary-border-color);
+  padding-inline-start: 16px;
+}
+
+.page-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-toc li + li {
+  margin-top: 8px;
+}
+
+.page-toc button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--c-secondary-text-color);
+}
+
+.page-toc button:hover {
+  color: var(--c-primary-color);
+}
+
+.page-toc button.is-active {
+  color: var(--c-primary-color);
+  font-weight: 600;
+}
+
+.page-toc button:focus-visible {
+  outline: 2px solid var(--c-primary-color);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1200px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .page-toc {
+    display: none;
+  }
+}

@@ -1,8 +1,29 @@
 <nav class="topbar">
-  <div class="topbar__brand">
-    <img src="assets/img/cesar-dev.png" class="brand__brandmark"/>
+
+  <div class="topbar__brand" (click)="goToLanding()">
+    <img src="/assets/img/cesar-dev.png" alt="logo cesardev" class="brand__brandmark" />
     <span class="brand__wordmark">cesardev</span>
   </div>
-  <div class="topbar__actions">docs blocks design</div>
-</nav>
 
+  <nav class="topbar__nav">
+    <a routerLink="/components" routerLinkActive="is-active">Components</a>
+    <a routerLink="/blocks" routerLinkActive="is-active">Blocks</a>
+    <a routerLink="/styles" routerLinkActive="is-active">Styles</a>
+    <a routerLink="/wiki" routerLinkActive="is-active">Wiki</a>
+  </nav>
+
+  <div class="topbar__actions">
+    <button type="button" class="theme-toggle" [attr.aria-label]="'Theme: ' + mode" (click)="toggleTheme()">
+      <i class="material-icons-outlined">
+        {{
+        mode === 'light'
+        ? 'light_mode'
+        : mode === 'dark'
+        ? 'dark_mode'
+        : 'computer'
+        }}
+      </i>
+    </button>
+  </div>
+
+</nav>
