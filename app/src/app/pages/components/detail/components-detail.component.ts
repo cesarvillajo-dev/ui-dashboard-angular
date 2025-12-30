@@ -62,7 +62,7 @@ export class ComponentsDetailComponent implements AfterViewInit {
 
   private observer?: IntersectionObserver;
 
-  // 🔒 lock para scroll programático
+  // lock para scroll programático
   private isAutoScrolling = false;
   private autoScrollTimeout?: number;
 
@@ -102,7 +102,7 @@ export class ComponentsDetailComponent implements AfterViewInit {
   }
 
   onSectionClick(sectionId: string): void {
-    // 🔒 activamos lock
+    //  activamos lock
     this.isAutoScrolling = true;
     this.activeSectionId = sectionId;
 
@@ -112,7 +112,7 @@ export class ComponentsDetailComponent implements AfterViewInit {
       .getElementById(sectionId)
       ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    // ⏱ liberamos lock tras animación
+    //  liberamos lock tras animación
     this.autoScrollTimeout = window.setTimeout(() => {
       this.isAutoScrolling = false;
     }, 500);

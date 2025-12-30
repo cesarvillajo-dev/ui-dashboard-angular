@@ -1,21 +1,30 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class LandingStateService {
 
-  private readonly KEY = 'c-dashboard-landing-visited';
+  private readonly KEY = 'hasVisited';
 
-  hasVisited(): boolean {
-    return sessionStorage.getItem(this.KEY) === 'true';
+  constructor(private router: Router) {}
+
+  /** Solo se llama al entrar en "/" */
+  checkLanding(): void {
+    const visited = sessionStorage.getItem(this.KEY);
+
+    if (!visited) {
+      sessionStorage.setItem(this.KEY, 'true');
+      return;
+    }
   }
 
-  markVisited(): void {
-    sessionStorage.setItem(this.KEY, 'true');
-  }
-
+  /** Solo se llama explícitamente desde el logo */
   reset(): void {
     sessionStorage.removeItem(this.KEY);
+  }
+
+  /** 🔒 Protección crítica */
+  isRootUrl(): boolean {
+    return this.router.url === '/' || this.router.url === '';
   }
 }

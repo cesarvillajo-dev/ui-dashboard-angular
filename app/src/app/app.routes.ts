@@ -6,7 +6,6 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 
 // Landing / Home
 import { LandingComponent } from './pages/landing/landing.component';
-import { HomeComponent } from './pages/home/home.component';
 
 // Components
 import { ComponentsComponent } from './pages/components/components.component';
@@ -15,21 +14,20 @@ import { ComponentsDetailComponent } from './pages/components/detail/components-
 
 // Blocks
 import { BlocksComponent } from './pages/blocks/blocks.component';
-
 // Styles
 import { StylesComponent } from './pages/styles/styles.component';
-
 // Wiki
 import { WikiComponent } from './pages/wiki/wiki.component';
 
 export const routes: Routes = [
 
-  /* =========================================================
-     LANDING (SIN SIDEBAR · SIN DASHBOARD)
-     ========================================================= */
+  /* =====================================================
+     LANDING — SOLO /
+     ===================================================== */
   {
     path: '',
     component: BaseLayoutComponent,
+    pathMatch: 'full',
     children: [
       {
         path: '',
@@ -38,58 +36,37 @@ export const routes: Routes = [
     ],
   },
 
-  /* =========================================================
-     DASHBOARD (TOPBAR FIJO + SIDEBAR)
-     ========================================================= */
+  /* =====================================================
+     DASHBOARD — TODAS LAS SECCIONES
+     ===================================================== */
   {
     path: '',
     component: DashboardLayoutComponent,
     children: [
 
-      /* ---------- HOME ---------- */
-      {
-        path: 'home',
-        component: HomeComponent,
-      },
-
-      /* =====================================================
-         COMPONENTS
-         ===================================================== */
+      // COMPONENTS
       {
         path: 'components',
         component: ComponentsComponent,
         children: [
-          {
-            path: '',
-            component: ComponentsIndexComponent,
-          },
-          {
-            path: ':slug',
-            component: ComponentsDetailComponent,
-          },
+          { path: '', component: ComponentsIndexComponent },
+          { path: ':slug', component: ComponentsDetailComponent },
         ],
       },
 
-      /* =====================================================
-         BLOCKS
-         (estructura simple por ahora, ampliable después)
-         ===================================================== */
+      // BLOCKS
       {
         path: 'blocks',
         component: BlocksComponent,
       },
 
-      /* =====================================================
-         STYLES
-         ===================================================== */
+      // STYLES
       {
         path: 'styles',
         component: StylesComponent,
       },
 
-      /* =====================================================
-         WIKI
-         ===================================================== */
+      // WIKI
       {
         path: 'wiki',
         component: WikiComponent,
@@ -97,9 +74,9 @@ export const routes: Routes = [
     ],
   },
 
-  /* =========================================================
+  /* =====================================================
      FALLBACK
-     ========================================================= */
+     ===================================================== */
   {
     path: '**',
     redirectTo: '',

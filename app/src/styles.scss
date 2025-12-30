@@ -175,11 +175,11 @@ body {
    MARK: ROOT LIGHT
    ===================================================== */
 :root.light {
-  /* variables claras */
+    /* variables claras */
 }
 
 :root.dark {
-  /* variables oscuras */
+    /* variables oscuras */
 }
 
 
@@ -234,7 +234,9 @@ body {
     --c-text-5xl: 3rem; // 48px
     --c-text-6xl: 3.75rem; // 60px
     --c-text-7xl: 4.5rem; // 72px
-
+    --c-text-8xl: 6rem; // 96px
+    --c-text-9xl: 8rem; // 128px
+    
     --c-line-height-xs: 1.4;
     --c-line-height-sm: 1.45;
     --c-line-height-base: 1.5;
@@ -246,6 +248,8 @@ body {
     --c-line-height-5xl: 1.15;
     --c-line-height-6xl: 1.1;
     --c-line-height-7xl: 1.1;
+    --c-line-height-8xl: 1;
+    --c-line-height-9xl: 1;
 
     --c-border-radius-none: 0;
     --c-border-radius-sm: 2px;

@@ -15,13 +15,7 @@
   <div class="topbar__actions">
     <button type="button" class="theme-toggle" [attr.aria-label]="'Theme: ' + mode" (click)="toggleTheme()">
       <i class="material-icons-outlined">
-        {{
-        mode === 'light'
-        ? 'light_mode'
-        : mode === 'dark'
-        ? 'dark_mode'
-        : 'computer'
-        }}
+        {{ mode === 'light' ? 'light_mode' : mode === 'dark' ? 'dark_mode' : 'computer' }}
       </i>
     </button>
   </div>
