@@ -28,11 +28,7 @@ export class TopbarComponent {
   }
 
   toggleTheme(): void {
-    const next = this.mode === 'light'
-      ? 'dark'
-      : this.mode === 'dark'
-        ? 'system'
-        : 'light';
+    const next = this.mode === 'light' ? 'dark' : 'light';
 
     this.mode = next;
     this.theme.setMode(next);

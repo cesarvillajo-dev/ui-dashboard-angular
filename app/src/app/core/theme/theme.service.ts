@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-export type ThemeMode = 'light' | 'dark' | 'system';
+export type ThemeMode = 'light' | 'dark';
 
 @Injectable({
   providedIn: 'root',
@@ -9,43 +9,45 @@ export class ThemeService {
 
   private readonly STORAGE_KEY = 'c-dashboard-theme';
 
-  private mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
+  /**
+   * Inicializa el tema de la aplicación.
+   * Se llama una sola vez al arrancar la app.
+   */
   init(): void {
     const saved = this.getSavedMode();
     this.apply(saved);
-
-    // Escuchar cambios del sistema solo si el modo es system
-    this.mediaQuery.addEventListener('change', () => {
-      if (this.getSavedMode() === 'system') {
-        this.apply('system');
-      }
-    });
   }
 
+  /**
+   * Establece explícitamente el modo de tema.
+   */
   setMode(mode: ThemeMode): void {
     localStorage.setItem(this.STORAGE_KEY, mode);
     this.apply(mode);
   }
 
+  /**
+   * Devuelve el modo de tema actual persistido.
+   */
   getMode(): ThemeMode {
     return this.getSavedMode();
   }
 
+  /**
+   * Obtiene el modo guardado o devuelve el modo por defecto.
+   */
   private getSavedMode(): ThemeMode {
-    return (localStorage.getItem(this.STORAGE_KEY) as ThemeMode) ?? 'system';
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    return stored === 'dark' ? 'dark' : 'light';
   }
 
+  /**
+   * Aplica el tema al documento.
+   */
   private apply(mode: ThemeMode): void {
     const root = document.documentElement;
 
     root.classList.remove('light', 'dark');
-
-    if (mode === 'system') {
-      const prefersDark = this.mediaQuery.matches;
-      root.classList.add(prefersDark ? 'dark' : 'light');
-    } else {
-      root.classList.add(mode);
-    }
+    root.classList.add(mode);
   }
 }

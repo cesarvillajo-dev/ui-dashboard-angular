@@ -3,6 +3,7 @@
 :root {
     --c-topbar-height: 56px;
     --c-primary-surface: var(--c-white);
+    --c-secondary-surface: var(--c-gray-200);
     --c-primary-border-color: var(--c-gray-500);
     --c-secondary-border-color: var(--c-gray-300);
 
@@ -105,9 +106,9 @@ body {
 :root {
 
     h1 {
-        font-size: var(--c-text-4xl);
+        font-size: var(--c-text-5xl);
         /* 36px */
-        line-height: var(--c-line-height-4xl);
+        line-height: var(--c-line-height-5xl);
         /* 1.25 */
         font-weight: 600;
     }
@@ -220,23 +221,23 @@ body {
 :root {
 
     --c-font-family-base: "Inter", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --c-font-fanily-brand: "Inter Tight", "Inter", system-ui, sans-serif;
+    --c-font-family-brand: "Inter Tight", "Inter", system-ui, sans-serif;
     --c-font-family-code: "JetBrains Mono", monospace;
 
     --c-text-xs: .75rem; // 12px
     --c-text-sm: .875rem; // 14px
     --c-text-base: 1rem; // 16px
-    --c-text-lg: 1.125rem; // 18px
-    --c-text-xl: 1.25rem; // 20px
-    --c-text-2xl: 1.5rem; // 24px
+    --c-text-lg: 1.125rem; // 18px <--text ui
+    --c-text-xl: 1.25rem; // 20px 
+    --c-text-2xl: 1.5rem; // 24px <-- subtitle ui
     --c-text-3xl: 1.875rem; // 30px
-    --c-text-4xl: 2.25rem; // 36px
+    --c-text-4xl: 2.25rem; // 36px <-- title ui
     --c-text-5xl: 3rem; // 48px
     --c-text-6xl: 3.75rem; // 60px
     --c-text-7xl: 4.5rem; // 72px
     --c-text-8xl: 6rem; // 96px
     --c-text-9xl: 8rem; // 128px
-    
+
     --c-line-height-xs: 1.4;
     --c-line-height-sm: 1.45;
     --c-line-height-base: 1.5;
@@ -250,15 +251,27 @@ body {
     --c-line-height-7xl: 1.1;
     --c-line-height-8xl: 1;
     --c-line-height-9xl: 1;
-
+    
+    --c-font-weight-thin: 100;
+    --c-font-weight-extralight: 200;
+    --c-font-weight-light: 300;
+    --c-font-weight-normal: 400;
+    --c-font-weight-medium: 500;
+    --c-font-weight-semibold: 600;
+    --c-font-weight-bold: 700;
+    --c-font-weight-extrabold: 800;
+    --c-font-weight-black: 900;
+    
     --c-border-radius-none: 0;
-    --c-border-radius-sm: 2px;
-    --c-border-radius-base: 4px;
-    --c-border-radius-md: 6px;
-    --c-border-radius-lg: 8px;
-    --c-border-radius-xl: 12px;
-    --c-border-radius-2xl: 16px;
-    --c-border-radius-3xl: 9999px;
+    --c-border-radius-xs: .125rem; // 2px
+    --c-border-radius-sm: .25rem; // 4px
+    --c-border-radius-md: .375rem; // 6px
+    --c-border-radius-lg: .5rem; // 8px
+    --c-border-radius-xl: .75rem; // 12px
+    --c-border-radius-2xl: 1rem; // 16px
+    --c-border-radius-3xl: 1.5rem; // 24px
+    --c-border-radius-4xl: 2rem; // 32px
+    --c-border-radius-rounded: 9999px;
 }
 
 /* =====================================================
