@@ -1,74 +1,192 @@
 <div class="landing">
 
-  <div class="landing-content">
-    <section class="landing__shape">
-      <div class="landing__gradient">
-        <div class="c-gradient-1"></div>
-        <div class="c-gradient-2"></div>
-        <div class="c-gradient-3"></div>
-        <div class="c-gradient-4"></div>
-        <div class="c-gradient-5"></div>
-      </div>
-      <div class="landing__hero">
-        <div class="landing__hero-subtitle">v1.0.1 - Est.26</div>
-        <div class="landing__hero-title">Develop UI</div>
-        <div class="landing__hero-subtitle">herramientas para el desarrollador </div>
-      </div>
-    </section>
+  <div class="landing-grid">
 
-    <section class="landing-doc">
+    <!-- MARGEN IZQUIERDO -->
+    <div class="landing-margin c-pattern--diagonal-lines"></div>
 
-      <h2 class="landing__doc-title">
-        Construye rápidamente componentes SINTRA
-        <br>sin tener que buscar en otro sitio.
-      </h2>
-
-      <h3 class="landing__doc-subtitle">
-        Guía para el desarrollo de aplicaciones:
-      </h3>
-      <p class="landing__doc-text">
-        Develop UI es un conjunto de herramientas de diseño que ayudan al desarrollador a seguir una línea única de
-        contrucción de interfaces.
-      </p>
-
-      <h3 class="landing__doc-subtitle">
-        Components
-      </h3>
-      <p class="landing__doc-text">
-        Todos los componentes en un sólo sitio,
-        preparados para ser implantados sin necesidad de buscar.
-        <br>
-        Angular Material y PrimeNG suman para formar un solo estilo.
-      </p>
-
-      <h3 class="landing__doc-subtitle">
-        Blocks
-      </h3>
-      <p class="landing__doc-text">
-        Bloques de interfaz de usuario preconstruidos.
-        <br>Ejemplos que ya forman parte en varias aplicaciones y que repiten fórmulas de maquetación.
-      </p>
-
-      <h3 class="landing__doc-subtitle">
-        Styles
-      </h3>
-      <p class="landing__doc-text">
-        Tokens de diseño utilizados para cada elemento, contrucción y variables.
-      </p>
-      
-      <h3 class="landing__doc-subtitle">
-        Wiki
-      </h3>
-      <p class="landing__doc-text">
-        Documentación para normas diseño
-      </p>
-    </section>
+    <!-- COLUMNA CENTRAL SECCIONES-->
+    <div class="landing-main c-pattern--design">
 
 
+
+      <!-- HERO · Developer-Centric centrado -->
+      <section class="landing-hero">
+
+        <div class="landing-hero__content">
+
+          <div class="landing-hero__meta">
+            <span>v1.0.1 · Est.26</span>
+            <span class="separate">|</span>
+            <span class="accent"> Powered by Cesar Villajo</span>
+            <span>⭐5</span>
+          </div>
+
+          <div class="landing-hero__title">
+            <span>Develop</span>
+            <span class="accent">UI</span>
+          </div>
+
+          <p class="landing-hero__subtitle">
+            Sistema de documentación para construir interfaces coherentes y unificadas<br> con Angular Material y
+            PrimeNG.
+          </p>
+          <div class="landing-hero__buttons">
+            <button class="hero-button-1">Empezar</button>
+            <button class="hero-button-2">Ver más</button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- SECCIÓN · QUÉ ES? (Product-First split) -->
+      <section class="landing-what landing-section ">
+        <div class="split-grid split-grid--what">
+
+          <div class="split-text">
+            <h2 class="landing__doc-text accent">
+              Implementar más rápido
+            </h2>
+            
+            <h2 class="landing__doc-hero-title">
+              Todo lo que necesitas para construir componentes SINTRA
+              en un solo lugar.
+            </h2>
+
+            <p class="landing__doc-text">
+              Sistema de desarrollo de interfaces que unifica estilos,
+              componentes y bloques de maquetación.
+            </p>
+
+            <p class="landing__doc-text">
+              Permite que Angular Material y PrimeNG compartan la misma
+              apariencia y que toda la aplicación mantenga una
+              estructura coherente.
+            </p>
+
+            <p class="landing__doc-text landing__doc-text--muted">
+              No es un framework ni una librería nueva.
+              Es una referencia técnica para construir interfaces
+              de forma consistente.
+            </p>
+          </div>
+
+          <div class="split-visual">
+            <figure class="dashboard-frame">
+              <img src="assets/img/dashboard-preview.png" alt="Vista general del dashboard" loading="lazy" />
+            </figure>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- SECCIÓN · QUÉ INCLUYE (Modular Grid) -->
+      <section class="landing-section landing-section--includes">
+
+        <h2 class="landing__doc-title">¿Qué incluye?</h2>
+
+        <div class="includes-grid">
+
+          <article class="c-card">
+            <h3 class="c-card__title">Components</h3>
+            <p class="c-card__text">
+              Componentes documentados con ejemplos reales,
+              API clara y criterios de uso definidos.
+            </p>
+          </article>
+
+          <article class="c-card">
+            <h3 class="c-card__title">Blocks</h3>
+            <p class="c-card__text">
+              Bloques de interfaz reutilizables basados
+              en patrones reales de aplicaciones.
+            </p>
+          </article>
+
+          <article class="c-card">
+            <h3 class="c-card__title">Styles</h3>
+            <p class="c-card__text">
+              Tokens de diseño, tipografía, espaciado y
+              variables que definen el sistema visual.
+            </p>
+          </article>
+
+          <article class="c-card">
+            <h3 class="c-card__title">Wiki</h3>
+            <p class="c-card__text">
+              Normas de diseño, decisiones técnicas
+              y criterios que rigen el sistema.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+
+
+      <!-- SECCIÓN · CÓMO SE UTILIZA (Split explicativo) -->
+      <section class="landing-section landing-section--how">
+
+        <div class="split-grid split-grid--how">
+
+          <div class="split-text">
+            <h2 class="landing__doc-title">¿Cómo se utiliza?</h2>
+
+            <p class="landing__doc-text">
+              Explora un componente, revisa sus ejemplos,
+              consulta la API y replica el patrón en tu aplicación.
+            </p>
+
+            <p class="landing__doc-text">
+              La documentación está pensada para usarse
+              mientras desarrollas, no para leerse de principio a fin.
+            </p>
+          </div>
+
+          <div class="split-visual">
+            <ol class="how-steps">
+              <li>Selecciona un componente</li>
+              <li>Revisa variantes y ejemplos</li>
+              <li>Consulta la API</li>
+              <li>Aplica el patrón en tu proyecto</li>
+            </ol>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- SECCIÓN - CTA TÉCNICO FINAL (Cierre profesional) -->
+      <section class="landing-section landing-section--cta">
+
+        <div class="cta-box">
+          <h2 class="cta-title">Empieza por la documentación</h2>
+
+          <p class="cta-text">
+            Explora los componentes, revisa ejemplos reales
+            y consulta la API mientras desarrollas.
+          </p>
+
+          <div class="cta-actions">
+            <a href="/docs" class="c-button c-button--primary">
+              Ver documentación
+            </a>
+            <a href="/components" class="c-button c-button--secondary">
+              Ver components
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+
+    </div>
+
+    <!-- MARGEN DERECHO -->
+    <div class="landing-margin c-pattern--diagonal-lines"></div>
 
   </div>
-
-
-
-
 </div>

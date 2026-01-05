@@ -188,7 +188,7 @@ body {
 
 // COLOR
 :root {
-    --c-primary-color: #3f51b5;
+    --c-primary-color: #304ffe;
     --c-secondary-color: #ff1493;
     --c-primary-text-color: #212121;
 }
@@ -251,7 +251,7 @@ body {
     --c-line-height-7xl: 1.1;
     --c-line-height-8xl: 1;
     --c-line-height-9xl: 1;
-    
+
     --c-font-weight-thin: 100;
     --c-font-weight-extralight: 200;
     --c-font-weight-light: 300;
@@ -261,7 +261,7 @@ body {
     --c-font-weight-bold: 700;
     --c-font-weight-extrabold: 800;
     --c-font-weight-black: 900;
-    
+
     --c-border-radius-none: 0;
     --c-border-radius-xs: .125rem; // 2px
     --c-border-radius-sm: .25rem; // 4px
@@ -274,6 +274,60 @@ body {
     --c-border-radius-rounded: 9999px;
 }
 
+
 /* =====================================================
-   MARK: SEMANTIC VAR
+   MARK: Atomic CSS
    ===================================================== */
+
+.flex-1 {
+    flex: 1 1 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+.gap-5 {
+    gap: 2rem;
+}
+
+/* =====================================================
+   MARK: Utility First
+   ===================================================== */
+
+
+.c-card {
+  padding: 2rem;
+  border: 1px solid var(--c-gray-200);
+  background: var(--c-surface-color);
+}
+
+.c-card__title {
+  font-size: var(--c-text-xl);
+  font-weight: var(--c-font-weight-semibold);
+  margin-bottom: 0.5rem;
+}
+
+.c-card__text {
+  font-size: var(--c-text-md);
+  color: var(--c-gray-600);
+}

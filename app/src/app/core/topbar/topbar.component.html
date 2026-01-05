@@ -13,16 +13,13 @@
   </nav>
 
   
-  <div class="topbar__actions">
-    <span class="topbar__mode">
-      <span>mode</span>
+  <div class="topbar__actions">    
       <button type="button" class="topbar__theme-toggle" [attr.aria-label]="'Theme: ' + mode" (click)="toggleTheme()">     
         <i class="material-icons-outlined">
           {{ mode === 'dark' ? 'light_mode' : 'dark_mode' }}
         </i>
-      </button>
-    </span>
-    <code >"by &#64;cesarvillajo"</code>
+      </button> 
+    <small>by &#64;cesarvillajo</small>
   </div>
 
 </nav>

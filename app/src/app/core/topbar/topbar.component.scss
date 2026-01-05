@@ -4,29 +4,6 @@
  * Contact: cesarvillajo.dev@gmail.com
  */
 
-
-
-
-
-
-// logotipo
-.brand__brandmark {
-  width: 32px;
-  height: 32px;
-}
-
-// isologo
-.brand__wordmark {
-  font-size: 22px;
-  font-family: var(--c-font-family-base);
-  font-optical-sizing: auto;
-  font-weight: var(--c-font-weight-bold);
-  font-style: normal;
-  line-height: 1;
-  position: relative;
-  top: -1px;
-}
-
 // nav
 .topbar {
   display: flex;
@@ -49,6 +26,7 @@
 //   left: -100vw;
 // }
 
+// MARK: Logo
 .topbar__brand {
   display: flex;
   align-items: center;
@@ -56,34 +34,45 @@
   cursor: pointer;
 }
 
+// logotipo
+.brand__brandmark {
+  width: 32px;
+  height: 32px;
+}
 
+// isologo
+.brand__wordmark {
+  font-size: 22px;
+  font-family: var(--c-font-family-base);
+  font-optical-sizing: auto;
+  font-weight: var(--c-font-weight-bold);
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  top: -1px;
+}
+
+// MARK: Enlaces navegación
 .topbar__nav {
   display: flex;
   gap: 16px;
   margin-left: 32px;
 }
 
-
 .topbar__nav a.active {
   font-weight: 600;
 }
 
-// acciones de light/dark
+// MARK: modos light/dark
 .topbar__actions {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
   margin-left: auto;
   margin-right: .5rem;
 }
-.topbar__mode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid lightgray;
-  border-radius: 9999px;
-  padding: 2px 0 2px 8px;
-}
+
+// botón sun/moon
 .topbar__theme-toggle {
   background: none;
   border: none;
@@ -92,7 +81,13 @@
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  border: 1px solid var(--c-primary-border-color);
+  height: 2rem;
+  width: auto;
+  padding: 2px;
+  border-radius: 8px;
 
+  &:hover {
+    box-shadow: 0 0 0 2px var(--c-primary-color);
+  }
 }
-
-
