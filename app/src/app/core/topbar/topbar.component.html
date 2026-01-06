@@ -1,25 +1,45 @@
 <nav class="topbar">
 
-  <div class="topbar__brand" (click)="goToLanding()">
-    <img src="/assets/img/cesar-dev.png" alt="logo cesardev" class="brand__brandmark" />
-    <span class="brand__wordmark">Develop UI</span>    
-  </div>
+  <div class="topbar-grid">
 
-  <nav class="topbar__nav">
-    <a routerLink="/components" routerLinkActive="is-active">Components</a>
-    <a routerLink="/blocks" routerLinkActive="is-active">Blocks</a>
-    <a routerLink="/styles" routerLinkActive="is-active">Styles</a>
-    <a routerLink="/wiki" routerLinkActive="is-active">Wiki</a>
-  </nav>
+    <div class="topbar-margin"></div>
 
-  
-  <div class="topbar__actions">    
-      <button type="button" class="topbar__theme-toggle" [attr.aria-label]="'Theme: ' + mode" (click)="toggleTheme()">     
-        <i class="material-icons-outlined">
-          {{ mode === 'dark' ? 'light_mode' : 'dark_mode' }}
-        </i>
-      </button> 
-    <small>by &#64;cesarvillajo</small>
+    <div class="topbar-main">
+
+      <div class="topbar-content">
+
+
+        <div class="topbar__start">
+          <section class="topbar__brand" (click)="goToLanding()">
+            <img src="/assets/img/cesar-dev.png" alt="logo cesardev" class="brand__brandmark" />
+            <span class="brand__wordmark">Develop UI</span>
+          </section>
+
+          <nav class="topbar__nav">
+            <a routerLink="/components" routerLinkActive="is-active">Components</a>
+            <a routerLink="/blocks" routerLinkActive="is-active">Blocks</a>
+            <a routerLink="/styles" routerLinkActive="is-active">Styles</a>
+            <a routerLink="/wiki" routerLinkActive="is-active">Wiki</a>
+          </nav>
+
+        </div>
+
+        <div class="topbar__space"></div>
+
+        <section class="topbar__actions">
+          <button type="button" class="topbar__theme-toggle" [attr.aria-label]="'Theme: ' + mode"
+            (click)="toggleTheme()">
+            <i class="material-icons-outlined">
+              {{ mode === 'dark' ? 'light_mode' : 'dark_mode' }}
+            </i>
+          </button>
+        </section>
+
+      </div>
+
+    </div>
+    <div class="topbar-margin"></div>
+
   </div>
 
 </nav>

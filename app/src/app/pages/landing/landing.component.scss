@@ -10,7 +10,7 @@
 
 .landing-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(1535px, 10fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(1536px, 10fr) minmax(0, 1fr);
   min-width: 0;
 }
 
@@ -29,22 +29,25 @@
   min-height: 100%;
 }
 
+.landing-section {
+  padding: 0 2rem;
+  margin-top: 4rem;
+}
+
 /* ============================================
    MARK: HERO
    ============================================ */
 
 .landing-hero {
   position: relative;
-  padding: 7.5rem 2rem;
-  overflow: hidden;
 }
 
 .landing-hero__content {
   display: grid;
   align-content: center;
   justify-items: center;
-  height: 100%;
   margin: 0 auto;
+  min-height: calc(100vh - 56px);
   text-align: center;
 }
 
@@ -71,6 +74,8 @@
 
 .landing-hero__title {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   font-size: clamp(var(--c-text-7xl), var(--c-text-9xl), var(--c-text-9xl));
   font-weight: var(--c-font-weight-medium);
@@ -103,6 +108,14 @@
   color: var(--c-white);
   border: 1px solid var(--c-primary-color);
   border-radius: var(--c-border-radius-lg);
+  transition: 250ms ease;
+
+  &:hover {
+    cursor: pointer;
+    background: color-mix(in oklab, var(--c-primary-color) 88%, var(--c-white));
+    transform: scale(1.015);
+    transition: background scale ease-in-out 250ms;
+  }
 }
 
 .hero-button-2 {
@@ -113,14 +126,31 @@
   color: var(--c-primary-color);
   border: 1px solid var(--c-primary-border-color);
   border-radius: var(--c-border-radius-lg);
+
+  &:hover {
+    cursor: pointer;
+    background: color-mix(in oklab, var(--c-black) 2%, var(--c-white));
+    transform: scale(1.015);
+    transition: background scale ease-in-out 250ms;
+  }
 }
+
 
 /* ============================================
    MARK: WHAT
    ============================================ */
+.landing-what {
+  position: relative;
+}
+
 .split-grid.split-grid--what {
- grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
- align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.landing-what.landing-section {
+  padding: 1rem 0 1rem 2rem;
+  //background-color: color-mix(in srgb, var(--c-primary-color) 12%, transparent);
 }
 
 .dashboard-frame {
@@ -131,8 +161,9 @@
 
 .dashboard-frame img {
   width: auto;
-  height: 600px;
+  height: 540px;
 }
+
 
 
 /* ============================================
@@ -143,27 +174,35 @@
   padding: 0 2rem 4rem;
 }
 
+.landing__doc-hero {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  width: 100%;
+}
+
 .landing__doc-hero-title {
   font-size: var(--c-text-5xl);
   font-weight: var(--c-font-weight-bold);
   line-height: 1;
-  margin: 1rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .landing__doc-title {
   font-size: var(--c-text-4xl);
   font-weight: var(--c-font-weight-bold);
-  margin: 4rem 0 0 0;
+  margin: 4rem0 0 0 0;
+
 }
 
-.landing__doc-subtitle {
-  font-size: var(--c-text-2xl);
-  font-weight: var(--c-font-weight-semibold);
-  margin: 2rem 0 0 0;
+.landing__doc-hero-subtitle {
+  font-size: var(--c-text-xl);
+  font-weight: var(--c-font-weight-normal);
+  margin: 1rem 0 0 0;
 }
 
 .landing__doc-text {
-  font-size: var(--c-text-lg); 
+  font-size: var(--c-text-lg);
   margin: 2rem 0 0 0;
 
   &.accent {
@@ -175,7 +214,7 @@
    RESPONSIVE
    ============================================ */
 
-@media (max-width: 1024px) {
+@media (max-width: 1279px) {
   .landing-grid {
     grid-template-columns: 1fr;
   }
@@ -192,9 +231,30 @@
 
 @media (max-width: 1024px) {
 
-  .landing-margin-start,
-  .landing-margin-end {
+  .landing-margin {
     display: none;
+  }
+  .landing-main{
+    margin: 0;
+  }
+
+}
+@media (max-width: 699px) {
+  .landing-hero__title{
+    gap: 0;
+    line-height: 1;
+    transition: ease 200ms;
+  }
+  .split-grid--what .split-visual {
+    display: none;
+  }
+  .split-grid.split-grid--what,
+  .landing-include .includes-grid {
+   grid-template-columns: 1fr
+  }
+
+  .landing__doc-hero-subtitle {
+    text-align: center;
   }
 }
 
@@ -244,39 +304,56 @@
     repeating-linear-gradient(150deg, transparent, transparent 35px, rgba(31, 41, 55, 0.04) 35px, rgba(31, 41, 55, 0.04) 36px);
 }
 
-// .landing-section {
-//   margin-top: 6rem;
-// }
+
+/* ============================================
+   MARK: INCLUDES
+   ============================================ */
+
+.landing-include {
+  margin: 2rem 0 0 0;
+}
+
+.include-card__icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--c-primary-color);
+  border: 1px solid var(--c-primary-color);
+  border-radius: 16px;
+
+  i.material-icons-outlined {
+    font-size: 2.5rem;
+    color: var(--c-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
 
 .includes-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
-  margin-top: 3rem;
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .include-card {
-  padding: 2rem;
-  border: 1px solid var(--c-gray-200);
-  background-color: var(--c-surface-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 1rem 0;
+
 }
 
-.include-card h3 {
-  font-size: var(--c-text-xl);
-  font-weight: var(--c-font-weight-semibold);
-  margin-bottom: 0.75rem;
+.include-card .landing__doc-title,
+.include-card .landing__doc-text {
+  margin: 1rem 0 0 0;
 }
 
-.include-card p {
-  font-size: var(--c-text-md);
-  color: var(--c-gray-600);
-}
-
-@media (max-width: 768px) {
-  .includes-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 
 /* ============================================
@@ -286,7 +363,7 @@
 .split-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   min-width: 0;
 }
@@ -298,6 +375,9 @@
   overflow: hidden;
 }
 
+.split-text {
+  padding: 0 1rem 0 0;
+}
 
 /* ============================================
    HOW IT WORKS

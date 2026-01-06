@@ -11,8 +11,8 @@
 
 
 /* =====================================================
-   MARK: BODY BASE
-   ===================================================== */
+MARK: BODY BASE
+===================================================== */
 
 //AJUSTE EN DASHBOARD PARA QUE NO HAYA UN SCROLL GENERAL
 
@@ -21,6 +21,7 @@ html {
     font-family: "Inter", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 400;
     line-height: 1.5;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -42,9 +43,13 @@ body {
 }
 
 *,
-::before,
-::after {
+:after,
+:before,
+::backdrop {
     box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0
 }
 
 .material-icons-outlined {
@@ -98,6 +103,7 @@ body {
     /* Support for IE. */
     font-feature-settings: 'liga';
 }
+
 
 
 /* =====================================================
@@ -175,13 +181,13 @@ body {
 /* =====================================================
    MARK: ROOT LIGHT
    ===================================================== */
-:root.light {
-    /* variables claras */
-}
+// :root.light {
+//     /* variables claras */
+// }
 
-:root.dark {
-    /* variables oscuras */
-}
+// :root.dark {
+//     /* variables oscuras */
+// }
 
 
 
@@ -299,6 +305,10 @@ body {
     width: 100%;
 }
 
+.h-100 {
+    height: 100%;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -306,9 +316,19 @@ body {
 .flex-nowrap {
     flex-wrap: nowrap;
 }
+
 .gap-5 {
     gap: 2rem;
 }
+
+.gap-2 {
+    gap: .5rem
+}
+
+.gap-4 {
+    gap: 1rem
+}
+
 
 /* =====================================================
    MARK: Utility First
@@ -316,18 +336,19 @@ body {
 
 
 .c-card {
-  padding: 2rem;
-  border: 1px solid var(--c-gray-200);
-  background: var(--c-surface-color);
+    padding: 2rem;
+    border: 1px solid var(--c-primary-border-color);
+    background: var(--c-primary-surface);
+    border-radius: 1rem;
 }
 
 .c-card__title {
-  font-size: var(--c-text-xl);
-  font-weight: var(--c-font-weight-semibold);
-  margin-bottom: 0.5rem;
+    font-size: var(--c-text-xl);
+    font-weight: var(--c-font-weight-semibold);
+    margin-bottom: 0.5rem;
 }
 
 .c-card__text {
-  font-size: var(--c-text-md);
-  color: var(--c-gray-600);
+    font-size: var(--c-text-md);
+    color: var(--c-gray-600);
 }

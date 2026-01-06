@@ -16,7 +16,7 @@
         <div class="landing-hero__content">
 
           <div class="landing-hero__meta">
-            <span>v1.0.1 · Est.26</span>
+            <span>v1.0.1 - Est.26</span>
             <span class="separate">|</span>
             <span class="accent"> Powered by Cesar Villajo</span>
             <span>⭐5</span>
@@ -32,8 +32,8 @@
             PrimeNG.
           </p>
           <div class="landing-hero__buttons">
-            <button class="hero-button-1">Empezar</button>
-            <button class="hero-button-2">Ver más</button>
+            <button class="hero-button-1"  (click)="goToComponents()">Comenzar</button>
+            <button class="hero-button-2" (click)="scrollTo('section-what')">Ver más</button>
           </div>
 
         </div>
@@ -41,14 +41,15 @@
 
 
       <!-- SECCIÓN · QUÉ ES? (Product-First split) -->
-      <section class="landing-what landing-section ">
+      <section id="section-what" class="landing-what landing-section ">
+
         <div class="split-grid split-grid--what">
 
           <div class="split-text">
             <h2 class="landing__doc-text accent">
               Implementar más rápido
             </h2>
-            
+
             <h2 class="landing__doc-hero-title">
               Todo lo que necesitas para construir componentes SINTRA
               en un solo lugar.
@@ -57,18 +58,17 @@
             <p class="landing__doc-text">
               Sistema de desarrollo de interfaces que unifica estilos,
               componentes y bloques de maquetación.
-            </p>
-
-            <p class="landing__doc-text">
               Permite que Angular Material y PrimeNG compartan la misma
               apariencia y que toda la aplicación mantenga una
               estructura coherente.
             </p>
 
-            <p class="landing__doc-text landing__doc-text--muted">
-              No es un framework ni una librería nueva.
-              Es una referencia técnica para construir interfaces
-              de forma consistente.
+            <h2 class="landing__doc-hero-title">
+              No es un una librería nueva.
+            </h2>
+            <p class="landing__doc-text ">
+              Es una referencia técnica para construir interfaces de forma consistente sin tener que consultar en otras
+              documentaciones sobre estilos o bloques de desarrollo.
             </p>
           </div>
 
@@ -83,39 +83,68 @@
 
 
       <!-- SECCIÓN · QUÉ INCLUYE (Modular Grid) -->
-      <section class="landing-section landing-section--includes">
+      <section class="landing-include landing-section ">
 
-        <h2 class="landing__doc-title">¿Qué incluye?</h2>
+        <div class="landing__doc-hero">
+          <h2 class="landing__doc-hero-title">¿Qué incluye?</h2>
+          <p class="landing__doc-hero-subtitle">
+            Estas son las secciones de las que consta esta apllicación
+          </p>
+        </div>
 
         <div class="includes-grid">
 
-          <article class="c-card">
-            <h3 class="c-card__title">Components</h3>
-            <p class="c-card__text">
+          <article class="include-card">
+
+            <div class="include-card__icon">              
+              <i class="material-icons-outlined">
+                chrome_reader_mode
+              </i>
+            </div>
+            <h2 class="landing__doc-title">Components</h2>
+            <p class="landing__doc-text">
               Componentes documentados con ejemplos reales,
               API clara y criterios de uso definidos.
             </p>
           </article>
 
-          <article class="c-card">
-            <h3 class="c-card__title">Blocks</h3>
-            <p class="c-card__text">
+          <article class="include-card">
+            <div class="include-card__icon">
+
+              <i class="material-icons-outlined">
+                auto_awesome_mosaic
+              </i>
+            </div>
+            <h2 class="landing__doc-title">Blocks</h2>
+            <p class="landing__doc-text">
               Bloques de interfaz reutilizables basados
               en patrones reales de aplicaciones.
             </p>
           </article>
 
-          <article class="c-card">
-            <h3 class="c-card__title">Styles</h3>
-            <p class="c-card__text">
+          <article class="include-card">
+            <div class="include-card__icon">
+
+              <i class="material-icons-outlined">
+                format_color_fill
+              </i>
+            </div>
+            <h2 class="landing__doc-title">Styles</h2>
+            <p class="landing__doc-text">
               Tokens de diseño, tipografía, espaciado y
               variables que definen el sistema visual.
             </p>
           </article>
 
-          <article class="c-card">
-            <h3 class="c-card__title">Wiki</h3>
-            <p class="c-card__text">
+          <article class="include-card">
+            <div class="include-card__icon">
+
+              <i class="material-icons-outlined">
+                menu_book
+              </i>
+            </div>
+            <h2 class="landing__doc-title">Wiki</h2>
+            <p class="landing__doc-text">
               Normas de diseño, decisiones técnicas
               y criterios que rigen el sistema.
             </p>
