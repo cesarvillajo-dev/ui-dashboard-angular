@@ -1,0 +1,47 @@
+/**
+ * Component: Opacity Tokens
+ * Description: Tokens de opacidad del sistema utilizados exclusivamente
+ *              para capas visuales (overlays, scrims y efectos de superficie).
+ *              No deben emplearse para texto ni estados interactivos.
+ * Date: 2026
+ */
+
+:root {
+
+    /* ============================================
+     MARK: Micro Overlays
+     ============================================ */
+
+    /* Ripple suave, highlight muy ligero y mask-backdrop. */
+    --opacity-overlay-4: 0.04; // 100
+
+    /* Hover y Focus*/
+    --opacity-overlay-8: 0.08; // 200
+
+    /* ============================================
+     MARK: Light Overlays
+     ============================================ */
+
+     /* Hover y Focus de superficies y Disabled Color */
+    --opacity-overlay-12: 0.12; // 300
+
+    /* Active y Selected con mayor énfasis */
+    --opacity-overlay-16: 0.16; // 350
+
+    /* ============================================
+     MARK: Standard Overlay
+     ============================================ */
+
+     /* Overlay estándar para estados seleccionados */
+    --opacity-overlay-24: 0.24; // 400
+
+    
+    /* ============================================
+     MARK: Scrims / Blocking Layers
+     ============================================ */
+     /* Scrim estándar. Disabled Background */
+    --opacity-scrim-soft: 0.38; // 500
+
+    /* Scrim fuerte. Backdrop de diálogos y drawers "modernos" */
+    --opacity-scrim-strong: 0.54; // 600
+}

@@ -1,0 +1,139 @@
+/**
+ * Component: SHADOW TOKEN
+ * Description: sombras basadas en Angular Material incluyendo la adaptación real en overlay
+ * Date: 2026
+ */
+ 
+/* ============================================
+   MARK: Semánticas
+   ============================================ */ 
+:root {
+    // SIN SOMBRA
+    --shadow-none:
+        0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+
+    // BUTTON RAISED, CARD, PANEL, ACCORDION, TABS
+    --shadow-base:
+        0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    // OVERLAY, DESPLEGABLES, POPOVER, SELECT, MULTISELECT (IGUAL AL DE MATERIAL --mat-sys-elevation-shadow)
+    --shadow-overlay:
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    // DRAWER/SIDEBAR
+    --shadow-drawer: 2px 2px 4px -2px var(--gray-300);
+
+    // :HOVER
+    --shadow-hover:
+        0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+
+    // TOAST
+    --shadow-toast:
+        0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+    // DIALOG
+    --shadow-dialog:
+        0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+    // PAGE TOP
+    --shadow-page-top: 0px 0px 8px -2px var(--primary-border-color);
+}
+
+/* ============================================
+   MARK: Por Niveles
+   ============================================ */ 
+:root {
+    // SIN SOMBRA
+    --shadow-level0:
+        0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+
+    // BUTTON RAISED, CARD, PANEL, ACCORDION, TABS
+    --shadow-level1:
+        0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    // :HOVER
+    --shadow-level2:
+        0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+
+    // BUTTON FAB, SNACKBAR, TOAST
+    --shadow-level3:
+        0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+    // DIALOG Y MODALES
+    --shadow-level4:
+        0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+    // NO SE UTILIZA
+    --shadow-level5:
+        0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+
+ 
+ /* ============================================
+   MARK: Sombra línea Outline
+   ============================================ */
+:root {
+
+  // Utilización de la sombra como elemto de línea outline
+  --shadow-outline-sm: 0 0 0 1px var(--secondary-border-color);
+  --shadow-outline-md: 0 0 0 2px var(--secondary-border-color);
+}
+
+
+
+
+/* MATERIAL */
+// :root {
+//     --mat-sys-level0:
+//         0px 0px 0px 0px rgba(0, 0, 0, .2),
+//         0px 0px 0px 0px rgba(0, 0, 0, .14),
+//         0px 0px 0px 0px rgba(0, 0, 0, .12);
+//     --mat-sys-level1:
+//         0px 2px 1px -1px rgba(0, 0, 0, .2),
+//         0px 1px 1px 0px rgba(0, 0, 0, .14),
+//         0px 1px 3px 0px rgba(0, 0, 0, .12);
+//     --mat-sys-level2:
+//         0px 3px 3px -2px rgba(0, 0, 0, .2),
+//         0px 3px 4px 0px rgba(0, 0, 0, .14),
+//         0px 1px 8px 0px rgba(0, 0, 0, .12);
+//     --mat-sys-level3:
+//         0px 3px 5px -1px rgba(0, 0, 0, .2),
+//         0px 6px 10px 0px rgba(0, 0, 0, .14),
+//         0px 1px 18px 0px rgba(0, 0, 0, .12);
+//     --mat-sys-level4:
+//         0px 5px 5px -3px rgba(0, 0, 0, .2),
+//         0px 8px 10px 1px rgba(0, 0, 0, .14),
+//         0px 3px 14px 2px rgba(0, 0, 0, .12);
+//     --mat-sys-level5:
+//         0px 7px 8px -4px rgba(0, 0, 0, .2),
+//         0px 12px 17px 2px rgba(0, 0, 0, .14),
+//         0px 5px 22px 4px rgba(0, 0, 0, .12);
+//
+//     --mat-sys-elevation-shadow:
+//         0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+//         0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+//         0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+// }
+
+/* PRIMENG */
+// :root {
+//     --p-overlay-select-shadow:
+//         0 5px 5px -3px rgba(0, 0, 0, .2),
+//         0 8px 10px 1px rgba(0, 0, 0, .14),
+//         0 3px 14px 2px rgba(0, 0, 0, .12);
+
+//     --p-overlay-popover-shadow:
+//         0 11px 15px -7px rgba(0, 0, 0, .2),
+//         0 24px 38px 3px rgba(0, 0, 0, .14),
+//         0 9px 46px 8px rgba(0, 0, 0, .12);
+
+//     --p-overlay-modal-shadow:
+//         0 11px 15px -7px rgba(0, 0, 0, .2),
+//         0 24px 38px 3px rgba(0, 0, 0, 0.14),
+//         0 9px 46px 8px rgba(0, 0, 0, .12);
+
+//     --p-overlay-navigation-shadow:
+//         0 2px 4px -1px rgba(0, 0, 0, .2),
+//         0 4px 5px 0 rgba(0, 0, 0, .14),
+//         0 1px 10px 0 rgba(0, 0, 0, .12);
+// }

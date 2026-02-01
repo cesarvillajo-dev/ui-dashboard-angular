@@ -1,0 +1,143 @@
+/**
+ * Component: State Tokens
+ * Description: Tokens semánticos para estados interactivos y de sistema.
+ *              No definen estilos completos, solo valores reutilizables.
+ *              Diseñados para cumplir accesibilidad y coherencia visual.
+ * Date: 2026
+ */
+
+:root {
+
+    /* ============================================
+     MARK: Hover
+     ============================================ */
+
+     /* Fondo al pasar el cursor. Uso general en elementos interactivos. */
+    --state-hover-bg: var(--primary-color);
+
+    /* Borde en hover para inputs, cards y listas. */
+    --state-hover-border: var(--primary-border-color);
+
+    /* El texto no cambia por defecto en hover. */
+    --state-hover-text: inherit;
+
+    /* ============================================
+     MARK: Active / Pressed
+     ============================================ */
+
+     /* Fondo al hacer click o presionar. */
+    --state-active-bg: var(--surface-pressed);
+
+    /* Refuerzo visual del estado activo. */
+    --state-active-border: var(--surface-500);
+
+    /* El color de texto se mantiene. */
+    --state-active-text: inherit;
+
+    /* ============================================
+     MARK: Focus (accesibilidad)
+     ============================================ */
+
+     /* Color del focus ring visible. */
+    --state-focus-ring-color: var(--focus-ring-color);
+
+    /* Grosor del focus ring. */
+    --state-focus-ring-width: 2px;
+
+    /* Separación del focus ring respecto al elemento. */
+    --state-focus-ring-offset: 2px;
+
+    /* ============================================
+     MARK: Selected
+     ============================================ */
+
+     /* Fondo de elementos seleccionados. */
+    --state-selected-bg: var(--surface-focus);
+
+    /* Borde del estado seleccionado. */
+    --state-selected-border: var(--surface-500);
+
+    /* Texto o icono en estado seleccionado. */
+    --state-selected-text: var(--white);
+
+    /* ============================================
+     MARK: Disabled
+     ============================================ */
+
+     /* Fondo de elementos deshabilitados. */
+    --state-disabled-bg: var(--surface-300);
+
+    /* Texto deshabilitado con contraste suficiente. */
+    --state-disabled-text: var(--gray-600);
+
+    /* Borde de elementos deshabilitados. */
+    --state-disabled-border: var(--gray-500);
+
+    --state-disabled-cursor: not-allowed;
+    /* Cursor estándar para elementos disabled. */
+
+    /* ============================================
+     MARK: Read-only
+     ============================================ */
+
+     /* Fondo para campos de solo lectura. */
+    --state-readonly-bg: var(--surface-50);
+
+    /* Borde neutro para readonly. */
+    --state-readonly-border: var(--surface-border);
+
+    /* El texto no se degrada en readonly. */
+    --state-readonly-text: inherit;
+
+    /* ============================================
+     MARK: Validation · Info
+     ============================================ */
+
+     /* Fondo de estado correcto. */
+    --state-info-bg: var(--info-bg);
+
+    /* Borde de validación correcta. */
+    --state-info-border: var(--info-border);
+
+    /* Texto o icono de validación correcta. */
+    --state-info-text: var(--info-color);
+
+    /* ============================================
+     MARK: Validation · Success
+     ============================================ */
+
+     /* Fondo de estado correcto. */
+    --state-success-bg: var(--success-bg);
+
+    /* Borde de validación correcta. */
+    --state-success-border: var(--success-border);
+
+    /* Texto o icono de validación correcta. */
+    --state-success-text: var(--success-color);
+    
+    /* ============================================
+     MARK: Validation · Warning
+     ============================================ */
+
+     /* Fondo de advertencia. */
+    --state-warning-bg: var(--warning-bg);
+
+    /* Borde de advertencia. */
+    --state-warning-border: var(--warning-border);
+
+    /* Texto o icono de advertencia. */
+    --state-warning-text: var(--warning-color);
+
+    /* ============================================
+     MARK: Validation · Error
+     ============================================ */
+
+     /* Fondo de error. */
+    --state-error-bg: var(--error-bg);
+
+    /* Borde de error. */
+    --state-error-border: var(--error-border);
+
+    /* Texto o icono de error. */
+    --state-error-text: var(--error-color);
+}

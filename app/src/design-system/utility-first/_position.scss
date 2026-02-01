@@ -1,0 +1,11 @@
+/**
+ * Component: POSITION UTILITY-FIRST
+ * Description: Especifica cómo se posciona un elemento en la pantalla
+ * Date: 2026
+ */
+
+.static,   .p-static   { position: static; }
+.relative, .p-relative { position: relative; }
+.absolute, .p-absolute { position: absolute; }
+.fixed ,   .p-fixed    { position: fixed; }
+.sticky,   .p-sticky   { position: sticky; }

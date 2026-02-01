@@ -1,0 +1,32 @@
+/**
+ * Component: WIDTH TOKENS
+ * Description: Tokens de anchura reutilizables. No describen layout, solo límites y tamaños base.
+ * Date: 2026
+ */
+
+:root {
+    /* ============================================
+       MARK: RELATIVE
+       ============================================ */
+
+      --size-width-auto: auto;
+      --size-width-full: 100%;
+
+    /* ============================================
+       MARK: CONTENT-BASED
+       ============================================ */
+
+      --size-width-min-content: min-content;
+      --size-width-max-content: max-content;
+      --size-width-fit-content: fit-content;
+
+    /* ============================================
+       MARK: FIXED SCALE (UI ELEMENTS)
+       ============================================ */    
+
+      --size-width-xs: 4rem;  /* 64px */
+      --size-width-sm: 8rem;  /* 128px */
+      --size-width-md: 12rem; /* 192px */
+      --size-width-lg: 16rem; /* 256px */
+      --size-width-xl: 20rem; /* 320px */
+}

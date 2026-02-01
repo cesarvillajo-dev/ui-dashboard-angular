@@ -1,0 +1,164 @@
+/**
+ * Component: WIDTH UTILITY-FIRST
+ * Description: propiedad que define el tamaño horizontal de la caja de un elemento o área de contenido.
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Escala base
+   ============================================ */
+//.w-0   { width: 0; }
+// .w-1   { width: 0.25rem; }
+// .w-2   { width: 0.5rem; }
+// .w-3   { width: 0.75rem; }
+// .w-4   { width: 1rem; }
+// .w-5   { width: 1.25rem; }
+// .w-6   { width: 1.5rem; }
+
+// .w-8   { width: 2rem; }
+// .w-10  { width: 2.5rem; }
+// .w-12  { width: 3rem; }
+// .w-16  { width: 4rem; }
+
+// .w-20  { width: 5rem; }
+// .w-24  { width: 6rem; }
+
+// .w-32  { width: 8rem; }
+// .w-40  { width: 10rem; }
+// .w-48  { width: 12rem; }
+// .w-56  { width: 14rem; }
+
+// .w-64  { width: 16rem; }
+
+/* ============================================
+   MARK: Anchuras Relativas
+   ============================================ */
+.w-0      { width: 0; }
+.w-auto   { width: auto; }
+.w-full   { width: 100%; }
+.w-screen { width: 100vw; }
+
+/* ============================================
+   MARK: Anchuras fraccionales
+   ============================================ */
+.w-1\/2 { width: 50%; }
+.w-1\/3 { width: 33.3333%; }
+.w-2\/3 { width: 66.6667%; }
+.w-1\/4 { width: 25%; }
+.w-3\/4 { width: 75%; }
+
+/* ============================================
+   MARK: Anchuras basada en Contrenido
+   ============================================ */
+.w-min { width: min-content; }
+.w-max { width: max-content; }
+.w-fit { width: fit-content; }
+.w-inherit { width: inherit; }
+
+/* ============================================
+   MARK: Min / Max
+   ============================================ */
+.min-w-0    { min-width: 0; } // Items flex: evitar desbordamientos comunes
+.min-w-full { min-width: 100%; }
+.min-w-max { min-width: max-content; }
+
+.max-w-none { max-width: none; }
+.max-w-full { max-width: 100%; }
+.max-w-min { max-width: min-content; }
+
+/* ============================================
+   MARK: Anchuras de Contenedor
+   ============================================ */
+.max-w-xs  { max-width: var(--container-xs); }
+.max-w-sm  { max-width: var(--container-sm); }
+.max-w-md  { max-width: var(--container-md); }
+.max-w-lg  { max-width: var(--container-lg); }
+.max-w-xl  { max-width: var(--container-xl); }
+.max-w-2xl { max-width: var(--container-2xl); }
+.max-w-3xl { max-width: var(--container-3xl); }
+.max-w-4xl { max-width: var(--container-4xl); }
+.max-w-5xl { max-width: var(--container-5xl); }
+
+
+/* ============================================
+   MARK: Anchuras basada en porcentajes
+   ============================================ */
+.w-0,  .w-0pct,  .w-0_percent  { width: 0%; }
+.w-5,  .w-5pct,  .w-5_percent  { width: 5%; }
+.w-10, .w-10pct, .w-10_percent { width: 10%; }
+.w-15, .w-15pct, .w-15_percent { width: 15%; }
+.w-20, .w-20pct, .w-20_percent { width: 20%; }
+.w-25, .w-25pct, .w-25_percent { width: 25%; }
+.w-30, .w-30pct, .w-30_percent { width: 30%; }
+.w-35, .w-35pct, .w-35_percent { width: 35%; }
+.w-40, .w-40pct, .w-40_percent { width: 40%; }
+.w-45, .w-45pct, .w-45_percent { width: 45%; }
+.w-50, .w-50pct, .w-50_percent { width: 50%; }
+.w-55, .w-55pct, .w-55_percent { width: 55%; }
+.w-60, .w-60pct, .w-60_percent { width: 60%; }
+.w-65, .w-65pct, .w-65_percent { width: 65%; }
+.w-70, .w-70pct, .w-70_percent { width: 70%; }
+.w-75, .w-75pct, .w-75_percent { width: 75%; }
+.w-80, .w-80pct, .w-80_percent { width: 80%; }
+.w-85, .w-85pct, .w-85_percent { width: 85%; }
+.w-90, .w-90pct, .w-90_percent { width: 90%; }
+.w-95, .w-95pct, .w-95_percent { width: 95%; }
+.w-100, .w-100pct, .w-100_percent { width: 100%; }
+
+/* ============================================
+   MARK: Anchuras basada en pixels
+   ============================================ */
+.w-25px  { width: 25px; }
+.w-50px  { width: 50px; }
+.w-75px  { width: 75px; }
+.w-100px { width: 100px; }
+.w-125px { width: 125px; }
+.w-150px { width: 150px; }
+.w-175px { width: 175px; }
+.w-200px { width: 200px; }
+.w-250px { width: 250px; }
+.w-300px { width: 300px; }
+.w-350px { width: 350px; }
+.w-400px { width: 400px; }
+.w-450px { width: 350px; }
+.w-500px { width: 500px; }
+.w-550px { width: 550px; }
+.w-600px { width: 600px; }
+.w-650px { width: 650px; }
+.w-700px { width: 700px; }
+
+/* ============================================
+   MARK: Anchuras basada en rem
+   ============================================ */
+.w-0rem  { width: 0rem;}
+.w-1rem  { width: 1rem; }
+.w-2rem  { width: 2rem; }
+.w-3rem  { width: 3rem; }
+.w-4rem  { width: 4rem; }
+.w-5rem  { width: 5rem; }
+.w-6rem  { width: 6rem; }
+.w-7rem  { width: 7rem; }
+.w-8rem  { width: 8rem; }
+.w-9rem  { width: 9rem; }
+.w-10rem { width: 10rem; }
+.w-11rem { width: 11rem; }
+.w-12rem { width: 12rem; }
+.w-13rem { width: 13rem; }
+.w-14rem { width: 14rem; }
+.w-15rem { width: 15rem; }
+.w-16rem { width: 16rem; }
+.w-17rem { width: 17rem; }
+.w-18rem { width: 18rem; }
+.w-19rem { width: 19rem; }
+.w-20rem { width: 20rem; }
+.w-21rem { width: 21rem; }
+.w-22rem { width: 22rem; }
+.w-23rem { width: 23rem; }
+.w-24rem { width: 24rem; }
+.w-25rem { width: 25rem; }
+.w-26rem { width: 26rem; }
+.w-27rem { width: 27rem; }
+.w-28rem { width: 28rem; }
+.w-29rem { width: 29rem; }
+.w-30rem { width: 30rem; }
+.w-35rem { width: 35rem; }

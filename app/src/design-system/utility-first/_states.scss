@@ -1,0 +1,14 @@
+/**
+ * Component: STATES UTILITY-FIRST
+ * Description: clases para utilidad de estado visual con elementos.
+ * Date: 2026
+ */
+
+.is-disabled, .disabled { background: var(--surfece-300); color: var(--gray-600); opacity: 1; }   
+.is-enabled, .enabled   { opacity: 1; } 
+.is-inactive            { opacity: var(--opacity-scrim-soft); }
+.is-visible             { visibility: visible; }
+.is-loading             { cursor: wait; }
+.is-readonly            { opacity: .8; }
+.is-active              { background: var(--bg-highlight); }
+.is-selected            { outline: 2px solid var(--accent); }

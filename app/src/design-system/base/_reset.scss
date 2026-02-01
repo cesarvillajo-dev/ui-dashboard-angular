@@ -1,0 +1,102 @@
+/**
+ * Component: Reset
+ * Description: reinicio controlado de estilos por defecto no cubiertos por normalize
+ * Date: 2026
+ */
+
+ /**
+  * Eliminar el margen en todos los navegadores.
+  */
+body {
+  margin: 0;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+    margin: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+ol,
+ul,
+menu {
+    //list-style: none;
+    // margin: 0;
+    // padding: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+}
+
+:disabled {
+    cursor: not-allowed;
+}
+
+/**
+ * Elimina el borde de las imágenes dentro de los enlaces en IE 10.
+ */
+img {
+  border-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    vertical-align: middle;
+}
+
+// summary {
+//     display: list-item;
+// }
+
+// table {
+//     text-indent: 0;
+//     border-collapse: collapse;
+// }
+
+// dialog {
+//     padding: 0;
+// }
+
+// textarea {
+//     resize: vertical;
+// }
+
+

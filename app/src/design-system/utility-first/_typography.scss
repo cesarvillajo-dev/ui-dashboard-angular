@@ -1,0 +1,133 @@
+/**
+ * Component: TYPOGRAPHY UTILITY-FIRST
+ * Description: tokens para fuentes, textos, distribución, pesos, tamaños etc.
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Tipografía o Fuente de Letra
+   ============================================ */
+.font-primary, .font-sans { font-family: var(--font-sans); }
+.font-secondary, .font-serif { font-family: var(--font-serif); }
+.font-terciary, .font-mono { font-family: var(--font-mono); }
+
+/* ============================================
+   MARK: Tamaño
+   ============================================ */
+.text-xs  { font-size: var(--font-size-xs); }
+.text-sm  { font-size: var(--font-size-sm); }
+.text-md  { font-size: var(--font-size-md); }
+.text-lg  { font-size: var(--font-size-lg); }
+.text-xl  { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+
+/* ============================================
+   MARK: Peso
+   ============================================ */
+.font-thin,      .font-weight-thin,      .font-weight-100, .text-thin      { font-weight: var(--font-weight-thin);  }
+.font-light,     .font-weight-light,     .font-weight-200, .text-light     { font-weight: var(--font-weight-light);  }
+.font-lighter,   .font-weight-lighter,   .font-weight-300, .text-lighter   { font-weight: var(--font-weight-lighter); }
+.font-regular,   .font-weight-regular,   .font-weight-400, .text-normal    { font-weight: var(--font-weight-regular); }
+.font-medium,    .font-weight-medium,    .font-weight-500, .text-medium    { font-weight: var(--font-weight-medium); }
+.font-semibold,  .font-weight-semibold,  .font-weight-600, .text-semibold  { font-weight: var(--font-weight-semibold); }
+.font-bold,      .font-weight-bold,      .font-weight-700, .text-bold      { font-weight: var(--font-weight-bold); }
+.font-extrabold, .font-weight-extrabold, .font-weight-800, .text-extrabold { font-weight: var(--font-weight-extrabold); }
+.font-black,     .font-weight-black,     .font-weight-900, .text-black     { font-weight: var(--font-weight-black); }
+
+/* ============================================
+   MARK: Interlineado
+   ============================================ */
+.leading-tight    { line-height: var(--leading-tight); }
+.leading-snug     { line-height: var(--leading-snug); }
+.leading-normal   { line-height: var(--leading-normal); }
+.leading-relaxed  { line-height: var(--leading-relaxed); }
+.leading-loose    { line-height: var(--leading-loose); }
+
+/* ============================================
+   MARK: Espaciado de caracteres
+   ============================================ */
+.tracking-tighter { letter-spacing: var(--letter-spacing-tigher); }
+.tracking-tight   { letter-spacing: var(--letter-spacing-tight); }
+.tracking-normal  { letter-spacing: var(--letter-spacing-normal); }
+.tracking-wide    { letter-spacing: var(--letter-spacing-wide); }
+.tracking-wider   { letter-spacing: var(--letter-spacing-wider); }
+.tracking-widest  { letter-spacing: var(--letter-spacing-widest); }
+
+/* ============================================
+   MARK: Alineación
+   ============================================ */
+.text-left,   .text-align-left   { text-align: left; }
+.text-center, .text-align-center { text-align: center; }
+.text-right,  .text-align-right  { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* ============================================
+   MARK: Saltos de línea
+   ============================================ */
+.whitespace-normal   { white-space: normal; }
+.whitespace-nowrap   { white-space: nowrap; }
+.whitespace-pre      { white-space: pre; }
+.whitespace-pre-line { white-space: pre-line; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+
+.text-overflow-ellipsis { text-overflow: ellipsis; }
+.text-overflow-clip { text-overflow: clip; }
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============================================
+   MARK: Tansformación
+   ============================================ */
+.uppercase   { text-transform: uppercase; }
+.lowercase   { text-transform: lowercase; }
+.capitalize  { text-transform: capitalize; }
+.normal-case { text-transform: none; }
+
+/* ============================================
+   MARK: Decoración
+   ============================================ */
+.text-underline { text-decoration: var(--text-decoration-underline);}
+.text-line-through { text-decoration: var(--text-decoration-line-through);}
+
+
+/* ============================================
+   MARK: Estilo
+   ============================================ */
+.italic { font-style: var(--font-style-italic); }
+.not-italic { font-style: var(--font-style-normal); }
+
+/* ============================================
+   MARK: Resaltado
+   ============================================ */
+.text-hightlight { color: var(--highlight-text-color); }
+.text-accent { color: var(--highlight-text-color); }
+
+
+/* ============================================
+   MARK: Texto en listas (ul class="")
+   ============================================ */
+.list-none    { list-style: none !important; }
+.list-disc    { list-style: disc !important; }
+.list-decimal { list-style: decimal !important; }
+.list-circle  { list-style: circle !important; }
+.list-square  { list-style: square !important; }
+
+/* ============================================
+   MARK: Alineación
+   ============================================ */
+.text-middle   { vertical-align: middle; }
+.text-baseline { vertical-align: baseline; }
+.text-super    { vertical-align: super; }
+.text-sub      { vertical-align: sub; }
+
+.vertical-align-top      { vertical-align: top; }
+.vertical-align-middle   { vertical-align: middle; }
+.vertical-align-bottom   { vertical-align: bottom; }
+.vertical-align-baseline { vertical-align: baseline; }
+.vertical-align-super    { vertical-align: super; }

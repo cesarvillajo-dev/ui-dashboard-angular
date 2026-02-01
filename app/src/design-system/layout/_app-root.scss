@@ -1,0 +1,32 @@
+/**
+* Component: app-root
+* Description: define la estructura visual base de la aplicación
+* Date: 2025-01-01
+*/
+
+/* Color basico de texto y fondo. Ancho y alto de la ventana del navegador */
+body {
+
+    /* 1 */
+    color: var(--primary-text-color, #212121);
+    background-color: var(--primary-bg-color, #ffffff);
+
+    /* 2 */
+    min-width: 1280px !important;
+    min-height: 420px;
+}
+
+
+body app,
+body app-root {
+    min-height: 100% !important;
+    font-size: 1rem;
+}
+
+
+.app-root {
+    min-height: 100vh;
+    min-width: 1280px;
+    display: flex;
+    flex-direction: column;
+}

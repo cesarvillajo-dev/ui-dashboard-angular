@@ -1,0 +1,39 @@
+/**
+ * Component: Base
+ * Description: configuración
+ * Date: 2026
+ */
+
+// Charset (definición de caracteres)
+@forward './charset';
+
+// HTML base
+@forward './html';
+
+// Body base
+@forward './body';
+
+// Normalize (correcciones cross-browser)
+@forward './normalize';
+
+// Reset (decisiones mínimas propias, si existiera)
+@forward './reset';
+
+// Box model (decisión estructural)
+@forward './box-sizing';
+
+// Fuentes
+@forward './fonts';
+
+// Iconos
+@forward './icons';
+
+// Tipografía estructural
+@forward './typography';
+
+// Contenido genérico (links, listas, mark, etc.)
+@forward './content';
+
+// Accesibilidad (focus, helpers)
+@forward './accessibility';
+

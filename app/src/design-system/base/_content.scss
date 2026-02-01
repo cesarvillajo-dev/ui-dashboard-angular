@@ -1,0 +1,27 @@
+/**
+ * Component: Content
+ * Description: estilos base para elementos de contenido genéricos
+ * Date: 2026
+ */
+
+li {
+    outline: none;
+}
+
+a {
+    // Elimina el fondo gris on active links en IE 10.
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    outline: none;
+}
+
+a:hover {
+    color: var(--primary-color)
+}
+
+mark {
+    background-color: var(--yellow-500);
+    color: var(--var(--gray-900));
+}

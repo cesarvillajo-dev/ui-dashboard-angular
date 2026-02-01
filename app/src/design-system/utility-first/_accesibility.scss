@@ -1,0 +1,53 @@
+/**
+ * Component: ACCESIBILITY UTILITY-FIRST
+ * Description: utilidades de accesibilidad
+ * Date: 2026
+ */
+
+ /* ============================================
+   MARK: Visuality
+   ============================================ */
+
+ /**
+  * Oculta visualmente el contenido manteniéndolo accesible para lectores de pantalla. 
+  * (Antiguo .hidden-accesible) */
+.visuality-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/**
+ * Variante para mostrar el contenido sólo cuando recibe foco o es activado por teclado.
+ * Ejemplo:
+ *  <a href="#main-content" class="visually-hidden visually-hidden-focusable">
+ *      Saltar al contenido principal
+ *  </a>
+ */
+.visuality-hidden-focusable:focus,
+.visuality-hidden-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ============================================
+   MARK: Focus
+   ============================================ */
+
+.focus-shadow { box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color); }
+
+.focus-outline {
+  outline: var(--outline-width) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset);
+}

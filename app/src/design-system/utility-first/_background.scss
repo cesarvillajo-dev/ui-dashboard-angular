@@ -1,0 +1,124 @@
+/**
+ * Component: BACKGROUND UTILITY-FIRST
+ * Description: colores de fondo de un elemento
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Fondos Principales
+   ============================================ */
+.bg-primary     { background-color: var(--surface-0); }
+.bg-secondary   { background-color: var(--surface-200); }
+.bg-white       { background-color: var(--surface-0); }
+.bg-black       { background-color: var(--surface-900); }
+.bg-transparent { background-color: transparent; }
+
+
+/* ============================================
+   MARK: Superficies
+   ============================================ */
+.bg-surface         { background-color: var(--surface-primary); }
+.bg-surface-ground  { background-color: var(--surface-ground); }
+.bg-surface-body    { background-color: var(--surface-body); }
+.bg-surface-card    { background-color: var(--surface-0); }
+.bg-surface-overlay { background-color: color-mix(in oklab, var(--surface-overlay) 38%, transparent)}
+
+.bg-surface-0   { background-color: var(--surface-0); }
+.bg-surface-50  { background-color: var(--surface-50); }
+.bg-surface-100 { background-color: var(--surface-100); }
+.bg-surface-200 { background-color: var(--surface-200); }
+.bg-surface-300 { background-color: var(--surface-300); }
+.bg-surface-400 { background-color: var(--surface-400); }
+.bg-surface-500 { background-color: var(--surface-500); }
+.bg-surface-600 { background-color: var(--surface-600); }
+.bg-surface-700 { background-color: var(--surface-700); }
+.bg-surface-800 { background-color: var(--surface-800); }
+.bg-surface-900 { background-color: var(--surface-900); }
+.bg-surface-950 { background-color: var(--surface-950); }
+
+
+/* ============================================
+   MARK: Color primario
+   ============================================ */
+.bg-primary-50  { background-color: var(--primary-50); }
+.bg-primary-100 { background-color: var(--primary-100); }
+.bg-primary-200 { background-color: var(--primary-200); }
+.bg-primary-300 { background-color: var(--primary-300); }
+.bg-primary-400 { background-color: var(--primary-400); }
+.bg-primary-500 { background-color: var(--primary-500); }
+.bg-primary-600 { background-color: var(--primary-600); }
+.bg-primary-700 { background-color: var(--primary-700); }
+.bg-primary-800 { background-color: var(--primary-800); }
+.bg-primary-900 { background-color: var(--primary-900); }
+
+
+/* ============================================
+   MARK: Colores
+   ============================================ */
+.bg-red-50  { background-color: var(--red-50); }
+.bg-red-100 { background-color: var(--red-100); }
+.bg-red-300 { background-color: var(--red-300); }
+.bg-red-500 { background-color: var(--red-500); }
+.bg-red-600 { background-color: var(--red-600); }
+.bg-red-900 { background-color: var(--red-900); }
+
+.bg-blue-50  { background-color: var(--blue-50); }
+.bg-blue-100 { background-color: var(--blue-100); }
+.bg-blue-300 { background-color: var(--blue-300); }
+.bg-blue-500 { background-color: var(--blue-500); }
+.bg-blue-600 { background-color: var(--blue-600); }
+.bg-blue-900 { background-color: var(--blue-900); }
+
+.bg-green-50  { background-color: var(--green-50); }
+.bg-green-100 { background-color: var(--green-100); }
+.bg-green-300 { background-color: var(--green-300); }
+.bg-green-500 { background-color: var(--green-500); }
+.bg-green-600 { background-color: var(--green-600); }
+.bg-green-900 { background-color: var(--green-900); }
+
+.bg-orange-50  { background-color: var(--orange-50); }
+.bg-orange-100 { background-color: var(--orange-100); }
+.bg-orange-300 { background-color: var(--orange-300); }
+.bg-orange-500 { background-color: var(--orange-500); }
+.bg-orange-600 { background-color: var(--orange-600); }
+.bg-orange-900 { background-color: var(--orange-900); }
+
+.bg-gray-50  { background-color: var(--gray-50); }
+.bg-gray-100 { background-color: var(--gray-100); }
+.bg-gray-300 { background-color: var(--gray-300); }
+.bg-gray-500 { background-color: var(--gray-500); }
+.bg-gray-600 { background-color: var(--gray-600); }
+.bg-gray-900 { background-color: var(--gray-900); }
+
+
+/* ============================================
+   MARK: Repeticiones
+   ============================================ */
+.bg-repeat       { background-repeat: repeat; }
+.bg-no-repeat    { background-repeat: no-repeat; }
+.bg-repeat-x     { background-repeat: repeat-x; }
+.bg-repeat-y     { background-repeat: repeat-y; }
+.bg-repeat-round { background-repeat: round; }
+.bg-repeat-space { background-repeat: space; }
+
+
+/* ============================================
+   MARK: Tamaño
+   ============================================ */
+.bg-auto    { background-size: auto; }
+.bg-cover   { background-size: cover; }
+.bg-contain { background-size: contain; }
+
+
+/* ============================================
+   MARK: Posición
+   ============================================ */
+.bg-bottom       { background-position: bottom; }
+.bg-center       { background-position: 50%; }
+.bg-left         { background-position: 0; }
+.bg-left-bottom  { background-position: 0 100%; }
+.bg-left-top     { background-position: 0 0; }
+.bg-right        { background-position: 100%; }
+.bg-right-bottom { background-position: 100% 100%; }
+.bg-right-top    { background-position: 100% 0; }
+.bg-top          { background-position: top; }

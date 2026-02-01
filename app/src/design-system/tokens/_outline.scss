@@ -1,0 +1,20 @@
+/**
+ * Component: OUTLINE TOKEN
+ * Description: outline es una línea fuera a la caja del elemento que no ocupa sitio pero sí da aspecto de desplazalo
+ * Date: 2026
+ */
+
+:root {
+
+  /*  OUTLINE WIDTH */
+  --outline-width: 2px;
+
+  /* OUTLINE STYLE */
+  --outline-style: solid;
+
+  /* OUTLINE COLOR */
+  --outline-color: var(--focus-ring-color);
+
+  /* OUTLINE OFFSET */
+  --outline-offset: 2px;
+}

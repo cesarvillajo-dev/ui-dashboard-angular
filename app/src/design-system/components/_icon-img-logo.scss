@@ -1,0 +1,62 @@
+/**
+ * Component: ICON IMG LOGO
+ * Description: clases para iconos con background-image para logos
+ * Date: 2026
+ *
+ * Ejemplo HTML:
+ * <mat-icon class="icon-nombre"></mat-icon>
+*/
+
+.icon-doc_e {
+    width: 35px !important;
+    height: 13px !important;
+    background-image: url('../../../assets/ico-grid-doce.png');
+    background-size: contain !important;
+    background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    background-position: top left !important;
+    position: relative !important;
+    left: -4px !important;
+
+    &::before {
+        content: ""/"icon-doc_e";
+    }
+}
+
+//icono logo actuaciones
+.icon-logo_actuaciones {
+    width: 24px !important;
+    height: 24px !important;
+    background-image: url('../../../assets/logo_actuaciones.png');
+    background-size: 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+
+    &::before {
+        content: ""/"icon-logo_actuaciones";
+    }
+}
+
+.icon-logo_fincas {
+	width: 24px !important;
+	height: 24px !important;
+	background-image: url('../../../assets/logo_fincas.png');
+	background-size: 24px !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+
+	&::before {
+			content: ""/"icon-logo_fincas";
+	}
+}
+
+.ico__sintra-fincas {
+    height: 20px;
+    width: 20px;
+    background: transparent url('../../../assets/logo_fincas.png') no-repeat center left;
+    background-size: 20px;
+
+    &::before {
+        content: ""/ "Sintra-Fincas";
+    }
+}

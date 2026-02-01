@@ -1,0 +1,33 @@
+/**
+ * Component: ELEVATION UTILITY-FIRST
+ * Description: clases de sombras o elevaciones, basadas en tokens de box-shadow
+ * Date: 2026
+ */
+
+ // Por tamaño (OFICIAL)
+.elevation-sm  { box-shadow: var(--shadow-base); }        // BUTTON RAISED, CARD, PANEL, ACCORDION, TABS
+.elevation-md  { box-shadow: var(--shadow-overlay); }     // OVERLAY, DESPLEGABLES, POPOVER, SELECT, MULTISELECT IGUAL A "--mat-sys-elevation-shadow"
+.elevation-lg  { box-shadow: var(--shadow-drawer); }      // DRAWER / SIDEBAR
+.elevation-xl  { box-shadow: var(--shadow-hover); }       // :HOVER
+.elevation-2xl { box-shadow: var(--shadow-toast); }       // TOAST
+.elevation-3xl { box-shadow: var(--shadow-dialog); }      // DIALOG
+
+ // Por nombre
+.elevation-none    { box-shadow: var(--shadow-none); }    // SIN SOMBRA
+.elevation-base    { box-shadow: var(--shadow-base); }    // BUTTON RAISED, CARD, PANEL, ACCORDION, TABS
+.elevation-overlay { box-shadow: var(--shadow-overlay); } // OVERLAY, DESPLEGABLES, POPOVER, SELECT, MULTISELECT IGUAL A "--mat-sys-elevation-shadow"
+.elevation-drawer  { box-shadow: var(--shadow-drawer); }  // DRAWER / SIDEBAR
+.elevation-hover   { box-shadow: var(--shadow-hover); }   // :HOVER
+.elevation-toast   { box-shadow: var(--shadow-toast); }   // TOAST
+.elevation-dialog  { box-shadow: var(--shadow-dialog); }  // DIALOG
+
+// Por niver (basado en Material)
+.elevation-0 { box-shadow: var(--shadow-level0); }       // SIN SOMBRA
+.elevation-1 { box-shadow: var(--shadow-level1); }       // BUTTON RAISED, CARD, PANEL, ACCORDION, TABS
+.elevation-2 { box-shadow: var(--shadow-level2); }       // :HOVER
+.elevation-3 { box-shadow: var(--shadow-level3); }       // BUTTON FAB, SNACKBAR, TOAST
+.elevation-4 { box-shadow: var(--shadow-level4); }       // DIALOG Y MODALES
+.elevation-5 { box-shadow: var(--shadow-level5); }       // NO SE UTILIZA
+
+// Sombra que hace las veces de outline pero que no ocupa espacio en la caja del elemento
+.shadow-outline { box-shadow: var(--shadow-outline-md); }

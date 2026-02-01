@@ -1,0 +1,133 @@
+/**
+ * Component: Motion Duration Tokens
+ * Description: Tokens de duración para animaciones y transiciones del sistema.
+ *              Definen tiempos coherentes y previsibles para la UI.
+ * Date: 2026
+ */
+
+:root {
+
+    /* ============================================
+     MARK: Instant / Utility
+     ============================================ */
+
+    /* Feedback inmediato. Hover simple, focus visual. */
+    --motion-duration-xs: 100ms;
+
+    /* ============================================
+     MARK: Short Durations
+     ============================================ */
+
+    /* Transiciones rápidas. Botones, iconos, toggles. */
+    --motion-duration-sm: 150ms;
+
+    /* Transición estándar del sistema. */
+    --motion-duration-md: 200ms;
+
+    /* ============================================
+     MARK: Medium Durations
+     ============================================ */
+
+    /* Aparición/desaparición de elementos pequeños. */
+    --motion-duration-lg: 250ms;
+
+    /* Overlays ligeros, dropdowns, tooltips. */
+    --motion-duration-xl: 300ms;
+
+    /* ============================================
+     MARK: Long Durations
+     ============================================ */
+
+    /* Diálogos, drawers, cambios de layout controlados. */
+    --motion-duration-2xl: 400ms;
+
+    /* Animaciones narrativas excepcionales. */
+    --motion-duration-3xl: 500ms;
+}
+
+/**
+ * Component: Motion Easing Tokens (Timing Function)
+ * Description: Curvas de aceleración del sistema para animaciones y transiciones.
+ *              Definen cómo se percibe el movimiento.
+ * Date: 2026
+ */
+
+:root {
+
+    /* ============================================
+     MARK: Standard Easings
+     ============================================ */
+
+    /* Movimiento constante. Usos técnicos, loaders. */
+    --motion-ease-linear: linear;
+
+    /* Curva principal del sistema. */
+    --motion-ease-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    /* ============================================
+     MARK: Emphasis
+     ============================================ */
+
+    /* Entrada enfatizada. Elementos que aparecen. */
+    --motion-ease-in: cubic-bezier(0.4, 0.0, 1, 1);
+
+    /* Salida suave. Elementos que desaparecen. */
+    --motion-ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+    /* Entrada y salida equilibradas. */
+    --motion-ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    /* ============================================
+     MARK: Discrete / UI
+     ============================================ */
+
+    /* Transiciones discretas sin sensación elástica. */
+    --motion-ease-snap: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+/**
+ * Component: Motion Transition Tokens
+ * Description: Tokens compuestos de transición que combinan duración y easing.
+ *              Representan transiciones oficiales del sistema.
+ * Date: 2026
+ */
+
+:root {
+
+    /* ============================================
+     MARK: Fast Transitions
+     ============================================ */
+
+    /* Hover, focus, cambios inmediatos. */
+    --motion-transition-fast:
+        var(--motion-duration-xs) var(--motion-ease-standard);
+
+    /* Botones, iconos, microinteracciones. */
+    --motion-transition-short:
+        var(--motion-duration-sm) var(--motion-ease-standard);
+
+    /* ============================================
+     MARK: Standard Transitions
+     ============================================ */
+
+    /* Transición base del sistema. */
+    --motion-transition-base:
+        var(--motion-duration-md) var(--motion-ease-standard);
+
+    /* Aparición/desaparición de componentes. */
+    --motion-transition-medium:
+        var(--motion-duration-lg) var(--motion-ease-in-out);
+
+    /* ============================================
+     MARK: Overlay Transitions
+     ============================================ */
+
+    /* Dropdowns, tooltips, popovers. */
+    --motion-transition-overlay:
+        var(--motion-duration-xl) var(--motion-ease-out);
+
+    /* Dialogs, drawers, modales. */
+    --motion-transition-dialog:
+        var(--motion-duration-2xl) var(--motion-ease-in-out);
+}

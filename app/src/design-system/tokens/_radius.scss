@@ -1,0 +1,30 @@
+/**
+ * Component: RADIUS TOKEN
+ * Description: radio de curvatura de la caja de un elemento
+ * Date: 2026
+ */
+
+:root {
+    --radius-none: 0;        //--mat-sys-corner-none
+    --radius-xs: 2px;
+    --radius-sm: 4px;        //--mat-sys-corner-extra-small  --> NORMAL / BUTTON
+    --radius-md: 6px;
+    --radius-lg: 8px;        //--mat-sys-corner-small        --> GRANDE / CARD / DIALOG
+    --radius-xl: 12px;       //--mat-sys-corner-medium
+    --radius-2xl: 16px;      //--mat-sys-corner-large        --> EXTRA / TAB / STEPPER
+    --radius-3xl: 28px;      //--mat-sys-corner-extra-large
+}
+    
+:root {
+    --radius-full: 9999px;   //--mat-sys-corner-full         --> REDONDO
+    --radius-circle: 50%;    //--mat-sys-corner-full         --> CIRCULAR
+}
+ 
+:root {
+    --radius-sm-top: 4px 4px 0 0;         //--mat-sys-corner-extra-small-top
+    --radius-2xl-top: 16px 16px 0 0;      //--mat-sys-corner-large-top
+    --radius-2xl-start: 16px 0 0 16px;    //--mat-sys-corner-large-start
+    --radius-2xl-end: 0 16px 16px 0;      //--mat-sys-corner-large-end    
+    --radius-2xl-bottom: 0 0 16px 16px;   //--mat-sys-corner-large-bottom
+    --radius-3xl-top: 28px 28px 28px 0 0; //--mat-sys-corner-extra-large-top      
+}

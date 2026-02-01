@@ -1,0 +1,53 @@
+/**
+ * Component: SUPERFICIES TOKEN
+ * Description: es una capa de fondo sobre la cual se coloca contenido
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Superficies
+   ============================================ */
+:root {
+
+    --surface-0: var(--white);
+    --surface-50: var(--gray-50);
+    --surface-100: var(--gray-100);
+    --surface-200: var(--gray-200);
+    --surface-300: var(--gray-300);
+    --surface-400: var(--gray-400);
+    --surface-500: var(--gray-500);
+    --surface-600: var(--gray-600);
+    --surface-700: var(--gray-700);
+    --surface-800: var(--gray-800);
+    --surface-900: var(--gray-900);
+    --surface-950: var(--gray-950);
+    --surface-1000: var(--black);
+}
+
+
+/* ============================================
+   MARK: Superficies semánticas
+   ============================================ */
+:root {
+    --surface-primary: var(--surface-0);
+    --surface-secondary: var(--primary-300);
+
+    --surface-body: var(--primary-250);
+    --surface-ground: var(--primary-250);
+
+    --surface-white: var(--surface-0);
+    --surface-black: var(var(--surface-1000));
+
+    --surface-card: var(--surface-primary);
+    --surface-th: var(--surface-body);
+    --surface-raised: var(--surface-50);
+    --surface-elevated: var(--gray-100);
+    --surface-hover: color-mix(in oklab, var(--surface-0) 8%, transparent);
+    --surface-focus: color-mix(in oklab, var(--surface-0) 8%, transparent);
+    --surface-pressed: color-mix(in oklab, var(--surface-0) 12%, transparent);
+    --surface-muted: var(--surface-100);
+    --surface-disabled: var(--surface-300);
+    --surface-overlay: var(--surface-900);
+    --surface-backdrop: var(--surface-900);
+    --surface-inverse: var(--surface-1000);
+}

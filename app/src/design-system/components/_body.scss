@@ -1,0 +1,37 @@
+/**
+Component: BODY
+Description: cases comunes para el body.
+Date: 2026
+*/
+
+// HACK: OBSOLETO
+.al-content,
+.all-content {
+    padding: 0;
+}
+
+// HACK: OBSOLETO
+.al-main,
+.all-main {
+    padding: 0;
+}
+
+.main-menu {
+    margin-left: 270px;
+    margin-right: 60px;
+    padding: 4.5rem 0;
+    min-height: 500px;
+    position: relative;
+    transition: margin-left 0.4s;
+    background: var(--primary-bg-color);
+}
+
+.main-no-menu {
+    margin-left: 90px;
+    margin-right: 60px;
+    padding: 4.5rem 0;
+    min-height: 540px;
+    position: relative;
+    transition: margin-left 0.4s;
+    background: var(--primary-bg-color);
+}

@@ -1,0 +1,77 @@
+/**
+ * Component: LEGEND
+ * Description: clases para señales de colores en las leyendas.
+ * Date: 2026
+ */
+
+/* LEYENDA AZUL */
+.origenM {
+  background: var(--blue-100) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}
+
+/* LEYENDA PÚRPURA */
+.origenA {
+  background: var(--purple-100) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}
+
+/* LEYENDA AMARILLA */
+.origenC {
+  background: var(--yellow-100) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}
+
+/* LEYENDA VERDE */
+.origenT {
+  background: var(--green-100) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}
+
+/* LEYENDA PRIMARY */
+.legend-different {
+  background: var(--primary-300) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}
+
+/* LEYENDA DE RESALTADO */
+.legend-incoherent {
+  background: var(--primary-700) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}
+
+/* LEYENDA PRIMARY 400 */
+.legend-primary-400 {
+  background: var(--primary-400) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}
+
+/* LEYENDA BLANCO */
+.legend-white {
+  background: var(--white) !important;
+  color: var(--gray-700);
+  width: 30px;
+  height: 15px;
+  border: 1px solid var(--gray-400);
+}

@@ -1,0 +1,18 @@
+/**
+ * Component: OVERFLOW UTILITY-FIRST
+ * Description: clases para overflow que controla qué ocurre cuando el contenido de un elemento supera el tamaño de su caja.
+ * Date: 2026
+ */
+ 
+.overflow-visible { overflow: visible; }
+.overflow-hidden  { overflow: hidden; }
+.overflow-auto    { overflow: auto; }
+.overflow-scroll  { overflow: scroll; }
+
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-x-auto   { overflow-x: auto; }
+.overflow-x-scroll { overflow-x: scroll; }
+
+.overflow-y-hidden { overflow-y: hidden; }
+.overflow-y-auto   { overflow-y: auto; }
+.overflow-y-scroll { overflow-y: scroll; }

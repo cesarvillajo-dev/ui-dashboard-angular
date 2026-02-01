@@ -1,0 +1,141 @@
+/**
+Component: BOX
+Description: clases para cajas con estructura de encabezado resaltado y contenido separado.
+Date: 2026
+*/
+
+/*HTML*/
+/**
+<div class="box-card">
+    <header class="box-card__header">
+        <i class="fas fa-home"></i>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        <span>Título del encabezado</span>
+    </header>
+    <div class="box-card__body">
+        Contenido
+    </div>
+</div>
+*/
+
+.box-card {
+    background: var(--white);
+    border: 1px solid var(--gray-400) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+.box-card__header {
+    background: var(--primary-250);
+    color: var(--primary-700);
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin: 0 !important;
+    border-radius: var(--radius-sm)var(--radius-sm) 0 0;
+
+    .fa,
+    .far,
+    .fas,
+    .fa-solid {
+        font-size: 1.25rem;
+        color: var(--primary-color);
+        margin-right: 0.5rem;
+    }
+
+    .mat-icon,
+    .material-icons {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        color: var(--primary-color);
+        margin-right: 0.5rem;
+    }
+}
+
+.box-card__body {
+    color: var(--gray-700);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1rem;
+    letter-spacing: .05em;
+}
+
+/* ============================================
+   MARK: WRAPPER ADICIONAL
+   ============================================ */
+
+.box-card__transparent {
+    background: transparent;
+    border: 1px solid transparent !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 0 1rem;
+}
+
+.box-card__primary {
+    background: var(--white);
+    border: 1px solid var(--primary-color) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+.box-card__body-gray {
+    color: var(--gray-700);
+    background-color: var(--gray-50);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 1rem;
+    letter-spacing: .05em;
+}
+
+.box-card__gray {
+    background: var(--gray-50);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+}
+
+.box-card__white {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+}
+
+.box-wrapper__gray {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-400) !important;
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+}
+
+.box-wrapper__white {
+    background: var(--white);
+    border: 1px solid var(--gray-400) !important;
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+}
+
+.box-wrapper__transparent {
+    background: var(--white);
+    border: 1px solid var(--white) !important;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.box-wrapper__primary {
+    background: var(--white);
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-wrapper--bg-gray {
+    background: var(--primary-250);
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    *.mdc-text-field {
+        background: var(--white);
+    }
+}

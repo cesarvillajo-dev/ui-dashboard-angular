@@ -1,0 +1,19 @@
+/**
+ * Component: Fonts
+ * Description: importación y definición de tipografías base del sistema
+ * Note: esta importación se realiza sólo por pertenecer a una App, de otra manera la fuente se carga desde index.html con <link href="" rel="">
+ * Date: 2026
+ */
+
+// Roboto (texto) primaria
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Montserrat (enunciados) - secundaria
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// IBM Plex Mono (código) - terciaria
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+

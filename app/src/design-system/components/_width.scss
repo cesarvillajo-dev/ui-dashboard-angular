@@ -1,0 +1,51 @@
+/**
+ * Component: WIDTH
+ * Description: clases para anchos.
+ * Date: 2026
+ */
+
+.lista-apartados {
+  width: 140px;
+}
+
+.lista-unidades {
+  width: 110px;
+}
+
+.ancho {
+  width: 580px !important;
+}
+
+.ancho2 {
+  width: 440px !important;
+}
+
+.ver3 {
+  min-width: 3.15em;
+}
+
+.ver4 {
+  min-width: 2.25em;
+  text-align: center;
+}
+
+.ver5 {
+  min-width: 1.65em;
+}
+
+.anchoRM1 {
+  width: 100%;
+  white-space: nowrap;
+  margin-right: 0.5rem;
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+}
+
+.anchoRM2 {
+  @extend .anchoRM1;
+  margin-right: 0rem;
+}
+
+.headerRecinto {
+  width: max-content;
+}

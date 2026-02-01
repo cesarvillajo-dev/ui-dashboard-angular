@@ -1,0 +1,67 @@
+/**
+ * Component: Accessibility
+ * Description: fundamentos globales de CSS, define el documento HTML antes de aplicar temas, layout o componentes.
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Navegación por teclado
+   ============================================ */
+
+/*  Reset general */
+// *:focus {
+//   outline: none;
+// }
+
+/** 
+ * No se utiliza outline
+ * Se simula el borde con una línea de sombra
+ * Focus SOLO para navegación por teclado */
+// *:focus-visible {
+//    outline: none;
+//    box-shadow:
+//       0 0 0 var(--focus-ring-offset) transparent,
+//       0 0 0 calc(var(--focus-ring-offset) + var(--focus-ring-width)) var(--focus-ring-color);
+// }
+
+// /* Anular focus-visible cuando el foco viene del ratón */
+// :focus:not(:focus-visible) {
+//   box-shadow: none;
+// }
+
+/* focus-visible en CDK de Angular Material */
+.cdk-keyboard-focused {
+   outline: none;
+   box-shadow:
+      0 0 0 var(--focus-ring-offset) transparent,
+      0 0 0 calc(var(--focus-ring-offset) + var(--focus-ring-width)) var(--focus-ring-color);
+}
+
+
+/* ============================================
+   MARK: Selección de Texto
+   ============================================ */
+/** 
+* Pseudo-elemento que se aplica al texto seleccionado por el usuario cuando: 
+ * arrastra con el ratón,
+ * usa Shift + flechas,
+ * selecciona texto en móvil */
+::selection {
+    background-color: var(--selection-text-bg);
+    color: var(--selection-text-color);
+}
+
+
+/* ============================================
+   MARK: Reducción de Movimiento
+   ============================================ */
+/** Medida que se toma para reducir todas las animaciones si el usuario lo pide :
+ * Debido a mareos, vértigo, epilepsia fotosensible, fatiga visual o problemas de atención */
+/* 
+// @media (prefers-reduced-motion: reduce) {
+//     * {
+//         animation-duration: 0.01ms !important;
+//         transition-duration: 0.01ms !important;
+//     }
+// }
+*/

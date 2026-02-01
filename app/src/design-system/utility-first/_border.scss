@@ -1,0 +1,73 @@
+/**
+ * Component: BORDER UTILITY-FIRST
+ * Description: radio de curvatura del borde de la caja de un elemento
+ * Date: 2026
+ */
+
+// .border
+// .outline 
+// .box-shadow
+// outline: none
+
+/* ============================================
+   MARK: Border Radius
+   ============================================ */
+.border-radius-none { border-radius: var(--radius-none); }
+.border-radius-xs   { border-radius: var(--radius-xs); }
+.border-radius-sm   { border-radius: var(--radius-sm); }
+.border-radius-md   { border-radius: var(--radius-md); }
+.border-radius-lg   { border-radius: var(--radius-lg); }
+.border-radius-xl   { border-radius: var(--radius-xl); }
+.border-radius-2xl  { border-radius: var(--radius-2xl); }
+.border-radius-3xl  { border-radius: var(--radius-3xl); }
+
+.border-radius-full   { border-radius: var(--radius-full); }
+.border-raius-circle { border-radius: var(--radius-circle); }
+
+/* ============================================
+   MARK: Border Width
+   ============================================ */
+.border-none { border-width: var( --border-width-none); }
+
+.border-1 { border-width: var( --border-width-xs); }
+.border-2 { border-width: var( --border-width-sm); }
+.border-3 { border-width: var( --border-width-md); }
+.border-4 { border-width: var( --border-width-lg); }
+
+.border-top-none { border-top-width: var( --border-width-none); }
+.border-top-1 { border-top-width: var( --border-width-xs); }
+.border-top-2 { border-top-width: var( --border-width-sm); }
+.border-top-3 { border-top-width: var( --border-width-md); }
+
+.border-right-none { border-right-width: var( --border-width-none);}
+.border-right-1 { border-right-width: var( --border-width-xs); }
+.border-right-2 { border-right-width: var( --border-width-sm); }
+.border-right-3 { border-right-width: var( --border-width-md); }
+
+.border-left-none { border-left-width: var( --border-width-none); }
+.border-left-1 { border-left-width: var( --border-width-xs); }
+.border-left-2 { border-left-width: var( --border-width-sm); }
+.border-left-3 { border-left-width: var( --border-width-md); }
+
+.border-bottom-none { border-bottom-width: var( --border-width-none); }
+.border-bottom-1 { border-bottom-width: var( --border-width-xs); }
+.border-bottom-2 { border-bottom-width: var( --border-width-sm); }
+.border-bottom-3 { border-bottom-width: var( --border-width-md); }
+
+.border-x-none { border-left-width: var( --border-width-none); border-right-width: var( --border-width-none); }
+.border-x-1 { border-left-width: var( --border-width-xs); border-right-width: 1px }
+.border-x-2 { border-left-width: var( --border-width-sm); border-right-width: 2px }
+.border-x-3 { border-left-width: var( --border-width-md); border-right-width: var( --border-width-md); }
+
+.border-y-none { border-top-width: var( --border-width-none); border-bottom-width: var( --border-width-none); }
+.border-y-1 { border-top-width: var( --border-width-xs); border-bottom-width: 1px }
+.border-y-2 { border-top-width: var( --border-width-sm); border-bottom-width: 2px }
+.border-y-3 { border-top-width: var( --border-width-md);  border-bottom-width: var( --border-width-md); }
+
+/* ============================================
+   MARK: Border Style
+   ============================================ */
+.border-solid  { border-style: var(--border-style-solid); }
+.border-dashed { border-style: var(--border-style-dashed); }
+.border-dotted { border-style: var(--border-style-dotted); }
+.border-none   { border-style: var(--border-style-none); }

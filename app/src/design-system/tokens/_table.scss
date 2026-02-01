@@ -1,0 +1,68 @@
+/**
+ * Component: TABLE TOKEN
+ * Description: definen superficies, texto y estados de filas y cabeceras en tablas de datos
+ * Date: 2026
+ */
+:root {
+
+    /* ============================================
+       MARK: Base
+       ============================================ */
+
+    /* Texto base de la tabla */
+    --primary-table-text: var(--primary-text-color);
+
+    /* Bordes de filas y columnas */
+    --primary-table-border: var(--primary-border-color);
+
+    /* ============================================
+       MARK: Header (th)
+       ============================================ */
+
+    /* Fondo base de cabeceras */
+    --table-header-bg: var(--surface-200);
+    --bg-thead: var(--gray-200);
+
+    /* Hover en cabeceras */
+    --table-header-bg-hover: var(--surface-300);
+    --bg-thead-hover: var(--gray-300);
+
+    /* Focus visible en cabeceras */
+    --table-header-bg-focus: var(--surface-300);
+    --bg-thead-focus: var(--gray-300);
+    --bg-hightlight-header-table: var(--p-surface-300);
+    --border-thead-focus: var(--primary-color);
+
+    /* ============================================
+       MARK: Cell (td)
+       ============================================ */
+
+    /* Fondo base de celdas */
+    --table-cell-bg: var(--surface-0);
+    --bg-tbody: var(--white);
+
+    /* Hover sobre filas o celdas */
+    --table-cell-bg-hover: var(--surface-200);
+    --bg-tbody-hover: var(--gray-200);
+
+    /* Focus visible en filas o celdas */
+    --table-cell-bg-focus: var(--surface-300);
+    --bg-tbody-focus: var(--gray-300);
+
+
+    /* ============================================
+       MARK: Zebra Rows
+       ============================================ */
+
+    /* Selected row */
+    --table-row-selected: color-mix(in oklab, var(--primary-color) 24%, var(--white));
+    --bg-hightlight-table: color-mix(in oklab, var(--primary-color) 24%, var(--white));
+
+    /* Filas impares */
+    --table-row-bg-odd: var(--surface-0);
+    --bg-tbody-odd: var(--white);
+
+    /* Filas pares */
+    --table-row-bg-even: var(--surface-50);
+    --bg-tbody-even: var(--gray-50);
+}

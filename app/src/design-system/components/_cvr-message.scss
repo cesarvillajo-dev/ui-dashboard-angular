@@ -1,0 +1,254 @@
+/**
+* Component: CVR-MESSAGE
+* Description: clases para mensajes no emergentes de alerta "CVR"
+* Autor: at.cesar.villajo@catastro.hacienda.gob.es
+* Date: 2026
+*/
+
+/**
+ * Cómo se hace:
+
+    <div class="cvr-message cvr-message__info cvr-style__A">
+        <i class="cvr-message-info_icon fas fa-info-circle"></i>
+        <span class="cvr-message-summary">INFO</span>
+        <span class="cvr-message-detail">Texto de información</span>
+        <i class="cvr-message-icon_close fas fa-times></i>
+    </div>
+
+    // Clase principal necesaria
+    cvr-message
+
+    // Tipo de mensage: INFO (azul), SUCCESS (verde), WARNING (amarillo), ERROR (rojo)
+    cvr-message__info, cvr-message__success, cvr-message__warning, cvr-message__error         
+
+    // Estilos de línea: A (línea al principio resto sin bordes), B (por defecto / sin borde), C (con bordes)
+    cvr-style__A, cvr-style__B, cvr-style__C:         
+
+    // Colore para los iconos : azul, verde, amarillo, rojo
+    cvr-message-info_icon, cvr-message-success_icon, cvr-message-warning_icon, cvr-message-error_icon
+
+    // Iconos fa: i, v, !, x
+    fas fa-info-circle, fa-check-circle, fa-exclamation-triangle, fas fa-times
+
+    // Palabra Clave: Info, Success, Warning, Error
+    cvr-message-summary
+
+    // Mensage: texto del mensaje
+    cvr-message-detail
+
+
+ * Ejemplos:
+
+     // Info
+    <div class="cvr-message cvr-message__info" *ngIf="classTypeScript">
+    <i class="cvr-message-info_icon fas fa-info-circle "></i>
+    <span class="cvr-message-summary">INFO</span>
+    <span class="cvr-message-detail">Message of detail</span>
+    </div>
+    
+    // Success
+    <div class="cvr-message cvr-message__success" *ngIf="classTypeScript">
+    <i class="cvr-message-success_icon far fa-check-circle"></i>
+    <span class="cvr-message-summary">SUCCESS</span>
+    <span class="cvr-message-detail">Message of detail</span>
+    </div>
+
+    // Warning
+    <div class="cvr-message cvr-message__warning" *ngIf="classTypeScript">
+    <i class="cvr-message-warning_icon fas fa-exclamation-triangle"></i>
+    <span class="cvr-message-summary">WARNING</span>
+    <span class="cvr-message-detail">Message of detail</span>
+    </div>
+
+    // Error
+    <div class="cvr-message cvr-message__error" *ngIf="classTypeScript"> 
+    <i class="cvr-message-error_icon fas fa-times-circle"></i>
+    <span class="cvr-message-summary">ERROR</span>
+    <span class="cvr-message-detail">Message of detail</span> 
+    </div>
+
+    // Opcional: botón o icono para cerrrar el mensaje
+    <button mat-flat-button (click)="buttonClose()">Ver Errores</button>
+    <p-button icon="pì pi-close" (click)="buttonClose()"/>
+    <i class="cvr-message-icon_close fas fa-times" (click)="iconClose()"></i>
+    </div>
+
+*/
+
+
+/* ============================================
+   *MARK: CVR MESSAGE
+   ============================================ */
+
+.cvr-message {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: normal;
+    align-items: center;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    min-height: 40px;
+    box-sizing: border-box;
+
+    background-color: var(--cvr-bg-color);
+    border-color: var(--cvr-color);
+    color: var(--cvr-color);
+
+    button {
+        color: var(--cvr-color);
+        min-width: max-content;
+    }
+
+    .cvr-message-icon {
+        margin-right: 0.5rem;
+        font-size: 2rem;
+        height: 24px;
+        width: 24px;
+    }
+
+    .fa-times,
+    .cvr-message-icon_close {
+        color: var(--cvr-color);
+        margin-right: 0.5rem;
+        font-size: 1rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: transparent;
+        transition:
+            background-color 0.2s,
+            color 0.2s,
+            box-shadow 0.2s;
+        justify-content: flex-end;
+        padding-left: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: color-mix(in oklab, var(--cvr-color) 38%, transparent);
+            transform: scale(1.015);
+            transform-origin: center right;
+        }
+
+        .mdc-button {
+            float: right;
+        }
+    }
+
+    .fa,
+    .fas,
+    .cvr-message-error_icon {
+        color: var(--cvr-color);
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .cvr-message-summary {
+        width: max-content;
+        margin-right: 0.75rem;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .cvr-message-detail {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   *MARK: CVR MESSAGE ERROR, INFO, SUCCESS, WARNING
+   ============================================ */
+
+[data-theme="legacy"] {
+
+    .cvr-message.cvr-message__success {
+        --cvr-color: var(--green-600);
+        --cvr-bg-color: var(--green-100);
+    }
+
+    .cvr-message.cvr-message__info {
+        --cvr-color: var(--blue-600);
+        --cvr-bg-color: var(--blue-100);
+    }
+
+    .cvr-message.cvr-message__warning {
+        --cvr-color: var(--orange-600);
+        --cvr-bg-color: var(--yellow-100);
+    }
+
+    .cvr-message.cvr-message__error {
+        --cvr-color: var(--red-600);
+        --cvr-bg-color: var(--red-100);
+    }
+}
+
+[data-theme="light"] {
+
+    .cvr-message.cvr-message__success {
+        --cvr-color: var(--green-900);
+        --cvr-bg-color: var(--green-50);
+    }
+
+    .cvr-message.cvr-message__info {
+        --cvr-color: var(--blue-900);
+        --cvr-bg-color: var(--blue-50);
+    }
+
+    .cvr-message.cvr-message__warning {
+        --cvr-color: var(--orange-900);
+        --cvr-bg-color: var(--yellow-50);
+    }
+
+    .cvr-message.cvr-message__error {
+        --cvr-color: var(--red-900);
+        --cvr-bg-color: var(--red-50);
+    }
+}
+
+[data-theme="dark"] {
+
+    .cvr-message.cvr-message__success {
+        --cvr-color: var(--green-500);
+        --cvr-bg-color: color-mix(in oklab, var(--green-500), var(--gray-100) 84%) !important;
+        border-color: var(--cvr-color) !important;
+    }
+
+    .cvr-message.cvr-message__info {
+        --cvr-color: var(--blue-500);
+        --cvr-bg-color: color-mix(in oklab, var(--blue-500), var(--gray-100) 84%) !important;
+        border-color: var(--cvr-color) !important;
+    }
+
+    .cvr-message.cvr-message__warning {
+        --cvr-color: var(--orange-500);
+        --cvr-bg-color: color-mix(in oklab, var(--orange-500), var(--gray-100) 84%) !important;
+        border-color: var(--cvr-color) !important;
+    }
+
+    .cvr-message.cvr-message__error {
+        --cvr-color: var(--red-500);
+        --cvr-bg-color: color-mix(in oklab, var(--red-500), var(--gray-100) 84%) !important;
+        border-color: var(--cvr-color) !important;
+    }
+}
+
+
+/* ============================================
+   *MARK: CVR MESSAGE STYLE
+   ============================================ */
+
+.cvr-message.cvr-style__A {
+    border-style: solid;
+    border-width: 0 0 0 6px;
+}
+
+.cvr-message.cvr-style__B {
+    border: none;
+    border-width: 0px;
+}
+
+.cvr-message.cvr-style__C {
+    border-style: solid;
+    border-width: 2px;
+}

@@ -1,0 +1,35 @@
+/**
+ * Component: Breakpoints Tokens
+ * Description: Tokens de breakpoints del sistema utilizados para definir comportamientos responsivos coherentes y previsibles.
+ *              Representan límites de layout, no tamaños de dispositivo.
+ * Date: 2026
+ * Uso de ejemplo:
+ *   @media (min-width: var(--breakpoint-md)) {
+ *       "layout tablet+" 
+ *   }
+ */
+
+:root {
+
+    /* ============================================
+     MARK: Mobile First (min-width)
+     ============================================ */
+  
+    /* Punto base. Mobile pequeño. No se usa en media queries. */
+    --breakpoint-xs: 0px;
+
+    /* Mobile grande / small devices. */
+    --breakpoint-sm: 576px;
+
+    /* Tablets y layouts intermedios. */
+    --breakpoint-md: 768px;
+
+    /* Desktop estándar. */
+    --breakpoint-lg: 1024px;
+
+    /* Desktop grande / monitores amplios. */
+    --breakpoint-xl: 1280px;
+
+    /* Pantallas muy grandes / widescreen. */
+    --breakpoint-2xl: 1536px;
+}

@@ -1,0 +1,19 @@
+/**
+ * Component: GUTTER TOKEN
+ * Description: espacio entre columnas o elementos, normalmente dentro de un grid o de un contenedor flexible.
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Gutter
+   ============================================ */
+
+:root {
+    --gutter-xs: 0.5rem; // 8px
+    --gutter-sm: 1rem; // 16px
+    --gutter-md: 1.5rem; // 24px
+    --gutter-lg: 2rem; // 32px
+
+    --gutter-grid: var(--gutter-md);
+    --gutter-flex: var(--gutter-sm);
+}

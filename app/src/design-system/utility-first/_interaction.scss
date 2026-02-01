@@ -1,0 +1,62 @@
+/**
+ * Component: INTERACTION UTILITY-FIRST
+ * Description: clases para utilidad de interacción con elementos (cursor, puntero, selección y apariencia nativa).
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Cursor
+   ============================================ */
+
+.cursor-auto        { cursor: auto; }
+.cursor-default     { cursor: default; }
+.cursor-pointer     { cursor: pointer; }
+.cursor-text        { cursor: text; }
+.cursor-none        { cursor: none; }
+.cursor-not-allowed { cursor: not-allowed; }
+.cursor-no-drop     { cursor: no-drop; }
+.cursor-wait        { cursor: wait; }
+.cursor-move        { cursor: move;}
+
+/* ============================================
+   MARK: Eventos del puntero
+   ============================================ */
+
+.pointer-events-none { pointer-events: none; }
+.pointer-events-auto { pointer-events: auto; }
+
+/* ============================================
+   MARK: Select (seleccionar texto)
+   ============================================ */
+
+.select-none {
+        -webkit-user-select: none!important;
+        -moz-user-select: none!important;
+        user-select: none!important;
+}
+
+.select-text {
+        -webkit-user-select: text!important;
+        -moz-user-select: text!important;
+        user-select: text!important;
+}
+
+.select-all {
+        -webkit-user-select: all!important;
+        -moz-user-select: all!important;
+        user-select: all!important;
+}
+
+.select-auto {
+        -webkit-user-select: auto!important;
+        -moz-user-select: auto!important;
+        user-select: auto!important;
+}
+
+
+/* ============================================
+   MARK: Apariencia nativa
+   ============================================ */
+
+.appearance-none { appearance: none;} // “No apliques el estilo nativo del sistema operativo / navegador”.
+.outline-none { outline: none; } // Eliminia el estilo outline cuando recibe el foco.

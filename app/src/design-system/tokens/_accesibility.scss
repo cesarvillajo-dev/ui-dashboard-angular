@@ -1,0 +1,40 @@
+/**
+ * Component: ACCESIBILITY TOKEN
+ * Description: tokens que tienen que ver con la accesibilidad
+ * Date: 2026
+ */
+
+/* =====================================================
+   MARK: FOCUS RING (KEYBOARD NAVIGATION)
+   ===================================================== */
+:root {
+
+    /* Color del anillo de foco
+     - Debe tener alto contraste
+     - No debe confundirse con hover ni active
+     - Debe funcionar en light y dark */
+    --focus-ring-color: var(--primary-color);
+
+    /* Grosor del anillo
+     - WCAG recomienda ≥ 2px
+     - 2px es el estándar más usado */
+    --focus-ring-width: 1px;
+
+    /* Separación respecto al elemento
+     - Evita solaparse con border
+     - Mejora legibilidad visual */
+    --focus-ring-offset: 1px;
+}
+
+
+/* =====================================================
+   MARK: Selección de texto (::selection)
+   ===================================================== */
+:root {
+    /* Pseudo-elemento que se aplica al texto seleccionado por el usuario cuando: 
+       - arrastra con el ratón,
+       - usa Shift + flechas,
+       - selecciona texto en móvil */
+    --selection-text-bg: var(--primary-color);
+    --selection-text-color: var(--secondary-text-color);
+}

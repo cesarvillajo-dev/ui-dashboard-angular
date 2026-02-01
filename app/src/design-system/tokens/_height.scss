@@ -1,0 +1,42 @@
+/**
+ * Component: HEIGHT TOKENS
+ * Description:  Tokens de altura reutilizables. No controlan alineación ni layout.
+ * Date: 2026
+ */
+
+:root {
+
+    /* ============================================
+      MARK: RELATIVE
+      ============================================ */
+
+    --size-height-auto: auto;
+    --size-height-full: 100%;
+
+    /* ============================================
+      MARK: VIEWPORT
+      ============================================ */
+
+    --size-height-screen: 100vh;
+    --size-height-dvh: 100dvh;
+    --size-height-svh: 100svh;
+    --size-height-lvh: 100lvh;
+
+    /* ============================================
+       MARK: CONTENT-BASED
+       ============================================ */
+
+    --size-height-min-content: min-content;
+    --size-height-max-content: max-content;
+    --size-height-fit-content: fit-content;
+
+    /* ============================================
+       MARK: FIXED SCALE (UI ELEMENTS)
+       ============================================ */
+
+    --size-height-xs: 2rem; /* 32px */
+    --size-height-sm: 3rem; /* 48px */
+    --size-height-md: 4rem; /* 64px */
+    --size-height-lg: 6rem; /* 96px */
+    --size-height-xl: 8rem; /* 128px */
+}

@@ -1,0 +1,15 @@
+/**
+ * Component: DISPLAY UTILITY-FIRST
+ * Description: propiedad de visualización que define cómo un elemento participa en el flujo del documento y cómo se comporta su caja.
+ * Date: 2026
+ */
+
+.flex,         .d-flex         { display: flex; }
+.inline-flex,  .d-inline-flex  { display: inline-flex; }
+.block,        .d-block        { display: block; }
+.inline-block, .d-inline-block { display: inline-block; }
+.inline,       .d-inline       { display: inline; }
+.list-inline,  .d-list-inline  { display: list-inline; }
+.contents,     .d-contents     { display: contents; }
+.grid,         .d-grid         { display: grid; }
+.display-none, .d-none         { display: none; }

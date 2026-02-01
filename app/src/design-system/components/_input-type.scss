@@ -1,0 +1,217 @@
+/**
+ * Component: INPUT [TYPE=""]
+ * Description: clases para inputs nativos
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: INPUT TEXT
+   ============================================ */
+
+input[type="text"] {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid var(--primary-border-color);
+  border-radius: 4px;
+  cursor: text;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* TEXTO SELECCIONADO CON EL CURSOR DENTRO DE UN INPUT */
+input[type="text"]::selection {
+  background-color: var(--selection-text-bg);
+  color: var(--selection-text-color);
+}
+
+/* INPUT QUE HA SIDO AUTOCOMPLETADO POR EL NAVEGADOR */
+input:-internal-autofill-selected {
+  -webkit-appearance: menulist-button;
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: -internal-light-dark(rgb(254, 238, 232), rgba(255, 255, 255, .2)) !important;
+  color: -internal-light-dark(black, white) !important
+}
+
+/* INPUT QUE HA SIDO AUTOCOMPLETADO POR EL NAVEGADOR DE OTRA MANERA */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--surface-0) inset !important;
+  -webkit-text-fill-color: var(--primary-text-color);
+}
+
+/* ============================================
+   MARK: INPUT RADIO
+   ============================================ */
+
+/* ESTADO INICIAL */
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  cursor: pointer;
+
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  visibility: visible;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 20px;
+  height: 20px;
+
+  transition: all 0.15s ease-out 0s;
+
+  background-color: var(--white);
+  outline: none;
+  border: 2px solid var(--gray-500);
+  border-radius: 50%;
+  transition: background-color ease 0.2s, border-color ease 0.2s, box-shadow ease 0.2s;
+}
+
+input[type="radio"]:checked {
+  /* Mantenemos el borde del contenedor */
+  border: 2px solid var(--primary-color);
+  transition: background-color ease 0.2s, border-color ease 0.2s, box-shadow ease 0.2s;
+}
+
+/* ESTADO SELECCIONADO */
+input[type="radio"]:checked::before {
+  cursor: pointer;
+  content: "";
+
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  visibility: visible;
+
+  width: 16px;
+  height: 16px;
+
+  top: 0px;
+  left: 0px;
+
+  background-color: var(--primary-color);
+  border: 3px solid var(--white);
+  outline: 2px solid var(--primary-500);
+  border-radius: 50%;
+  transition: background-color ease 0.2s, border-color ease 0.2s, box-shadow ease 0.2s;
+}
+
+/* ESTADO DEL PUNTERO POR ENCIMA */
+input[type="radio"]:not(:disabled):hover {
+  border-color: var(--gray-900);
+  background: var(--white);
+  box-shadow: 0 0 1px 10px color-mix(in srgb, var(--primary-text-color), transparent 96%);
+  transition: background-color ease 0.2s, border-color ease 0.2s, box-shadow ease 0.2s;
+}
+
+/* ESTADO AL PULSAR */
+input[type="radio"]:not(:disabled):active {
+  cursor: pointer;
+
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  visibility: visible;
+
+  background-color: color-mix(in srgb, var(--gray-500), transparent 72%);
+  border-radius: 50%;
+  transition: background-color ease 0.2s, border-color ease 0.2s, box-shadow ease 0.2s;
+}
+
+input[type="radio"]:disabled {
+  border: 2px solid var(--gray-500);
+  background-color: var(--gray-300);
+  cursor: auto;
+}
+
+/* ============================================
+   MARK: INPUT CHECKBOX
+   ============================================ */
+/*
+
+/* ESTADO INICIAL */
+input[type="checkbox"]:not([class^="p-"]):not([class^="mat-"])::before {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  visibility: visible;
+
+  cursor: pointer;
+  content: "";
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: var(--white);
+  border: 1px solid var(--gray-800);
+}
+
+input[type="checkbox"]:not([class^="p-"]):not([class^="mat-"]):checked::after {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  visibility: visible;
+
+  cursor: pointer;
+  content: "";
+
+  top: -20px;
+  left: 0;
+
+  width: 14px;
+  height: 14px;
+
+  outline: 2px solid var(--primary-500-50);
+  background-color: var(--primary-color);
+  border: 2px solid var(--white);
+  //clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  clip-path: polygon(20% 47%, 9% 67%, 50% 90%, 93% 32%, 74% 19%, 44% 60%);
+}
+
+/* TACHA EL TEXTO DEL LABEL CUANDO NO ESTA SELECCIONADO (CHECKED="FALSE") */
+input[type="checkbox"]:checked+label.crossed {
+  text-decoration: none;
+}
+
+input[type="checkbox"]+label.crossed {
+  text-decoration: line-through;
+}
+
+/* OCULTA EL CHECKBOX DE ESE ID EN CONCRETO DEL INPUT Y DEL LABEL CORRESPONDIENTE (INPUT + LABEL.CROSSED) */
+input[type="checkbox"]#id-imput {
+  display: none !important;
+}
+
+/* EJEMPO */
+/*
+<input type="checkbox" id="id-input" />
+<label for="id-input" class="crossed">ejemplo<label>
+*/

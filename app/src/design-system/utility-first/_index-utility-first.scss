@@ -1,0 +1,29 @@
+/**
+ * Component: INDEX UTILITY-FIRST
+ * Description: clases de utilidad Atomic CSS, para una arquitectura CSS basado en clases paqueñas, atómicas y reutilizables.
+ * Date: 2026
+ */
+ 
+@forward './flex';
+@forward './gap';
+@forward './padding';
+@forward './margin';
+@forward './order';
+@forward './display';
+@forward './float';
+@forward './columns';
+@forward './width';
+@forward './height';
+@forward './background';
+@forward './elevation';
+@forward './overflow';
+@forward './position';
+@forward './border';
+@forward './typography';
+@forward './interaction';
+@forward './states';
+@forward './placement';
+@forward './z-index';
+
+
+//@forward './tailwindcss-bridge';

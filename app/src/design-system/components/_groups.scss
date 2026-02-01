@@ -1,0 +1,111 @@
+/**
+ * Component: GROUPS
+ * Description: clases para grupos de varios elementos
+ * Date: 2026
+ */
+
+/* CONTENEDOR DE PANELES PEQUEÑOS */
+.cajita {
+  text-align: left;
+  margin: 0.2rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9em;
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+}
+
+.grupo {
+  padding: 0 2.3em 5.8em;
+  line-height: 1.4em;
+  cursor: auto;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.radio-group {
+  border: 1px solid var(--gray-400);
+  border-radius: 4px;
+  padding: 0.4em 0.8em;
+  width: 253px;
+  background-color: var(--white);
+  font-size: 0.9em;
+}
+
+.radio-group-2 {
+  border: 1px solid var(--gray-400);
+  border-radius: 4px;
+  padding: 0.4em 0.8em;
+  width: 289px;
+  background-color: var(--white);
+  white-space: nowrap;
+}
+
+.radio-group-3 {
+  border: 1px solid var(--gray-400);
+  border-radius: 4px;
+  padding: 0.4em 0.8em;
+  width: 377px;
+  background-color: var(--white);
+  font-size: 0.9em;
+}
+
+.radio-group-4 {
+  border: 1px solid var(--primary-color);
+  padding: 15px 0 15px 15px;
+  border-radius: 4px;
+}
+
+.radio-group-5 {
+  border: 1px solid var(--gray-400);
+  border-radius: 4px;
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+  width: auto;
+  background-color: var(--white);
+  font-size: 0.9em;
+  justify-content: center;
+  height: 43px;
+  align-items: center;
+}
+
+.radio-group-6 {
+  border: 1px solid var(--gray-400);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.radio-group-auto {
+  border: 1px solid var(--gray-400);
+  border-radius: 4px;
+  padding: 0.4em 0.8em;
+  background-color: var(--white);
+  white-space: nowrap;
+}
+
+.ComboMultiple {
+  reveal-if-active {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 16px;
+    transform: scale(0.8);
+    transition: 0.5s;
+
+    label {
+      display: block;
+      margin: 0 0 3px 0;
+    }
+
+    input[type="text"] {
+      width: 100%;
+    }
+
+    input[type="radio"]:checked~& {
+      opacity: 1;
+      max-height: 100px;
+      padding: 10px 20px;
+      transform: scale(1);
+      overflow: visible;
+    }
+  }
+}

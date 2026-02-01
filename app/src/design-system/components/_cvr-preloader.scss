@@ -1,0 +1,853 @@
+/**
+* Component: PRELOADER / SPINNER DE CARGA
+* Description: spinner de carga con el logo de catastro.
+* Use-1: #preloader para la precarga general en index.html a pantalla completa
+* Use-2: #preloader-mini para la precarga en panel desplegable
+* Autor: at.cesar.villajo@catastro.hacienda.gob.es
+* Date: 2026
+*/
+
+// ============================================================================
+// #region MARK: EJEMPLO HTML SPINNER PRELOADER
+// ============================================================================
+/**
+<body>
+  <app>
+    <div class="preloader-container" id="preloader" #preloader>
+      <div class="cvr-preloader-content" id="cvr-preloader">
+
+        <svg class="svg-sintra__animation-fade" viewBox="0 0 255 239">
+          <path _ngcontent-pwk-c12=""
+            d="M 1,124.5 1,10 l 57,0 57,0 0,-5 0,-5 45.5,0 45.5,0 0,5 0,5 24,0 24,0 0,114.5 0,114.5 -126.5,0 L 1,239 1,124.5 Z m 62,85.5 0,-24 -28.5,0 -28.5,0 0,24 0,24 28.5,0 28.5,0 0,-24 z m 62,0 0,-24 -28.5,0 -28.5,0 0,24 0,24 28.5,0 28.5,0 0,-24 z m 124,9.5 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m -186,-53 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z M 63,109.5 63,95 34.5,95 6,95 l 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z M 63,52.5 63,38 34.5,38 6,38 6,52.5 6,67 34.5,67 63,67 63,52.5 Z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z">
+          </path>
+        </svg>
+
+        <svg class="scuare-back" viewBox="0 0 255 239">
+          <rect x="0" y="0" width="100%" height="100%" />
+        </svg>
+
+        <svg class="svg-circle__animation-rotate " viewBox="25 25 50 50">
+          <circle class="circle-trail" />
+          <circle class="circle-trail__animation-trail_trailcolor " />
+        </svg>
+
+        <svg class="svg-circle2__animation-rotate2 " viewBox="25 25 50 50">
+          <circle class="circle-trail2__animation-rotate2" />
+        </svg>
+
+        <div class="texto_emergente-container">
+          <div class="text-sintra__animation-showup">SINTRA</div>
+          <div class="text_app-content">
+            <span class="text_app-separator__animation-showup_slidein mx-1">•</span>
+            <span class="text_app-name__animation-reveal_slidein">Procesando</span>
+          </div>
+        </div>
+
+
+        <!-- <div class="loader-dots" id="loader-dots"></div> -->
+        <!-- <div class="loading__animation-fade">CARGANDO DATOS...</div> -->
+        <!-- <span class="display-content">
+              <span class="display-text__animation-move_fade">CARGANDO DATOS...</span>
+             </span> 
+             <span class="text-loading__animation-fade">CARGANDO DATOS...</span> -->
+
+
+      </div>
+    </div>
+  </app>
+</body>
+*/
+// #endregion
+// ============================================================================
+
+// ============================================================================
+// #region MARK: EJEMPLO HTML PRELOADER MINI
+// ============================================================================
+/**
+<div [hidden]="isLoadingPreloader" style="min-height: 165px;">  
+  <div class="preloader-container-mini" id="preloader-mini">
+    <div class="cvr-preloader-content" id="cvr-preloader"  >
+
+      <svg class="svg-sintra__animation-fade" viewBox="0 0 255 239">
+        <path _ngcontent-pwk-c12=""
+          d="M 1,124.5 1,10 l 57,0 57,0 0,-5 0,-5 45.5,0 45.5,0 0,5 0,5 24,0 24,0 0,114.5 0,114.5 -126.5,0 L 1,239 1,124.5 Z m 62,85.5 0,-24 -28.5,0 -28.5,0 0,24 0,24 28.5,0 28.5,0 0,-24 z m 62,0 0,-24 -28.5,0 -28.5,0 0,24 0,24 28.5,0 28.5,0 0,-24 z m 124,9.5 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m -186,-53 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z M 63,109.5 63,95 34.5,95 6,95 l 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z M 63,52.5 63,38 34.5,38 6,38 6,52.5 6,67 34.5,67 63,67 63,52.5 Z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z m 62,0 0,-14.5 -28.5,0 -28.5,0 0,14.5 0,14.5 28.5,0 28.5,0 0,-14.5 z">
+        </path>
+      </svg>
+
+      <svg class="scuare-back" viewBox="0 0 255 239">
+        <rect x="0" y="0" width="100%" height="100%" />
+      </svg>
+
+      <svg class="svg-circle__animation-rotate " viewBox="25 25 50 50">
+        <circle class="circle-trail" />
+        <circle class="circle-trail__animation-trail_trailcolor " />
+      </svg>
+
+      <svg class="svg-circle2__animation-rotate2 " viewBox="25 25 50 50">
+        <circle class="circle-trail2__animation-rotate2" />
+      </svg>
+
+      <div class="texto_emergente-container">
+        <div class="text-sintra__animation-showup">Sintra</div>
+        <div class="text_app-content">
+          <span class="text_app-separator__animation-showup_slidein">-</span>
+          <span class="text_app-name__animation-reveal_slidein">Procesando</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>  
+  <div class="text-loading__animation-fade">CARGANDO DATOS...</div>
+</div>
+
+</html>
+*/
+// #endregion
+// ============================================================================
+
+/* ============================================
+   MARK: PRELOADER DE CARGA
+   ============================================ */
+
+/* CONTENEDOR DE PRELOADER PARA PANTALLA COMPLETA */
+.preloader-container,
+#preloader {
+  display: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  z-index: var(--z-index-preloader);
+}
+
+/* CONTENEDOR DE PRELOADER PARA PANELES PEQUENOS */
+.preloader-container-mini,
+#preloader-mini {
+  @extend .preloader-container;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  transform: scale(0.5) !important;
+
+  .cvr-preloader-content {
+    background: transparent !important;
+  }
+
+  .scuare-back {
+    position: absolute !important;
+    top: 46%;
+  }
+
+  .texto_emergente-container {
+    //display: none !important;
+    transform: scale(1.5);
+  }
+}
+
+/* CONTENIDO DEL PRELOADER */
+.cvr-preloader-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transform-origin: center center;
+}
+
+/* ICONO DE SINTRA Y ANIMACIÓN FADE */
+.svg-sintra__animation-fade {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  fill: var(--primary-color);
+  animation: fade 2.25s ease-in-out infinite;
+  z-index: calc(var(--z-index-preloader) - 1);
+}
+
+/* CUADRADO DETRAS DEL LOGO PARA QUE EL FONDO NO SE VEA TRANSPARENTE */
+.scuare-back {
+  position: relative;
+  top: 1px;
+  width: 50px;
+  height: 44px;
+  background: var(--white);
+  fill: var(--white);
+  transform-origin: center center;
+  z-index: calc(var(--z-index-preloader) - 2);
+}
+
+/* REGLA KEYFRAME PARA LA ANIMACION FADE */
+@keyframes fade {
+
+  100%,
+  0% {
+    fill: var(--primary-color);
+    color: var(--gray-350);
+  }
+
+  40% {
+    fill: var(--gray-350);
+    color: var(--primary-color);
+  }
+
+  66% {
+    fill: var(--primary-color);
+    color: var(--gray-350);
+  }
+
+  80%,
+  90% {
+    fill: var(--primary-color);
+    color: var(--gray-350);
+  }
+}
+
+
+/* CIRCULO PRINCIPAL Y ANIMACION ROTATE */
+.svg-circle__animation-rotate {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  animation: rotate 2s linear infinite;
+  transform-origin: center center;
+}
+
+/* REGLA KEYFRAME PARA NIMACIÓN ROTATE EN EL SENTIDO DEL RELOJ */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* CARRIL DEL CIRCULO PRINCIPAL */
+.circle-trail {
+  stroke: var(--gray-350);
+  cx: 50px;
+  cy: 50px;
+  r: 9.5px;
+  /* antes 10px */
+  fill: rgba(255, 255, 255, 0.4);
+  stroke-width: 1.5px;
+  /* ancho del rail antes 2px */
+}
+
+/* LÍNEA QUE RECORRE EL CARRIL DEL CIRCULO PRINCIPAL Y ANIMACIONES DEL CARRIL Y COLOR DEL CARRIL */
+.circle-trail__animation-trail_trailcolor {
+  cx: 50px;
+  cy: 50px;
+  r: 9.5px;
+  /* antes 10px */
+  fill: none;
+  animation: trail 2.5s ease-in-out infinite, trailcolor 6s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke-width: 2.5px;
+  /* ancho de linea antes 3px */
+  stroke-miterlimit: 5px;
+}
+
+/* REGLA KEYFRAME PARA LOS CAMBIOS EN EL CARRIL, SON LAS ESTELAS DE LA ANIMACION PRINCIPAL */
+@keyframes trail {
+
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+/* REGLA KEYFRAME PARA EL CAMBIO DE COLOR DE LA ANIMACION PRINCIPAL */
+@keyframes trailcolor {
+
+  100%,
+  0% {
+    stroke: var(--primary-color);
+  }
+
+  40% {
+    stroke: var(--primary-color);
+  }
+
+  66% {
+    stroke: var(--primary-color);
+  }
+
+  80%,
+  90% {
+    stroke: var(--primary-color);
+  }
+}
+
+/* CIRCULO SECUNDARIO Y ANIMACION ROTATE2 O SECUNDARIA */
+.svg-circle2__animation-rotate2 {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  animation: rotate2 13s linear infinite;
+}
+
+/* REGLA KEYFRAME PARA ANIMACIÓN ROTATE2, QUE ROTA EN CONTRA DEL SENTIDO DEL RELOJ */
+@keyframes rotate2 {
+  100% {
+    transform: rotate(-3600deg);
+  }
+}
+
+/* LINEA QUE RECORRE EL CARRIL DEL CIRCULO SECUNDARIO Y ANIMACIONES DEL CARRIL Y COLOR DEL CARRIL TRAIL2 O SECUNDARIO */
+.circle-trail2__animation-rotate2 {
+  cx: 50px;
+  cy: 50px;
+  r: 12px;
+  /* antes 13px */
+  fill: none;
+  animation: trail2 5s linear infinite;
+  stroke-linecap: round;
+  stroke-width: 1px;
+  stroke-miterlimit: 10px;
+  stroke: var(--gray-350);
+}
+
+/* REGLA KEYFRAME PARA LOS CAMBIOS EN TRAIL2, SON LAS ESTELAS EN EL CARRIL DE LA ANIMACION SECUNDARIA --*/
+@keyframes trail2 {
+
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: 15px;
+  }
+
+  100% {
+    stroke-dasharray: 200, 200;
+    stroke-dashoffset: 200px;
+  }
+}
+
+/* ============================================
+   MARK: TEXTO DE LA ANIMACIÓN Y ANIMACIÓN EMERGENTE
+   ============================================ */
+
+/* CONTENEDOR TEXTO DE LA ANIMACIÓN */
+.texto_emergente-container {
+  position: absolute;
+  margin-top: 200px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* TEXTO DE LA ANIMACIÓN DE EMERGER */
+.text-sintra__animation-showup {
+  display: inline-block;
+  animation: showup 4s infinite;
+  vertical-align: middle;
+}
+
+/* REGLA KEYFRAME DE LA ANIMACIÓN DE EMERGER */
+@keyframes showup {
+  0% {
+    opacity: 0;
+    color: var(--white);
+  }
+
+  20% {
+    opacity: 1;
+    color: var(--primary-color);
+  }
+
+  80% {
+    opacity: 1;
+    color: var(--primary-color);
+
+  }
+
+  100% {
+    opacity: 0;
+    color: var(--white);
+  }
+}
+
+.text_app-content {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.text_app-separator__animation-showup_slidein {
+  animation: showup 4s infinite, slidein 4s infinite;
+}
+
+.text_app-name__animation-reveal_slidein {
+  animation: reveal 4s infinite, slidein 4s infinite;
+}
+
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+
+  20% {
+    margin-left: -800px;
+  }
+
+  50% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+    color: var(--white);
+  }
+
+  20% {
+    opacity: 1;
+    width: 0px;
+    color: var(--primary-color);
+  }
+
+  30% {
+    width: 355px;
+  }
+
+  80% {
+    opacity: 1;
+    color: var(--primary-color);
+
+  }
+
+  100% {
+    opacity: 0;
+    width: 355px;
+    color: var(--white);
+  }
+}
+
+
+/* ============================================
+   MARK: TEXTO "CARGANDO..." Y ANIMACION FADE UTILIZADA ANTERIORMENTE
+   ============================================ */
+
+.text-loading__animation-fade {
+  position: absolute;
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.75rem 0;
+  animation: fade 2.25s ease-in-out infinite;
+}
+
+/* ============================================
+   MARK: TEXTO "CARGANDO..." MINI Y ANIMACION FADE UTILIZADA ANTERIORMENTE
+   ============================================ */
+
+.loading__animation-fade {
+  position: absolute;
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: fade 2.25s ease-in-out infinite;
+}
+ 
+
+
+.display-content {
+  position: absolute;
+  display: block;
+  margin-top: 200px;
+  width: 75px;
+  background-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ============================================
+   MARK: TEXTO Y ANIMACION MOVE PARA MOVER EL TEXTO  HORIZONTALMENTE
+   ============================================ */
+
+/* TEXTO ANIMADO */
+.display-text__animation-move_fade {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  animation: move 1.5s linear infinite, fade 2.25s ease-in-out infinite;
+  color: var(--primary-color);
+}
+
+/* REGLA KEYFRAME PARA ANIMACIÓN MOVE PARA EL TEXTO ANIMADO */
+@keyframes move {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ============================================
+   MARK: DOTS
+   ============================================ */
+
+.loader-dots:before,
+.loader-dots:after,
+.loader-dots {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: threedots 1.5s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+
+.loader-dots {
+  position: absolute;
+  margin-top: 40px;
+  animation-delay: 0.16s;
+}
+
+.loader-dots:before {
+  left: -1.5rem;
+}
+
+.loader-dots:after {
+  left: 1.5rem;
+  animation-delay: 0.32s;
+}
+
+.loader-dots:before,
+.loader-dots:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+/* REGLA KEYFRAME PARA ANIMACIÓN DE LOS TRES DOTS DEL LOADER-DOTS */
+@keyframes threedots {
+
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 1rem 0 -0.5rem var(--primary-color);
+  }
+
+  40% {
+    box-shadow: 0 2rem 0 0 var(--primary-color);
+  }
+}
+
+circle {
+  stroke-linecap: round !important;
+}
+
+
+
+
+/* ============================================
+   MARK: PRELOADER SPINNER "ANTIGUO"
+   ============================================ */
+
+// #preloader {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: var(--z-index-preloader);
+//     background: rgba(234, 234, 234, 0.5);
+
+//     //background: '/assets/img/application_logo.png' no-repeat center center;
+//     img {
+//       width: 20%;
+//       height: auto;
+//       opacity: 0.5;
+//       margin-left: auto;
+//       margin-right: auto;
+//       display: block;
+//       //animation: transparencia 2s linear infinite;
+//     }
+
+//     &>div {
+//       display: block;
+//       position: relative;
+//       left: 53%;
+//       top: 47%;
+//       width: 160px;
+//       height: 150px;
+//       margin: -75px 0 0 -75px;
+//       border-radius: 50%;
+//       border: 3px solid transparent;
+//       border-top-color: var(--primary-800); //COLOR EXTERIOR
+//       transform: translate3d(0, 0, 0);
+//       animation: spin 2s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera
+
+//       &:before {
+//         content: "";
+//         position: absolute;
+//         top: 5px;
+//         left: 5px;
+//         right: 5px;
+//         bottom: 5px;
+//         border-radius: 50%;
+//         border: 3px solid transparent;
+//         border-top-color: var(--primary-color); //COLOR DEL MEDIO
+//         -webkit-animation: spin 3s linear infinite; // Chrome, Opera 15+, Safari 5+
+//         animation: spin 3s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera
+//       }
+
+//       &:after {
+//         content: "";
+//         position: absolute;
+//         top: 15px;
+//         left: 15px;
+//         right: 15px;
+//         bottom: 15px;
+//         border-radius: 50%;
+//         border: 3px solid transparent;
+//         border-top-color: var(--primary-700); // COLOR INTERIOR
+//         animation: spin 1.5s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera
+//       }
+//     }
+//   }
+
+//   .p-progress-spinner {
+//     position: relative;
+//     margin: 0 auto;
+//     width: 100px;
+//     height: 100px;
+//     display: inline-block
+//   }
+
+//   .p-progress-spinner:before {
+//     content: "";
+//     display: block;
+//     padding-top: 100%
+//   }
+
+//   .p-progress-spinner-svg {
+//     animation: p-progress-spinner-rotate 2s linear infinite;
+//     height: 100%;
+//     transform-origin: center center;
+//     width: 100%;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     margin: auto
+//   }
+
+//   .p-progress-spinner-circle {
+//     stroke-dasharray: 89, 200;
+//     stroke-dashoffset: 0;
+//     stroke: var(--primary-color);
+//     animation: p-progress-spinner-dash 1.5s ease-in-out infinite, p-progress-spinner-color 6s ease-in-out infinite;
+//     stroke-linecap: round
+//   }
+
+//   @keyframes p-progress-spinner-rotate {
+//     to {
+//       transform: rotate(360deg)
+//     }
+//   }
+
+//   @keyframes p-progress-spinner-dash {
+//     0% {
+//       stroke-dasharray: 1, 200;
+//       stroke-dashoffset: 0
+//     }
+
+//     50% {
+//       stroke-dasharray: 89, 200;
+//       stroke-dashoffset: -35px
+//     }
+
+//     to {
+//       stroke-dasharray: 89, 200;
+//       stroke-dashoffset: -124px
+//     }
+//   }
+
+//   @keyframes p-progress-spinner-color {
+
+//     to,
+//     0% {
+//       stroke: var(--red-500)
+//     }
+
+//     40% {
+//       stroke: var(--blue-500)
+//     }
+
+//     66% {
+//       stroke: var(--green-500)
+//     }
+
+//     80%,
+//     90% {
+//       stroke: var(--yellow-500)
+//     }
+//   }
+
+//   @-webkit-keyframes spin {
+//     0% {
+//       transform: rotate(0deg); // Firefox 16+, IE 10+, Opera
+//     }
+
+//     100% {
+//       transform: rotate(360deg); // Firefox 16+, IE 10+, Opera
+//     }
+//   }
+
+//   @-moz-keyframes spin {
+//     0% {
+//       -moz-transform: rotate(0deg); // Firefox 16+
+//     }
+
+//     100% {
+//       -moz-transform: rotate(360deg); // Firefox 16+
+//     }
+//   }
+
+//   @keyframes spin {
+//     0% {
+//       transform: rotate(0deg); // Firefox 16+, IE 10+, Opera
+//     }
+
+//     100% {
+//       transform: rotate(360deg); // Firefox 16+, IE 10+, Opera
+
+//     // :after {
+//     //   content: "";
+//     //   position: absolute;
+//     //   top: 15px;
+//     //   left: 15px;
+//     //   right: 15px;
+//     //   bottom: 15px;
+//     //   border-radius: 50%;
+//     //   border: 3px solid transparent;
+//     //   // border-top-color: var(--main-color-terciario); //#EC6711;#F9960A;
+//     //   border-top-color: var(--color-interior-spinner);
+//     //   animation: spin 1.5s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera
+//     // }
+//   }
+// }
+
+// .spinner-loading-text {
+//   color: var(--primary-color);
+//   font-size: 1.3em;
+//   font-weight: 500;
+//   text-transform: uppercase;
+//   padding: 8em 0.5em 0.5em 0.5em;
+//   position: absolute;
+//   left: 50%;
+//   margin: 0;
+//   top: 50%;
+//   background: rgba(0, 0, 0, 0);
+//   transform: translate(-50%, -50%);
+// }
+
+
+// /*-- Spinner que se muestra durante la carga de tablas ----------------------------------------------*/
+
+// .posicionSpinnerComponentes {
+//   position: relative;
+//   height: 120px;
+// }
+
+// #preloader-mini-componentes {
+//   position: absolute;
+//   left: 50%;
+//   margin: 0;
+//   background: rgba(0, 0, 0, 0);
+//   transform: translate(-50%, -50%);
+
+//   img {
+//     width: 20%;
+//     height: auto;
+//     opacity: 0.5;
+//     margin-left: auto;
+//     margin-right: auto;
+//     display: block;
+//   }
+
+//   &>div {
+//     width: 80px;
+//     height: 75px;
+//     margin: 90px 0 0 0px;
+//     border-radius: 50%;
+//     border: 3px solid transparent;
+//     border-top-color: var(--primary-800); //COLOR EXTERIOR
+//     transform: translate3d(0, 0, 0);
+//     animation: spin 2s linear infinite;
+
+//     &:before {
+//       content: "";
+//       position: absolute;
+//       top: 5px;
+//       left: 5px;
+//       right: 5px;
+//       bottom: 5px;
+//       border-radius: 50%;
+//       border: 3px solid transparent;
+//       border-top-color: var(--primary-color); //COLOR DEL MEDIO
+//       -webkit-animation: spin 3s linear infinite; // Chrome, Opera 15+, Safari 5+
+//       animation: spin 3s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera
+//     }
+
+//     &:after {
+//       content: "";
+//       position: absolute;
+//       top: 15px;
+//       left: 15px;
+//       right: 15px;
+//       bottom: 15px;
+//       border-radius: 50%;
+//       border: 3px solid transparent;
+//       border-top-color: var(--primary-700); // COLOR INTERIOR
+//       animation: spin 1.5s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera
+//     }
+//   }
+// }
+
+// .spinner-loading-text-componentes {
+//   color: var(--primay-color);
+//   font-size: 1.3em;
+//   font-weight: 500;
+//   text-transform: uppercase;
+//   position: absolute;
+//   left: 50%;
+//   background: rgba(0, 0, 0, 0);
+//   transform: translate(-50%, -50%);
+//   margin-top: 105px;
+// }

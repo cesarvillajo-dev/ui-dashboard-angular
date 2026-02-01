@@ -1,0 +1,59 @@
+/**
+Component: BORDER
+Description: clases para bordes.
+Date: 2026
+*/
+
+// borde base
+.border-base {
+  border-width: var(--border-width-xs);
+  border-style: var(--border-style-solid);
+  border-color: var(--primary-border-color);
+}
+
+// borde :focus
+.border-focus {
+  border-color: var(--border-focus-color);
+}
+
+//borde gris
+.border-line,
+.border__line-box--gray {
+  border: 1px solid var(--primary-border-color);
+  border-radius: var(--radius-lg);
+}
+
+//borde de caja color primary
+.border_line-box,
+.border__line-box {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius-lg);
+}
+
+//borde de caja color primary con margen
+.border-line__box{
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+}
+
+//borde color primario
+.border-line--primary {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius-lg);
+}
+
+//borde de caja
+.border_line-box--gray{
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius-lg);
+  background-color: var(--gray-50);
+}
+
+
+.border-line--radiobutton{
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  line-height: 24px;
+  padding: .5rem 1rem;
+}

@@ -1,0 +1,44 @@
+/**
+ * Component: LISTAS
+ * Description: clases para cambiar los iconos de las listas.
+ * Date: 2026
+ */
+
+
+ul.circle {   
+    list-style-type: circle !important;
+    &::before {
+        content: "" !important;
+        margin-right: 2rem !important;
+        margin-left: -2rem !important;
+    }
+}
+
+ul.square {   
+    list-style-type: square !important;
+    &::before {
+        content: "" !important;
+        margin-right: 2rem !important;
+        margin-left: -2rem !important;
+    }
+}
+
+ul.disc {  
+    list-style-type: disc !important;
+    &::before {
+        content: "" !important;
+        margin-right: 2rem !important;
+        margin-left: -2rem !important;
+    }
+}
+
+ul.slash li{
+    list-style: none;
+    list-style-type: none !important;
+
+    &::before {
+        content: "-" ;
+        margin-right: 0.5rem;
+        margin-left: -1rem;
+    }
+}

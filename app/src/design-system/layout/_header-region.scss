@@ -1,0 +1,21 @@
+/**
+Component: Page Top
+Description: Contenedor de la barra de navegación principal
+Date: 2026
+*/
+
+.page-top {
+  min-width: 1280px;
+}
+
+.page-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 100%;
+  padding: 0 5.5rem 0 0;
+  box-shadow: var(--shadow-page-top, 0px 0px 8px -2px #757575);
+  background: inherit;
+  z-index: var(--z-index-pagetop);
+}

@@ -1,0 +1,12 @@
+/**
+ * Component: IMG
+ * Description: clases para contenedores de imagen
+ * Date: 2026
+ */
+
+.img-detalle,
+.imgDetalle {
+  width: clamp(600px, 100%, 900px);
+  height: auto;
+  object-fit: contain;
+}

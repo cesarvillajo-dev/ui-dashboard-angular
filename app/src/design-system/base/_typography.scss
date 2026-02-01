@@ -1,0 +1,115 @@
+/**
+ * Component: Typography
+ * Description: estilos tipográficos estructurales (headings, párrafos, etc.)
+ * Date: 2026
+ */
+
+/**
+ * Correge el tamaño de fuente y el margen de los elementos «h1» dentro de los contextos «sección» y «artículo» en Chrome, Firefox y Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/**
+ * 1. Añade el tamaño de cuadro correcto en Firefox.
+ * 2. Muestra el desbordamiento en Edge e Internet Explorer.
+ */
+hr {
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
+
+  /* 1 */
+  box-sizing: content-box;
+
+  /* 2 */
+  overflow: visible;
+  width: 100%;
+}
+
+/**
+ * Agregua el peso de fuente correcto en Chrome, Edge y Safari.
+ */
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correge la herencia y el escalado del tamaño de fuente en todos los navegadores.
+ * 2. Correge el tamaño de fuente irregular en todos los navegadores.
+ */
+pre,
+code,
+kbd,
+samp {
+
+  /* 1 */
+  font-family: monospace, monospace;
+
+  /* 2 */
+  font-size: 1em;
+}
+
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Agrega el tamaño correcto en todos los navegadores.
+ */
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/**
+ * Previene que a los elementos `sub` and `sup` lees afgecte `line height` en todos los navegadores
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}

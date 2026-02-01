@@ -1,0 +1,25 @@
+/**
+ * Component: TOKEN INDEX
+ * Description: Tokens de Diseño basado en variables primitivas (custom properties).
+ * Date: 2026
+ */
+
+ @forward './color';
+ @forward './surface';
+ @forward './typography';
+ @forward './spacing';
+ @forward './radius';
+ @forward './border';
+ @forward './shadow';
+ @forward './width';
+ @forward './height';
+ @forward './container';
+ @forward './z-index';
+ @forward './accesibility';
+ @forward './outline';
+ @forward './opacity';
+ @forward './motion';
+ @forward './breakpoints';
+ @forward './gutter';
+ @forward './states';
+//@forward './table';

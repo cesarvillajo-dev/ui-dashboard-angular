@@ -1,0 +1,44 @@
+/**
+ * Component: FLOAT UTILITY-FIRST
+ * Description: clases que permiten que los elementos salgan del flujo normal y se coloquen a los lados de otro elemento
+ * Date: 2026
+ */
+
+/**
+ * Ya casi no se usan estas propiedades, se usa Flex o Grid. Sólo es muy util cuando:
+ * 1- Estás maquetando un artículo donde las imágenes deben ir rodeadas de texto (uso legítimo de float).
+ * 2- Quieres aislar márgenes colapsados (margin collapsing) entre un padre y un hijo sin añadir bordes o paddings artificiales.
+ */
+
+.float-left  { float: left; }
+.float-right { float: right; }
+.float-none  { float: none; }
+
+/** 
+ * Elimina la herencia del float en el hijo.
+ * Se usa para impedir que un elemento se coloque al lado de elementos flotantes anteriores, forzándolo a posicionarse debajo de ellos.
+ */
+.clear-both,
+.clearfix {
+    clear: both;
+}
+
+/**
+ * Propiedad que crea un Nuevo Contexto de Formato de Bloque (bfc)
+ * Cuando un contenedor padre tiene hijos con float: left o float: right, estos hijos "salen" del flujo normal. 
+ * El resultado es que el padre no reconoce la altura de sus hijos y su fondo o bordes desaparecen (colapsan),
+ * obligándonos antiguamente a usar el "hack" de clearfix o elementos con clear: both.
+ * Usando flow-root en el padre evitas poner clear both en los hijos de elementos con float. 
+ */
+.flow-root {
+    display: flow-root;
+}
+
+/**
+Ejemplo moderno:
+<div class="flow-root">
+    <img src="foto.jpg" class="float-left">
+    <p>Este texto rodeará la imagen, pero el contenedor no colapsará gracias a .flow-root.</p>
+</div>
+*/
+

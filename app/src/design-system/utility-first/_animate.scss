@@ -1,0 +1,408 @@
+ /**
+ * Component: ANIMATE UTILITY-FIRST
+ * Description: Animaciones y Transformaciones, basadas en keyframes y transform del sistema. 
+ * Date: 2026
+ */
+
+/**
+ * ANIMATE:
+ *          .animate-fade-in        // Aparece suavemente cambiando opacidad
+ *          .animate-fade-out       // Desaparece suavemente cambiando opacidad
+ *          
+ *          .animate-slide-up       // Entra desde abajo con leve desplazamiento vertical
+ *          .animate-slide-down     // Entra desde arriba con leve desplazamiento vertical
+ *          .animate-slide-left     // Entra desde la derecha con leve desplazamiento horizontal
+ *          .animate-slide-right    // Entra desde la izquierda con leve desplazamiento horizontal
+ *          
+ *          .animate-scale-in       // Aparece con ligera escala desde menor tamaño
+ *          .animate-scale-out      // Desaparece reduciendo ligeramente la escala
+ *          
+ *          .animate-pulse-soft     // Pulso suave para llamar la atención de forma discreta
+ *          .animate-spin           // Rotación continua, normalmente usada para loaders
+ *          
+ *          .animate-bounce-soft    // Movimiento vertical muy leve (saltos) y repetitivo para énfasis
+ *          .animate-zoom-in-soft   // Aparición con zoom suave y controlado
+ *          .animate-flip-y         // Giro 3D en eje Y para efectos visuales puntuales
+ *
+ * TRANSFORM - base:
+ *          .transform              // Habilita el uso de transformaciones compuestas vía variables CSS
+ *          .transform-none         // Elimina cualquier transformación aplicada
+ *
+ * TRANSLATE — eje X:
+ *          .translate-x-0          // Sin desplazamiento horizontal
+ *          .translate-x-1/2        // Desplaza el elemento un 50% hacia la derecha
+ *          .-translate-x-1/2       // Desplaza el elemento un 50% hacia la izquierda
+ *          .translate-x-full       // Desplaza el elemento un 100% hacia la derecha
+ *          .-translate-x-full      // Desplaza el elemento un 100% hacia la izquierda
+ *
+ * TRANSLATE — eje Y:
+ *          .translate-y-0          // Sin desplazamiento vertical
+ *          .translate-y-1/2        // Desplaza el elemento un 50% hacia abajo
+ *          .-translate-y-1/2       // Desplaza el elemento un 50% hacia arriba
+ *          .translate-y-full       // Desplaza el elemento un 100% hacia abajo
+ *          .-translate-y-full      // Desplaza el elemento un 100% hacia arriba
+ *
+ * SCALE — uniforme:
+ *          .scale-90               // Reduce el tamaño al 90%
+ *          .scale-95               // Reduce el tamaño al 95%
+ *          .scale-100              // Tamaño original (100%)
+ *          .scale-105              // Aumenta el tamaño al 105%
+ *
+ * SCALE — por eje:
+ *          .scale-x-100            // Escala horizontal al 100%
+ *          .scale-y-100            // Escala vertical al 100%
+ *
+ * ROTATE:
+ *          .rotate-0               // Sin rotación
+ *          .rotate-90              // Rota 90 grados
+ *          .rotate-180             // Rota 180 grados
+ *          .rotate-270             // Rota 270 grados
+ */
+
+ /**
+ * *MARK: ANIMATE
+ * Description: Animaciones con keyframes funcionales, breves y controladas.
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Fade
+   ============================================ */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in var(--motion-duration-md) var(--motion-ease-out) both;
+}
+
+.animate-fade-out {
+    animation: fade-out var(--motion-duration-md) var(--motion-ease-in) both;
+}
+
+
+/* ============================================
+   MARK: Zoom-in (Entrada / Salida expresiva)
+   ============================================ */
+
+@keyframes zoom-in-soft {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-zoom-in-soft {
+    animation: zoom-in-soft var(--motion-duration-md) var(--motion-ease-out) both;
+}
+
+
+/* ============================================
+   MARK: Slide (Axis)
+   ============================================ */
+
+@keyframes slide-up {
+    from {
+        transform: translateY(0.5rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-0.5rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(0.5rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-0.5rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-up {
+    animation: slide-up var(--motion-duration-lg) var(--motion-ease-out) both;
+}
+
+.animate-slide-down {
+    animation: slide-down var(--motion-duration-lg) var(--motion-ease-out) both;
+}
+
+.animate-slide-left {
+    animation: slide-left var(--motion-duration-lg) var(--motion-ease-out) both;
+}
+
+.animate-slide-right {
+    animation: slide-right var(--motion-duration-lg) var(--motion-ease-out) both;
+}
+
+/* ============================================
+   MARK: Scale (Emphasis)
+   ============================================ */
+
+@keyframes scale-in {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+}
+
+.animate-scale-in {
+    animation: scale-in var(--motion-duration-lg) var(--motion-ease-out) both;
+}
+
+.animate-scale-out {
+    animation: scale-out var(--motion-duration-lg) var(--motion-ease-in) both;
+}
+
+/* ============================================
+   MARK: Attention / Feedback
+   ============================================ */
+
+@keyframes pulse-soft {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.85;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 1.5s var(--motion-ease-in-out) infinite;
+}
+
+@keyframes bounce-soft {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.25rem);
+    }
+}
+
+.animate-bounce-soft {
+    animation: bounce-soft 1s ease-in-out infinite;
+}
+
+/* ============================================
+   MARK: Spin (Utility) y Flip
+   ============================================ */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes flip-y {
+    from {
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-flip-y {
+    animation: flip-y var(--motion-duration-md) var(--motion-ease-out) both;
+}
+
+
+
+/**
+ * *MARK: TRANSFORM UTILITIES
+ * Description: Utilities base para habilitar transformaciones CSS.
+ * Date: 2026
+ */
+
+.transform {
+    transform:
+        translate(var(--transform-translate-x, 0), var(--transform-translate-y, 0)) rotate(var(--transform-rotate, 0)) scale(var(--transform-scale-x, 1), var(--transform-scale-y, 1));
+}
+
+.transform-none {
+    transform: none;
+}
+
+
+
+/**
+ * *MARK: TRANSLATE UTILITIES
+ * Description: Utilities de desplazamiento mediante transform. Usadas para alineación y posicionamiento.
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Translate X
+   ============================================ */
+
+.translate-x-0 {
+    --transform-translate-x: 0;
+}
+
+.translate-x-1\/2 {
+    --transform-translate-x: 50%;
+}
+
+.-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+}
+
+.translate-x-full {
+    --transform-translate-x: 100%;
+}
+
+.-translate-x-full {
+    --transform-translate-x: -100%;
+}
+
+/* ============================================
+   MARK: Translate Y
+   ============================================ */
+
+.translate-y-0 {
+    --transform-translate-y: 0;
+}
+
+.translate-y-1\/2 {
+    --transform-translate-y: 50%;
+}
+
+.-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+}
+
+.translate-y-full {
+    --transform-translate-y: 100%;
+}
+
+.-translate-y-full {
+    --transform-translate-y: -100%;
+}
+
+
+/**
+ * MARK: SCALE
+ * Description: Utilities de escala para microajustes visuales.
+ * Date: 2026
+ */
+
+/* ============================================
+   MARK: Uniform Scale
+   ============================================ */
+
+.scale-90 {
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
+}
+
+.scale-95 {
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
+}
+
+.scale-100 {
+    --transform-scale-x: 1;
+    --transform-scale-y: 1;
+}
+
+.scale-105 {
+    --transform-scale-x: 1.05;
+    --transform-scale-y: 1.05;
+}
+
+/* ============================================
+   MARK: Axis Scale
+   ============================================ */
+
+.scale-x-100 {
+    --transform-scale-x: 1;
+}
+
+.scale-y-100 {
+    --transform-scale-y: 1;
+}

@@ -1,0 +1,8 @@
+/**
+ * Component: Theme
+ * Description: punto de entrada para los temas legacy, light y dark
+ * Date: 2026
+ */
+
+@forward './light-theme';
+@forward './dark-theme';

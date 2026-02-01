@@ -1,0 +1,148 @@
+/**
+* Component: CARD
+* Description: tarjetas base
+* Date: 2026
+*/
+
+// TARJETA
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font: inherit;
+    word-wrap: break-word;
+    color: inherit;
+    background: var(--white);
+    background-clip: border-box;
+    border-radius: var(--radius-lg);   
+    box-shadow: var(--shadow-base);
+    padding: 1rem;
+    box-sizing: border-box;
+    min-width: 0;
+
+    // sin sombra
+    &--no-shadow {
+        @extend .card;
+        box-shadow: none;
+    }
+}
+
+// SIN SOMBRA
+.card.sinsombra {
+    box-shadow: none;
+}
+
+// ENCABEZADO
+.card__header {
+    padding: 0 .25rem;
+
+    &--opciones-tabla {
+        @extend .card__header;
+        position: absolute;
+        right: 10.75rem;
+        margin-top: 4px;
+        z-index: 1;
+    }
+}
+
+// CUERPO / CONTENIDO
+.card__body {
+    font-size: 1rem;
+    flex: 1 1 auto;
+    min-height: 1px;
+}
+
+// TÍTULO
+.card__title,
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--primary-800);
+}
+
+.card-header h3 {
+    color: var(--primary-800);
+
+    span {
+        font-size: 1.5em;
+    }
+}
+
+.card2 {
+    position: relative;
+    background: var(--white);
+}
+
+.card3 {
+    border-top: var(--yellow-500) dotted 1px;
+    border-bottom: var(--yellow-500) dotted 1px;
+    border-left: solid 1px var(--primary-250);
+    border-right: solid 1px var(--primary-250);
+}
+
+.card4 {
+    border-top: var(--primary-550) solid 2px;
+    border-bottom: var(--primary-550) solid 2px;
+    border-left: solid 2px var(--primary-550);
+    border-right: solid 2px var(--primary-550);
+    background: var(--primary-250);
+    color: var(--primary-700);
+    padding: 0.5em 1em;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.card5 {
+    display: flex;
+    word-wrap: break-word;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+    background-color: var(--white);
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem !important;
+    box-shadow: 1px 1px 10px -1px var(--primary-550);
+
+    .sinsombra {
+        box-shadow: none !important;
+    }
+}
+
+.card-deck {
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.card-deck .card {
+    flex: 1 0 0%;
+    margin-right: 16px;
+    margin-bottom: 0;
+    margin-left: 16px;
+}
+
+.cardDatos {
+    border: none;
+    box-shadow: none;
+}
+
+.contenedor-normal {
+    .card {
+        padding: 40px;
+
+        .card-block {
+            display: inline-flex;
+        }
+
+        .botones {
+            padding: 0;
+            margin-top: 24px;
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/**
+ * Component: HTML Base
+ * Description: configuración base del elemento html
+ * Date: 2026
+ */
+
+/**
+ * 1. Define 1rem = 16px
+ * 2. Corrección de line height para todos los navegadores.
+ * 3. Evita ajustes del tamaño de fuente después de cambios de orientación en iOS.
+ */
+html{
+
+  /* 1 */
+  font-size: 16px;
+  overflow-x: hidden;
+
+  /* 2 */
+  line-height: 1.15;
+
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+}
+
+html,
+:host {  
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}

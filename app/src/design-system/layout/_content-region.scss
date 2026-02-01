@@ -1,0 +1,12 @@
+/**
+Component: Content
+Description: Contenedor general
+Date: 2026
+*/
+
+
+// Contenedor central de la app parecido a width 100% pero flexible
+.app-content {
+  flex: 1 1 auto;
+  overflow: auto;
+}

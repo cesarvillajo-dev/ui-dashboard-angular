@@ -1,0 +1,77 @@
+/**
+Component: Ayuda
+Description: clases específicas para el componente Ayuda.
+Date: 2026
+*/
+
+.content-user-manual {
+    margin: 0 5rem 2rem;
+}
+
+@media print {
+
+    @page {
+        size: A4 !important;
+        margin: 0cm !important;
+        padding: 1cm !important;
+    }
+
+    /* DIV CON SALTO DE PAGINA PARA MATERIAL */
+    .page-break {
+        break-after: page !important;
+        page-break-after: always !important;
+        margin-bottom: 297mm !important;
+        margin-top: 1cm !important;
+    }
+
+    /* SALTO DESPUÉS DE... */
+    .pagebreak-after {
+        display: block;
+        page-break-after: always;
+    }
+
+    /* SALTO ANTES DE... */
+    .pagebreak-before {
+        display: block;
+        page-break-before: always;
+    }
+
+    /* SALTO DESPUÉS DE... */
+    .pagebreak-after {
+        display: block;
+        page-break-after: always;
+    }
+
+    /* SALTO SIN ROMPER EL DIV */
+    .pagebreak-avoid {
+        display: block;
+        page-break-inside: avoid;
+    }
+
+    /* PANELES DESPLEGABLES CON SALTO DE PAGINA PARA MATERIAL */
+    .mat-expansion-panel {
+        break-after: page !important;
+        page-break-after: always !important;
+        margin-bottom: 297mm !important;
+        padding-top: 1cm !important;
+
+        &:first-of-type {
+            padding-top: 0cm !important;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0cm !important;
+        }
+    }
+
+    img,
+    figure,
+    table {
+        break-inside: avoid;
+    }
+
+    .print-chapter {
+        break-before: page;
+    }
+
+}

@@ -1,0 +1,24 @@
+/**
+Component: DESIGN-SYSTEM
+Description: punto de entrada para el sistema de diseño. El orden determina el orden de la cascada de carga.
+Date: 2026
+*/
+
+// Configuración base para los navegadores (body, reset, etc)
+@use './base/index-base' as index-base;
+
+// Estructura de la app (Header, Content, Footer)
+@use './layout/index-layout' as index-layout;
+
+// Clases de Componentes del design system (Utility-first)
+@use './components/index-components' as index-components;
+
+// Tokens de diseño (custom properties / variables)
+@use './tokens/index-tokens' as index-tokens;
+
+// Propiedades primitivas de layout (Atomics: flex, grid, etc.)
+@use './utility-first/index-utility-first' as index-utility-first;
+
+// Temas: Legacy / Light / Dark
+@use './theme/index-theme' as index-theme;
+

@@ -1,0 +1,352 @@
+/**
+* Component: DISLAY STYLE
+* Description: clases para displays
+* Date: 2026
+*/
+
+/* PARA GRUPOS QUE SE MUESTRAN EN LÍNEA */
+.form-inline {
+  display: flex !important;
+  align-items: unset;
+  flex-flow: row wrap;
+
+  label {
+    justify-content: left;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.form-inline-top {
+  display: flex !important;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.form-header-logo {
+  display: flex !important;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 1rem 7.5rem;
+  margin: 1rem 0;
+  background: var(--gray-100);
+
+  img.logo-ministerio {
+    width: 412px;
+    margin-right: auto;
+  }
+}
+
+.form-header-logo-infoversion {
+  @extend .form-header-logo;
+  padding: 0.5rem 1rem;
+  margin: -0.5rem -1.25rem 2rem;
+}
+
+.form-header-logo-wellcome {
+  @extend .form-header-logo;
+  padding: 1rem;
+  margin: 2.5rem -1rem 0rem -1rem;
+
+  img.logo-ministerio {
+    width: 90%;
+    margin: 0 auto !important;
+  }
+}
+
+/* GRUPOS DESPLEGABLES COMO DROPDOWN Y MULTISELECT */
+.form-group {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* PARA EL GRUPO DE BOTÓNES BORRADOR Y BÚSQUEDA */
+.form-group2 {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+/* PARA GRUPOS DESPLEGABLES EN BLOQUE COMO DROPDOWN, MULTIPANEL, CALENDAR, ETC */
+.form-group3 {
+  display: block;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* PARA GRUPOS DE BOTONES EN LINEA COMO BOTONES DE DESCARGA, ETC */
+.form-group4 {
+  display: inline-flex;
+  margin-bottom: 1rem;
+}
+
+.form-group5 {
+  display: inline-block;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid var(--primary-550);
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.localizacion {
+  width: 98% !important;
+  margin-left: 1% !important;
+  margin-right: 1% !important;
+}
+
+.form-group6 {
+  display: flex;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid var(--primary-550);
+  border-radius: 0.25rem;
+}
+
+.form-group7 {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--primary-550);
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.form-group8 {
+  display: block;
+  margin: 0.5rem 0.5rem 1rem;
+  border: 1px solid var(--primary-550);
+  border-radius: 0.25rem;
+}
+
+.form-group9 {
+  display: block;
+  border: 1px solid var(--primary-550);
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+}
+
+// Para grupos en linea
+.list-inline-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+// Margen en línea
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+// distintas alineaciones
+.alinea {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+}
+
+.alinea2 {
+  display: inline-flex;
+  vertical-align: middle;
+  padding-right: 1.3em !important;
+  padding-left: 0.3em;
+}
+
+.alinea3 {
+  display: inline-flex;
+  vertical-align: middle;
+  padding-right: 1.3em !important;
+  padding-left: 0.3em;
+  opacity: 0.4;
+}
+
+.alinea4 {
+  display: inline-flex;
+  vertical-align: middle;
+  padding-right: 1em !important;
+}
+
+.flex-center {
+  display: inline-flex;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 100%;
+}
+
+// botones en p-dialog
+.botonesModCE {
+  margin-right: 1.3em;
+  float: right;
+}
+
+//grupos en dashboard
+.p-g {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.pt1 {
+  color: inherit;
+  font-weight: 500;
+  text-align: start;
+}
+
+.pt2 {
+  color: inherit;
+  text-align: end;
+}
+
+.pt3 {
+  color: inherit;
+  text-align: start;
+}
+
+.registerGrowl.p-growl {
+  position: fixed;
+  top: 10%;
+}
+
+.exportar {
+  float: right;
+  margin-top: -35px;
+}
+
+.exportar2 {
+  float: right;
+  margin-top: -3rem;
+}
+
+.exportar3 {
+  margin-top: -35.5px;
+  float: right;
+}
+
+.exportar4 {
+  margin-top: -1em;
+  float: right;
+}
+
+.eraser {
+  float: left;
+  margin-top: -2.5em;
+}
+
+.eraser2 {
+  float: left;
+  margin-top: -4rem;
+}
+
+.eraser3 {
+  float: left;
+  margin-top: -4.2rem;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 5.5rem;
+}
+
+.filter-flex {
+  display: flex;
+  justify-self: center;
+  padding: 0 2rem;
+}
+
+// un contendor c1 para que c-2 mantenga su tamaño y c-3 ocupe todo el ancho
+.c-1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.c-2 {
+  flex-basis: auto;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.c-3 {
+  flex-basis: 0;
+  flex-grow: 999;
+  justify-content: flex-end;
+}
+
+.app-titulo {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+}
+
+.datos-filtro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+
+  .datos-resumen {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    font-size: 0.87rem;
+    text-transform: capitalize;
+    letter-spacing: 0.28px;
+    line-height: 1rem;
+
+    span {
+      margin: 0 0.25rem;
+    }
+  }
+}
+
+
+.section--contenedor-filtro {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: normal;
+  gap: 0.5rem;
+}
+
+.section--borrar-buscar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  gap: .5rem;
+  padding-top: 21px;
+}
+
+.section--mat-borrar-buscar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  gap: .5rem;
+  padding-top: 24px;
+}
+
+.section--rango-fechas {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 21rem;
+  gap: 0.5rem;
+}
+
+.layout-group {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.layout-group__content {
+  width: 100%;
+}

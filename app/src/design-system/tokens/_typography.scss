@@ -1,0 +1,172 @@
+/**
+ * Component: TYPOGRAPHY TOKEN
+ * Description: fuente tipográfica de caracteres
+ * Date: 2026
+ */
+
+/* =========================================================
+   FONT FAMILY
+   ========================================================= */
+:root {
+  --font-sans: "Roboto", sans-serif;
+  --font-serif: "Montserrat", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --font-base: "Roboto", sans-serif;
+  --font-brand: "Montserrat", sans-serif;
+  --font-code: "IBM Plex Mono", monospace;
+}
+
+
+/* =========================================================
+   FONT SIZE (ESCALA SEMÁNTICA)
+   ========================================================= */
+:root {
+
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px (BASE) */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+  --font-size-5xl: 3rem;     /* 48px */
+  --font-size-6xl: 3.75rem;  /* 60px */
+  --font-size-7xl: 4.5rem;   /* 72px */
+  --font-size-8xl: 6rem;     /* 96px */
+  --font-size-9xl: 8rem;     /* 128px */
+
+  --text-xs: .75rem;    // 12px
+  --text-sm: .875rem;   // 14px
+  --text-base: 1rem;    // 16px
+  --text-lg: 1.125rem;  // 18px <--text ui
+  --text-xl: 1.25rem;   // 20px 
+  --text-2xl: 1.5rem;   // 24px <-- subtitle ui
+  --text-3xl: 1.875rem; // 30px
+  --text-4xl: 2.25rem;  // 36px <-- title ui
+  --text-5xl: 3rem;     // 48px
+  --text-6xl: 3.75rem;  // 60px
+  --text-7xl: 4.5rem;   // 72px
+  --text-8xl: 6rem;     // 96px
+  --text-9xl: 8rem;     // 128px
+}
+
+/* =========================================================
+   LINE HEIGHT
+   ========================================================= */
+:root {  
+  --line-height-xs: 1.4;
+  --line-height-sm: 1.45;
+  --line-height-base: 1.5;
+  --line-height-lg: 1.55;
+  --line-height-xl: 1.5;
+  --line-height-2xl: 1.45;
+  --line-height-3xl: 1.3;
+  --line-height-4xl: 1.25;
+  --line-height-5xl: 1.15;
+  --line-height-6xl: 1.1;
+  --line-height-7xl: 1.1;
+  --line-height-8xl: 1;
+  --line-height-9xl: 1;
+
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+}
+
+/* =========================================================
+   FONT WEIGHT
+   ========================================================= */
+:root {
+  --font-weight-thin: 100;
+  --font-weight-light: 200;
+  --font-weight-lighter: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+}
+
+/* =========================================================
+   LETTER SPACING
+   ========================================================= */
+:root {
+  --letter-spacing-tighter: -.05em;
+  --letter-spacing-tight: -.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: .025em;
+  --letter-spacing-wider: .05em;
+  --letter-spacing-widest: .1em;
+}
+
+/* =========================================================
+   FONT STYLE
+   ========================================================= */
+:root {
+  --font-style-normal: normal;
+  --font-style-italic: italic;
+}
+
+/* =========================================================
+   FONT COLOR
+   ========================================================= */
+:root {
+  --primary-text-color: var(--gray-900);
+  --secondary-text-color: var(--white);
+
+  --text-color: var(--gray-900);
+  --text-primary: var(--primary-color);
+  --text-secondary: var(--white);
+
+  --text-decoration-underline: underline;
+  --text-decoration-line-through: line-through;
+
+  --highlight-text-color: var(--primary-color);
+}
+
+/* =========================================================
+   TEXT STYLES (TOKENS DE REFERENCIA)
+   ========================================================= */
+:root {
+  /* Body */
+  --text-body-font-family: var(--font-sans);
+  --text-body-font-size: var(--font-size-md);
+  --text-body-font-weight: var(--font-weight-regular);
+  --text-body-line-height: var(--line-height-normal);
+  --text-body-letter-spacing: var(--letter-spacing-normal);
+
+  --text-body-small-font-size: var(--font-size-sm);
+
+  /* Headings */
+  --text-heading-1-font-size: var(--font-size-4xl);
+  --text-heading-1-font-weight: var(--font-weight-bold);
+  --text-heading-1-line-height: var(--line-height-tight);
+
+  --text-heading-2-font-size: var(--font-size-3xl);
+  --text-heading-2-font-weight: var(--font-weight-semibold);
+
+  --text-heading-3-font-size: var(--font-size-2xl);
+  --text-heading-3-font-weight: var(--font-weight-semibold);
+
+  --text-heading-4-font-size: var(--font-size-xl);
+  --text-heading-4-font-weight: var(--font-weight-medium);
+
+  /* Labels / UI */
+  --text-label-font-size: var(--font-size-sm);
+  --text-label-font-weight: var(--font-weight-medium);
+  --text-label-letter-spacing: var(--letter-spacing-wide);
+
+  --text-button-font-size: var(--font-size-sm);
+  --text-button-font-weight: var(--font-weight-semibold);
+  --text-button-letter-spacing: var(--letter-spacing-wide);
+
+  /* Code */
+  --text-code-font-family: var(--font-mono);
+  --text-code-font-size: var(--font-size-sm);
+  --text-code-line-height: var(--line-height-relaxed);
+}

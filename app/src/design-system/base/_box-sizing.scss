@@ -1,0 +1,11 @@
+/**
+ * Component: Box Sizing
+ * Description: definición global del modelo de caja del sistema
+ * Date: 2026
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
